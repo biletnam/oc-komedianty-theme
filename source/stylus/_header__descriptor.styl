@@ -1,0 +1,78 @@
+.descriptor
+	height (75/16)rem
+
+	.items
+		text-transform uppercase
+
+		font-size 0
+		text-align justify
+		&:after
+			content ""
+			display inline-block
+			width 100%
+
+
+	.item
+		display inline-block
+		fs .9rem
+
+		margin 0
+		padding 0
+
+		color $gray_color
+
+
+	.text, .search
+		padding-top 1.5em
+
+	.search
+		a
+			color $gray_color
+
+	.social-top
+		font-size 0
+
+		a
+			position relative
+			top -.7em
+			display inline-block
+
+			outline $gray_color 1px solid
+
+			padding .6em
+			padding-top 1em
+			width 1.2em
+
+			text-align center
+			color $text_color
+			fs(14/$rem)
+
+			&:hover
+				background-color $brand_color_hover
+				outline-color $brand_color_hover
+				z-index 2000
+
+			&.vk:hover
+				background-color $vk_color
+				outline-color $vk_color
+			&.facebook:hover
+				background-color $facebook_color
+				outline-color $facebook_color
+			&.google-plus:hover
+				background-color $google-plus_color
+				outline-color $google-plus_color
+			&.youtube:hover
+				background-color $youtube_color
+				outline-color $youtube_color
+			&.vimeo:hover
+				background-color $vimeo_color
+				outline-color $vimeo_color
+			&.twitter:hover
+				background-color $twitter_color
+				outline-color $twitter_color
+			&.rss:hover
+				background-color $rss_color
+				outline-color $rss_color
+
+		@media screen and (max-width: 1200px)
+			display none

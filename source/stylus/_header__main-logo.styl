@@ -1,0 +1,62 @@
+.main-logo
+
+	position relative
+	width (17/82)*100%
+	float left
+
+	font-family 'Proba Pro' sans-serif
+	font-weight 300
+	color $text_color
+
+	.logo
+		fill $brand_color
+		transition fill ease-in .5s
+		width 72px
+		height 72px
+
+	.title
+		text-transform uppercase
+		.top
+			position relative
+			left -.25em
+
+			color $brand_color + 20%
+
+			font-size 18.7px
+			line-height 1em
+			letter-spacing .02em
+
+			margin-top .6em
+
+			transition color ease-in .5s
+
+		.main
+			position relative
+			left -.12em
+
+			font-weight bolder
+			font-size 23px
+			line-height 1em
+			letter-spacing .03em
+
+			margin-top .23em
+
+
+			transition color ease-in .5s
+
+	& > a
+		display block
+		color inherit
+		text-decoration none
+
+		&:hover
+			.logo
+				fill $brand_color_hover
+				transition fill ease-out .3s
+			.title
+				.top
+					color $brand_color_hover
+					transition color ease-out .3s
+				.main
+					color $brand_color_hover
+					transition color ease-out .3s

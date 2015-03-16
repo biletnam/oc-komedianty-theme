@@ -1,0 +1,128 @@
+/********************************************************************************************************************************************
+ *  REPERTOIRE PAGE
+ ********************************************************************************************************************************************/
+#repertoire-page
+	background-size cover
+
+
+
+	$width = 65
+
+	.content
+		position relative
+		// top -6px
+
+		margin-top (6/82)*100%
+		margin-bottom (16/82)*100%
+		padding-left (17/82)*100%
+
+		width ($width/82)*100%
+
+	.section
+		position relative
+		margin-top (5/82)*100%
+		// width ($width/82)*100%
+		// margin-left (17/82)*100%
+
+		display none
+
+		&.active
+			display block
+
+
+	.performance
+		position relative
+		cf()
+		margin-bottom (4/$width)*100%
+
+	.title-block, .synopsis
+		margin-left (31/$width)*100%
+
+	.title-block
+		position relative
+		top -1em
+		.title
+			margin-bottom .2em
+			second_font()
+			fs (28/$rem)
+			font-weight bold
+			a
+				color $brand_color
+				text-decoration none
+				&:hover
+					color $brand_color_bright
+					border none
+		.author
+			fs (16/$rem)
+			line-height 2em
+		.description
+			fs (14/$rem)
+			line-height 1.5em
+			second_font()
+			font-style italic
+
+		.rate
+			main_font()
+			position absolute
+			top .2em
+			margin-left 1em
+			// left 100%
+			fs (24/$rem)
+			font-weight 200
+	.synopsis
+		// position relative
+		width (29/$width)*100%
+		// bottom 0
+
+		overflow hidden
+		height 120px
+		// margin-left (2/50)*100%
+		// float left
+
+		fs (14/$rem)
+		line-height 1.5em
+
+		p
+			margin 0
+
+	.performance-link
+		position absolute
+		bottom 1px
+		// width (29/$width)*100%
+		left (31/$width)*100%
+		a
+			color $brand_color_dark
+			text-decoration none
+			border-bottom 1px solid
+			&:hover
+				color $brand_color_bright
+
+	// .content-block
+	// 	position relative
+	// 	margin-top 1.6em
+	// 	cf()
+
+	.playbill
+		display block
+		// position absolute
+		width (29/$width)*100%
+		float left
+		background-color $brand_color_dark - 50% !important
+		background-size cover !important
+
+		&:before
+			content ""
+			display block
+			padding-top (20/29)*100%
+
+	@media screen and (max-width: 1399px)
+		.title-block
+			position absolute
+			margin 0
+			width 100%
+			left 0
+		.playbill
+			position relative
+			margin-top (4/$width)*100%
+		.synopsis
+			margin-top (4/$width)*100%

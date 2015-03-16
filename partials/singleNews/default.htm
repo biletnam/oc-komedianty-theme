@@ -1,0 +1,16 @@
+{% set post = __SELF__.post %}
+
+<div class="content">
+    <h3>{{ post.title }}</h3>
+    {{ post.content_html|raw }}
+    <p class="info">
+        Posted
+        {% if post.categories.count %} in
+            {% for category in post.categories %}
+                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+        on {{ post.published_at|date('M d, Y') }}
+    </p>
+</div>
+

@@ -1,0 +1,47 @@
+/********************************************************************************************************************************************
+ *  MAIN MENU
+ ********************************************************************************************************************************************/
+.main-navigation
+
+	ul, li
+		list-style none
+		margin 0
+		padding 0
+
+	a
+		text-decoration none
+		text-transform uppercase
+
+		color $brand_color_dark
+
+		font-weight 500
+
+		opacity .75
+
+		&:hover
+			color $brand_color_bright
+			transition color ease-out .3s
+			// font-weight 400
+
+			opacity 1
+
+
+	.nav-menu, ul
+		font-size 0
+		text-align justify
+		&:after
+			content ""
+			display inline-block
+			width 100%
+
+	.nav-menu-item, li
+		display inline-block
+		padding-top 1.67em
+		fs(20/$rem)
+
+		&.active
+			a
+				color $brand_color_hover
+				font-weight bold
+
+				opacity 1

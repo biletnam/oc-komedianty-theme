@@ -1,0 +1,16 @@
+title = "Персона"
+url = "/person/:slug"
+layout = "default"
+hidden = "0"
+
+[person]
+slug = "{{ :slug }}"
+==
+<!-- Person -->
+				<div id="person-page">
+					<div class="container">
+						<div class="wrap">
+							{% component 'person' %}
+						</div>
+					</div>
+				</div>

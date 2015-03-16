@@ -1,0 +1,32 @@
+name: 'Главное меню'
+items:
+    -
+        title: 'О театре'
+        type: cms-page
+        code: about
+        reference: pages/about
+    -
+        title: Новости
+        type: cms-page
+        code: news
+        reference: pages/news
+    -
+        title: Афиша
+        type: cms-page
+        code: playbill
+        reference: pages/playbill
+    -
+        title: Репертуар
+        type: cms-page
+        code: repertoire
+        reference: pages/repertoire
+    -
+        title: Труппа
+        type: cms-page
+        code: troupe
+        reference: pages/troupe
+    -
+        title: Контакты
+        type: cms-page
+        code: contacts
+        reference: pages/contacts

@@ -1,0 +1,51 @@
+/********************************************************************************************************************************************
+ *  GENERAL
+ ********************************************************************************************************************************************/
+
+//
+// BOX-SIZING reset
+//
+// box-sizing-reset()
+
+
+body
+	background-color $body_color
+	color $text_color
+
+	fs (16/$rem)
+	main_font()
+
+#page
+	padding 0
+	background-color $page_color
+
+	position relative
+
+	// min-width 1280px
+
+	background url('../images/bg.jpg')
+	background-size 100% auto
+	background-position top center
+
+container()
+	position relative
+	max-width 1312px
+	margin 0 auto
+	padding 0 (5/120)*100%
+	cf()
+
+.container
+	container()
+
+.wrap
+	position relative
+
+
+
+
+// @media screen and (max-width: 1399px)
+// 	.container
+// 		max-width 1024px
+// @media screen and (max-width: 1199px)
+// 	.container
+// 		max-width 900px

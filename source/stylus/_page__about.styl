@@ -1,0 +1,84 @@
+/********************************************************************************************************************************************
+ *  ABOUT PAGEs
+ ********************************************************************************************************************************************/
+#about-page
+	background-size cover
+
+	margin-bottom -(9/120)*100%
+
+	.content
+		padding-left (17/82)*100%
+		margin-top (6/82)*100%
+		// margin-bottom (16/82)*100%
+
+		// width (54/82)*100%
+
+		&:after
+			content ""
+			display block
+			clear both
+
+	.section
+		position relative
+
+		display none
+
+		&.active
+			display block
+
+	#hudozhestvennyj-rukovoditel
+		img
+			float left
+			width (30/65) *100%
+			// width 496px
+			height auto
+			margin-right (3/65)*100%
+			margin-bottom (8/65)*100%
+
+		h2
+			fs (37/$rem)
+			text-transform uppercase
+			position relative
+			top -.45em
+			margin-bottom 0
+
+		.role
+			second_font()
+			color $brand_color
+			fs (26/$rem)
+			margin-top 0
+		.bio
+			fs (20/$rem)
+
+	#istoriya-teatra
+		width (47/65)*100%
+		fs (18/$rem)
+		// margin-bottom 100%
+		h2
+			position relative
+			top -.55em
+			margin 0
+			fs (40/$rem)
+
+	#troupe
+		position relative
+		padding-bottom 113%
+		width 240%
+		left -68%
+		// height 50%
+
+		background url('../images/troupe2015.png') no-repeat
+		background-size 100% auto
+		background-position top center
+
+		// &:after
+		// 	content "Труппа 2015"
+		// 	display block
+		// 	position absolute
+
+		// 	bottom 0
+		// 	right 10em
+
+		// 	fs (24/$rem)
+
+

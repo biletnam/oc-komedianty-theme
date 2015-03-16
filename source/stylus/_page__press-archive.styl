@@ -1,0 +1,42 @@
+/********************************************************************************************************************************************
+ *  PRESS ARCHIVE PAGE
+ ********************************************************************************************************************************************/
+#press-archive-page
+	background-size cover
+	position relative
+
+	.content
+		position relative
+
+		padding-left (17/82)*100%
+		margin-top (12/82)*100%
+		margin-bottom (16/82)*100%
+
+		width (38/82)*100%
+
+	h2
+		second_font()
+		color $brand_color
+
+	.post
+		margin-bottom 2.5em
+
+		.date-block, .title-block
+			display inline-block
+
+		.title-block
+			.title
+				text-transform uppercase
+				letter-spacing 0.05em
+				a
+					link $text_color
+					text-decoration none
+					border none
+					&:hover
+						border none
+						text-decoration none
+						color $brand_color
+
+		.meta-block
+			fs (13/16)rem
+			color $gray_color

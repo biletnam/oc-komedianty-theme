@@ -1,0 +1,184 @@
+/********************************************************************************************************************************************
+ *  FOOTER
+ ********************************************************************************************************************************************/
+
+#footer
+	cf()
+	color $gray_color
+	margin 4em 0 0 0
+	margin-top 160px // TODO: Rewrite
+
+	fs (12/$rem)
+
+	.container
+		max-width 1472px
+		cf()
+		border-top 1px solid
+		padding 0.66*4em 0
+
+
+	a
+		link $gray_color
+		text-decoration none
+		border none
+		&:hover
+			border none
+			text-decoration none
+			color $text_color
+
+	.colophon
+		// span(23/92, offset: 1/92)
+		position absolute
+		width (22/92)*100%
+		left (1/92)*100%
+
+		.copyrights, .design
+			color $text_color
+			fs: (13/16)rem
+			p
+				margin 0
+				padding 0
+			.copy
+				margin-top $line
+
+		.copyrights
+			margin-bottom 2em
+
+
+	.sitemap
+		// span(68/92)
+		margin-left (23/92)*100%
+
+		ul, li
+			margin 0
+			padding 0
+			list-style none
+		.nav-menu
+			position relative
+			text-align justify
+			font-size 0
+			&:after
+				content " "
+				display inline-block
+				width 100%
+
+		.page_item
+			position relative
+			// border-left 1px solid
+			box-sizing border-box
+			padding 0 18px
+			height 10*16px // TODO: Rewite!
+			// height 100%
+
+			// span(1/7)
+			// width (1/7)*100%
+			display inline-block
+
+			vertical-align top
+			fs: (16/16)rem
+
+			a
+				link $text_color
+				text-decoration none
+				border none
+				&:hover
+					border none
+					text-decoration none
+					color white
+			p
+				margin 0
+
+			&.about
+				width (12/68)*100%
+
+			// &.news
+			// 	width (9/68)*100%
+
+			// &.playbill
+			// 	width (11/68)*100%
+
+			// &.about
+			// 	width (12/68)*100%
+
+			// &.about
+			// 	width (12/68)*100%
+			&.social-bottom
+				a
+					display block
+					width 100%
+					text-align center
+					fs (18/$rem)
+					&.vk:hover
+						// background-color $vk_color
+						color $vk_color
+					&.facebook:hover
+						// background-color $facebook_color
+						color $facebook_color
+					&.google-plus:hover
+						// background-color $google-plus_color
+						color $google-plus_color
+					&.youtube:hover
+						// background-color $youtube_color
+						color $youtube_color
+					&.vimeo:hover
+						// background-color $vimeo_color
+						color $vimeo_color
+					&.twitter:hover
+						// background-color $twitter_color
+						color $twitter_color
+					&.rss:hover
+						// background-color $rss_color
+						color $rss_color
+
+
+
+		.subnav, .data
+			margin-top 1em
+			text-align left
+		.subpage_item
+			fs (14/$rem)
+			line-height 1.5em
+
+			a
+				link $gray_color
+				text-decoration none
+				border none
+				&:hover
+					border none
+					text-decoration none
+					color $text_color
+
+
+	.sponsors
+		clear both
+		text-align center
+		line-height 2rem
+		border-top 1px solid
+		margin-top 2rem
+		padding 2rem (1/92)*100%
+
+		text-align justify
+		font-size 0
+		line-height 0
+		&:after
+			content " "
+			display inline-block
+			width 100%
+
+		.sponsor
+			vertical-align middle
+			display inline-block
+			a
+				display block
+
+	.culture
+		span(1/1) // TODO: Rewrite!
+		text-align center
+		line-height 2rem
+		border-top 1px solid
+		// margin-top 2rem
+		padding 2rem 0
+		h4
+			color $text_color
+			margin 0
+			margin-bottom 1rem

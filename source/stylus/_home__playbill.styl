@@ -1,0 +1,393 @@
+/********************************************************************************************************************************************
+ *  PLAYBILL
+ ********************************************************************************************************************************************/
+#home #playbill
+	cf()
+
+	position relative
+	margin-top -(8/120)*100%
+	margin-bottom (6/90)*100%
+	top -6px // TODO: Rewrite!
+
+	$b = 52
+
+	.section-header
+
+		width (13/82)*100%
+
+		// .container()
+		position absolute
+		// z-index 3000
+		bottom (4/$b)*100%
+		margin 0
+
+		// container()
+
+		// main_header()
+		line-height .675em
+		// text-align center
+		text-indent .12em
+
+	.ratio
+		padding-bottom ($b/82)*100%
+		position relative
+
+	.performance
+		display none // for JS
+
+		position relative
+
+		background-position 50% 0 !important
+		background-repeat no-repeat !important
+		// background-size 100%
+
+	.performance.active
+		display block // for JS
+
+	.title-block
+
+		position absolute
+		width (65/80)*100%
+		bottom (4/$b)*100%
+		right 0
+
+		text-align right
+
+		.title
+
+			position relative
+			top .35em
+
+			margin 0
+			margin-right -.08em
+
+			second_font()
+			fs (60/$rem)
+			line-height 1.42em
+			text-transform uppercase
+			// letter-spacing 0.1em
+			text-align right
+
+			font-weight bold
+
+			a
+				text-decoration none
+
+			.oa-comma
+				margin-right -.38em
+
+		.author
+			margin 0
+			second_font()
+			fs (24/$rem)
+			line-height 1em
+			// text-transform uppercase
+			// letter-spacing 0.1em
+			text-align right
+
+			position absolute
+			right 0
+			top .05em
+
+		.description
+			text-transform uppercase
+			letter-spacing 0.1em
+			fs: 1.2rem
+
+
+	.date-block
+		position absolute
+		z-index 200
+
+		width (13/82)*100%
+		height (20/$b)*100%
+
+		top (16/$b)*100%
+		// padding-bottom (4/82)*100%
+		// padding-top (1/82)*100%
+
+
+
+		background-color $brand_color_dark
+
+		second_font()
+		font-weight normal
+		text-transform uppercase
+		text-align center
+		// letter-spacing 0.1em
+		color $text_color
+
+		.date
+			margin 0
+			padding 0
+			display block
+		.day
+			position relative
+			top -(4/124)*1em
+			fs (150/$rem)
+			line-height 1.24em
+			font-weight bold
+
+			&.double
+				position relative
+				top (20/124)*1em
+				fs (124/$rem)
+
+		.month
+			fs 1.5rem
+			// margin-top .5em
+			line-height .7em
+			position absolute
+			width 100%
+			top (12/22)*100%
+
+			&.Jan
+				fs: 2.5rem
+			&.Feb
+				fs: 1.8rem
+			&.Mar
+				fs: 2.2rem
+				// letter-spacing .11em
+				// text-indent .12em
+
+		.weekday
+			fs 1.6rem
+			margin-top .8em
+			line-height .5em
+
+			position absolute
+			width 100%
+			bottom (6/22)*100%
+			// top (13/22)*100%
+
+			&.Mon
+				fs (16/$rem)
+				letter-spacing .02em
+			&.Tue
+				fs (26/$rem)
+				letter-spacing .01em
+			&.Wed
+				fs (32/$rem)
+				letter-spacing .15em
+				text-indent .1em
+			&.Thu
+				fs (28/$rem)
+				// letter-spacing .05em
+			&.Fri
+				fs (25/$rem)
+				letter-spacing .01em
+			&.Sat
+				fs (26/$rem)
+			&.Sun
+				fs (17/$rem)
+		// .time
+		// 	letter-spacing 0
+		// 	fs (13/$rem)
+		.button-buy
+			// margin-top $line
+			line-height 1.3em
+			fs (16/$rem)
+			letter-spacing 0.02em
+
+			position absolute
+			width 100%
+			bottom (3/22)*100%
+
+			a
+				color inherit
+				text-decoration none
+				border-bottom 1px solid
+
+
+	.calendar
+		position relative
+		height 32px
+		bottom 0
+
+		second_font()
+
+		z-index 500
+
+		background-color $brand_color_dark
+		background linear-gradient(to right,
+			rgba(0,0,0,.7) 0%,
+			rgba(0,0,0, 0) 12%,
+			rgba(0,0,0, 0) 88%,
+			rgba(0,0,0,.7) 100%
+		) $brand_color_dark
+
+
+		color $text_color
+		// text-align center
+		// vertical-align top
+
+		.container
+			position relative
+			width auto
+			height 96px
+
+			top -16px
+
+			margin 0 auto
+			padding 0
+			// padding-top 16px
+
+
+			// &:before, &:after
+			// 	content ""
+			// 	display block
+			// 	position absolute
+
+			// 	top 16px
+
+			// 	width (5/90)*100%
+			// 	height 32px
+			// 	background-color $brand_color_dark
+			// 	z-index 10000
+
+			// 	// box-shadow 0px 0px 32px 10px rgba(0,0,0,0.8)
+			// &:before
+			// 	right 100%
+			// &:after
+			// 	left 100%
+
+		.wraper
+			padding-top 16px
+			padding-bottom 48px
+			overflow hidden
+
+		.nav
+			position absolute
+			display: block;
+
+			top 66%
+
+			// width: 20px;
+			// height: 20px;
+			// margin-top: -10px;
+
+			padding: 0;
+			font-size: 0;
+			line-height: 0;
+
+			cursor: pointer;
+			color: transparent;
+			border: none;
+			outline: none;
+
+			background: transparent;
+
+
+			z-index 5000
+
+			&.slick-prev
+				right 100%
+				triangle left 11px #7A1D00
+				margin-right 16px
+			&.slick-next
+				left 100%
+				triangle right 11px #7A1D00
+				margin-left 16px
+
+		.slider
+			white-space nowrap
+			position relative
+			// left -1*(4/92)*100%
+			font-size 0
+
+
+
+		a
+			display inline-block
+			position relative
+			// float left
+			height 32px
+
+
+			// top -16px
+
+			// margin 0 16px
+			// padding 0 16px
+
+			width (2/92)*100%
+			padding 0 (1/92)*100%
+
+			// width 25px
+			// padding 0 8px
+
+			vertical-align top
+			// top -4px // TODO: Rerite!
+
+			line-height 32px
+
+
+			color $text_color
+			// background $brand_color_dark
+			border none
+			text-decoration none
+			text-align center
+
+
+
+			&:hover
+				border none
+				text-decoration none
+
+			.day, .weekday
+				position relative
+				width 100%
+				text-align center
+				// margin 0 8px
+				// padding 0 8px
+				fs (20/$rem)
+				transition all .2s ease .05s
+
+			.day
+				// font-weight 600
+				background $brand_color_dark
+
+			.weekday
+				text-transform uppercase
+				display block
+				height 46px
+				margin-top 12px
+				fs (16/$rem)
+				// line-height (48/$rem)
+				// font-weight 200
+				// position absolute
+				// top 120%
+				// &.Sun, &.Sat
+				// 	// color $brand_color_dark
+				// 	color $gray_color
+				// 	font-weight 400
+
+		a.active, a:hover
+			// background $brand_color
+			z-index 99999
+
+			.day, .weekday
+				transition all .05s ease
+				font-weight 600
+
+			.day
+				padding 16px 8px
+				margin -16px -8px 0
+				fs (30/$rem)
+				box-shadow 0px 0px 24px 5px rgba(0,0,0,0.6)
+			.weekday
+				margin-top 4px
+				fs (21/$rem)
+
+		a.active
+			.weekday
+				margin-top 8px;
+
+		a.before
+			color $gray_color+20%
+
+
+
+
+
+
+

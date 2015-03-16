@@ -1,0 +1,22 @@
+{
+    "name": "october/komedianty-theme",
+    "type": "october-theme",
+    "description": "Komedianty theater OctoberCMS theme",
+    "keywords": ["october", "cms", "theater", "theme"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abnmt",
+            "email": "komedianty@abnmt.com",
+            "role": "Programming"
+        },
+        {
+            "name": "Ekaterina May",
+            "email": "may.ekaterina.88@gmail.com",
+            "role": "Design"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    }
+}

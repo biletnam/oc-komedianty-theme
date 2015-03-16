@@ -1,0 +1,22 @@
+title = "Новости"
+url = "/news"
+layout = "default"
+description = "Архив новостей"
+hidden = "0"
+
+[blogPosts newsArchive]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "404"
+postPage = "single/news"
+==
+<!-- News -->
+				<div id="news-page" class="page">
+					<div class="container">
+						<div class="wrap">
+							{% component 'newsArchive' %}
+						</div>
+					</div>
+				</div>
