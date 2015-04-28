@@ -11,10 +11,10 @@
 		padding-left (17/82)*100%
 		margin-top (5/82)*100%
 		margin-bottom (16/82)*100%
-		
+
 		top -25px
 
-		width (30/82)*100%
+		width (35/82)*100%
 
 		.author
 			fs (22/$rem)
@@ -23,22 +23,34 @@
 
 		.title
 			header()
-			fs (35/$rem)
+			fs (40/$rem)
+			line-height (48/40em)
 
 		.description
 			second_font()
-			fs (18/$rem)
+			fs (22/$rem)
 			font-style italic
-			// padding 1em 0
+			color $brand_color_bright
+			margin-top 2*(16/22em)
+
+			max-width (25/35)*100%
+
 		.about
-			margin-top 3em
+			margin-top 1.5em
+			fs (18/$rem)
+			line-height (23/18em)
+
+			max-width (32/35)*100%
 
 		.add
 			position absolute
-			width (21/38)*100%
+			width (25/52)*100%
 			height 4em
 			top 19px
-			left (40/38)*100%
+			left (57/52)*100%
+
+			font-size (14/$rem)
+			line-height (22/14em)
 
 			.premiere-date, .duration
 				position absolute
@@ -47,11 +59,12 @@
 				// width (10/20)*100%
 				border-top 1px solid $brand_color
 			.duration
-				left (22/38)*100%
+				left (11/25)*100%
+				// right 0
 				// width (17/38)*100%
 
 
-		.title, h1, h2, h3, h4, h5, h6
+		h1, h2, h3, h4, h5, h6
 			color $brand_color
 
 		h4
@@ -76,12 +89,53 @@
 			margin 0
 			padding 0
 
+		.creators, .roles
+			fs (16/$rem)
+			line-height (23/16em)
+
 		ul, li
 			margin 0
 			padding 0
 		li
 			list-style none
 			margin-bottom 1.5em
+
+		.video
+			margin-top 2em
+
+
+		.gallery
+			margin-top 2em
+			.gallery-item
+				display inline-block
+				margin 3px
+				padding 0
+				width 177px
+
+				text-align center
+
+				position relative
+				overflow hidden
+
+				img
+					height 177px
+					max-width inherit
+					display block
+
+					margin-left auto
+					margin-right auto
+
+					position relative
+
+					left 50%
+					margin-left (-265/2px)
+
+					// position absolute
+					// top -9999px
+					// bottom -9999px
+					// left -9999px
+					// right -9999px
+					// margin auto
 
 
 		&.kompromiss
