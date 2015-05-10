@@ -1,6 +1,6 @@
 console.log 'foobar'
 
-
+# hash = window.location.hash
 
 # $('#playbill .date-block .date').fitText(1.2, { minFontSize: '25px', maxFontSize: '100px' })
 
@@ -24,9 +24,11 @@ $("#playbill .calendar a").click (e) ->
 
 $(".secondary-navigation .nav-menu-item > a").click (e) ->
 	e.preventDefault()
+
 	link = $(this)
 	item = link.parent()
 	dest = $(link.attr("href"))
+	# window.location = link.attr("href")
 
 	unless item.attr("class") is "active"
 		$(".secondary-navigation .nav-menu-item").removeClass "active"

@@ -75,21 +75,32 @@
 			font-weight 400
 			margin-top 3em
 
+		h5
+			font-weight 300
+			color $brand_color_dark
+			margin-bottom .2em
+			margin-bottom 0
+
 		dl
 			cf()
 			display block
 			margin 0
 			padding 0
 		dt
-			float left
-			clear left
+			// float left
+			// clear left
+			display inline
 			margin 0
 			padding 0
 			&:after
 				content " — "
 		dd
+			display inline
 			margin 0
 			padding 0
+			&:after
+				content: " "
+				display block
 
 		.creators, .roles
 			fs (16/$rem)
