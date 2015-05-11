@@ -13,7 +13,7 @@
 	.container
 		max-width 1472px
 		cf()
-		border-top 1px solid
+		// border-top 1px solid
 		padding 0.66*4em 0
 
 
@@ -27,27 +27,45 @@
 			color $text_color
 
 	.colophon
+		border-top 1px solid
 		// span(23/92, offset: 1/92)
-		position absolute
-		width (22/92)*100%
-		left (1/92)*100%
+		position relative
+		// width (22/92)*100%
+		// left (1/92)*100%
 
-		.copyrights, .design
+		padding 3em 0
+
+		.copyrights, .design, .address, .email
+			display block
+			width (1/4)*100%
+			float left
+
+			text-align center
+
 			color $text_color
-			fs: (13/16)rem
+			fs: (14/16)rem
 			p
 				margin 0
 				padding 0
-			.copy
-				margin-top $line
+			a
+				color inherit
+				&:hover
+					// border-bottom 1px solid
+					text-decoration none
+					color $gray_color
 
-		.copyrights
-			margin-bottom 2em
+		// 	.copy
+		// 		margin-top $line
+
+		// .copyrights
+		// 	margin-bottom 2em
 
 
 	.sitemap
 		// span(68/92)
-		margin-left (23/92)*100%
+		// margin-left (23/92)*100%
+		border-top 1px solid
+		padding 3em 0
 
 		ul, li
 			margin 0
@@ -67,7 +85,7 @@
 			// border-left 1px solid
 			box-sizing border-box
 			padding 0 18px
-			height 10*16px // TODO: Rewite!
+			// height 10*16px // TODO: Rewite!
 			// height 100%
 
 			// span(1/7)
@@ -76,6 +94,8 @@
 
 			vertical-align top
 			fs: (16/16)rem
+
+			text-align center
 
 			a
 				link $text_color
@@ -102,39 +122,9 @@
 
 			// &.about
 			// 	width (12/68)*100%
-			&.social-bottom
-				a
-					display block
-					width 100%
-					text-align center
-					fs (18/$rem)
-					&.vk:hover
-						// background-color $vk_color
-						color $vk_color
-					&.facebook:hover
-						// background-color $facebook_color
-						color $facebook_color
-					&.google-plus:hover
-						// background-color $google-plus_color
-						color $google-plus_color
-					&.youtube:hover
-						// background-color $youtube_color
-						color $youtube_color
-					&.vimeo:hover
-						// background-color $vimeo_color
-						color $vimeo_color
-					&.twitter:hover
-						// background-color $twitter_color
-						color $twitter_color
-					&.rss:hover
-						// background-color $rss_color
-						color $rss_color
-
-
-
 		.subnav, .data
 			margin-top 1em
-			text-align left
+			// text-align left
 		.subpage_item
 			fs (14/$rem)
 			line-height 1.5em
@@ -147,6 +137,41 @@
 					border none
 					text-decoration none
 					color $text_color
+
+	.social-bottom
+		text-align center
+		a
+			display inline-block
+			// width 100%
+			text-align center
+			padding 0 .33em
+			fs (18/$rem)
+			&.vk
+				// background-color $vk_color
+				color $vk_color
+			&.facebook
+				// background-color $facebook_color
+				color $facebook_color
+			&.google-plus
+				// background-color $google-plus_color
+				color $google-plus_color
+			&.youtube
+				// background-color $youtube_color
+				color $youtube_color
+			&.vimeo
+				// background-color $vimeo_color
+				color $vimeo_color
+			&.twitter
+				// background-color $twitter_color
+				color $twitter_color
+			&.rss
+				// background-color $rss_color
+				color $rss_color
+			&:hover
+				color $text_color
+
+
+
 
 
 	.sponsors

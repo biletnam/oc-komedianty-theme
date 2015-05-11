@@ -5,15 +5,15 @@
 	background-size cover
 	position relative
 
-	margin-top (6/82)*100%
-	margin-bottom (16/82)*100%
+	margin-top (6/120)*100%
+	margin-bottom (16/120)*100%
 
 	.content
 		position relative
 
 		padding-left (17/82)*100%
 
-		top -25px
+		top -17px
 
 		width (35/82)*100%
 
@@ -119,24 +119,44 @@
 
 		.gallery
 			margin-top 2em
+			// margin-left -3px
+			margin-right -(9.66666/(35*16))*100%
+			font-size 0
 			.gallery-item
 				display inline-block
-				margin 3px
+				margin 0 (9.66666/560)*100% (9.66666/560)*100%  0
+				// margin 4px
 				padding 0
-				width 177px
-				height 177px
+
+				// width 177px
+				// height 177px
+
+				width (177/560)*100%
 
 				// text-align center
 
 				position relative
 				overflow hidden
 
+				font-size 0
+
+				&:before
+					content ""
+					font-size 0
+					display block
+					width 100%
+					padding-bottom 100%
+
+				&:hover
+					outline 3px solid $brand_color_dark
+
 				a
-					position relative
+					position absolute
+					top 0
 					width 100%
 					height 100%
 					// text-align center
-					display inline-block
+					display block
 					// right -50%
 
 				img
@@ -169,8 +189,8 @@
 			.title
 				fs (56/$rem)
 
-			.title, h1, h2, h3, h4, h5, h6, .author
-				color #E59E2C
+		// 	.title, h1, h2, h3, h4, h5, h6, .author
+		// 		color #E59E2C
 
-			.premiere-date, .duration
-				border-color #E59E2C
+		// 	.premiere-date, .duration
+		// 		border-color #E59E2C

@@ -5,6 +5,9 @@
 	background-size cover
 	position relative
 
+	.nav-submenu
+		top 10em
+
 	.content
 		position relative
 
@@ -12,7 +15,7 @@
 		margin-top (5/82)*100%
 		margin-bottom (16/82)*100%
 
-		width (38/82)*100%
+		width (55/82)*100%
 		min-height 1000px
 
 		.title
@@ -20,8 +23,14 @@
 			fs (35/$rem)
 
 
-		.title, h1, h2, h3, h4, h5, h6, dt
+		h2, h3, h4, h5, h6
 			color $brand_color
+
+		h4
+			text-transform uppercase
+			fs (16/$rem)
+			font-weight 400
+			margin-top 3em
 
 		dl
 			cf()
@@ -29,12 +38,25 @@
 			margin 0
 			padding 0
 		dt
-			float left
-			clear left
+			display inline
+			// float left
+			// clear left
 			margin 0
 			padding 0
 			&:after
-				content ": "
+				content " — "
 		dd
+			display inline
 			margin 0
 			padding 0
+			&:after
+				content ""
+				display block
+
+		.portrait
+			float left
+			margin-right 3em
+			margin-top .7em
+
+		.container
+			margin-left 235px
