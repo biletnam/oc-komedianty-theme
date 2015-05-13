@@ -20,7 +20,9 @@
 		.author
 			fs (22/$rem)
 			second_font()
+			color $brand_color_bright
 			font-style italic
+			margin-top 1em
 
 		.title
 			header()
@@ -30,12 +32,15 @@
 
 		.description
 			second_font()
-			fs (22/$rem)
+			fs (18/$rem)
 			font-style italic
-			color $brand_color_bright
-			margin-top 2*(16/22em)
+			// margin-top 2*(16/22em)
+			margin-top 1em
 
 			max-width (25/35)*100%
+
+			&.alone
+				color $brand_color_bright
 
 		.about
 			margin-top 1.5em
@@ -111,7 +116,15 @@
 			padding 0
 		li
 			list-style none
+			// margin-bottom 1.5em
+
+		.press
+			li:before
+				content "– "
+
+		.press-list
 			margin-bottom 1.5em
+
 
 		.video
 			margin-top 2em
