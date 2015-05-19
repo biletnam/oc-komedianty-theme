@@ -1,0 +1,16 @@
+title = "Пресса"
+url = "/press/:slug"
+layout = "default"
+hidden = "0"
+
+[press]
+pressPage = "single/press"
+==
+<!-- Press -->
+				<div id="press-page" class="{{ slug }}">
+					<div class="container">
+						<div class="wrap">
+							{% component 'press' %}
+						</div>
+					</div>
+				</div>
