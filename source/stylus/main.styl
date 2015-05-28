@@ -65,10 +65,16 @@ normalize-css()
 		height 4000px
 		top 0
 		left 0
-		background url('../images/module.png') 0 0
-		pointer-events none
-		opacity .75
 		z-index 99999
+		pointer-events none
+		// background url('../images/module.png') 0 0
+		// opacity .75
+
+		background linear-gradient(0deg, rgba(white,.2) 1px, rgba(0,0,0,0) 1px),
+                   linear-gradient(90deg, rgba(white,.2) 1px, rgba(0,0,0,0) 1px)
+		background-size (16/1920)*100% 16px, (16/1920)*100% 16px
+		background-position top center, top center
+
 	input, label
 		position absolute
 		z-index 9999999999
