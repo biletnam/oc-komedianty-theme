@@ -2,39 +2,31 @@ name: 'Главное меню'
 items:
     -
         title: 'О театре'
-        nesting: ''
         type: cms-page
-        url: ''
         code: about
         reference: pages/about
-        cmsPage: ''
-        replace: ''
     -
         title: Новости
-        type: url
-        url: /news
+        type: cms-page
         code: news
+        reference: pages/news
     -
         title: Афиша
-        type: url
-        url: /playbill
+        type: cms-page
         code: playbill
+        reference: pages/playbill
     -
         title: Репертуар
-        type: url
-        url: /repertoire
+        type: cms-page
         code: repertoire
+        reference: pages/repertoire
     -
         title: Труппа
-        type: url
-        url: /troupe
+        type: cms-page
         code: troupe
+        reference: pages/troupe
     -
         title: Контакты
-        nesting: ''
         type: cms-page
-        url: ''
         code: contacts
         reference: pages/contacts
-        cmsPage: ''
-        replace: ''

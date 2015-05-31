@@ -1,0 +1,37 @@
+description = "Новый шаблон"
+
+[staticPage]
+==
+<!-- Default -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>{{ this.page.title }} — Театр «Комедианты»</title>
+
+        {% partial "meta" %}
+
+    </head>
+    <body>
+        <div id="page" class="hfeed site">
+
+            {% partial "header" %}
+
+            <!-- Content -->
+            <main id="main" role="main" class="site-main">
+
+                {% page %}
+                {% component 'staticPage' %}
+
+            </main>
+
+            {% partial "footer" %}
+
+        </div><!-- #page -->
+
+        <!-- Scripts -->
+        <script src="{{ ['assets/js/jquery.min.js', 'assets/js/main.js' ]|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

@@ -3,29 +3,19 @@ url = "/"
 layout = "default"
 hidden = "0"
 
-[calendar]
-performancePage = "single/performance"
-
-[blogPosts newsFeed]
-pageNumber = "{{ :page }}"
-postsPerPage = "6"
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "404"
-postPage = "single/news"
 ==
 <!-- Home -->
 				<div id="home">
 
 					<div id="playbill" class="block">
-						{% component 'calendar' %}
+
 					</div><!-- #playbill -->
 
 					<div id="newsfeed" class="block">
 						<div class="container">
 							<div class="wrap">
 								<h3 class="section-header"><a href="{{ 'pages/news'|page }}">Новости</a></h3>
-                                {% component 'newsFeed' %}
+
 							</div>
 						</div>
 					</div><!-- #newsfeed -->
