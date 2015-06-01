@@ -16,10 +16,10 @@ prefix     = require 'gulp-autoprefixer'
 csso       = require 'gulp-csso'
 
 # Images
-imagemin   = require 'imagemin'
-jpegoptim  = require 'imagemin-jpegoptim'
-pngquant   = require 'imagemin-pngquant'
-optipng    = require 'imagemin-optipng'
+# imagemin   = require 'imagemin'
+# jpegoptim  = require 'imagemin-jpegoptim'
+# pngquant   = require 'imagemin-pngquant'
+# optipng    = require 'imagemin-optipng'
 
 # Helpers
 livereload = require 'gulp-livereload'
@@ -107,7 +107,7 @@ gulp.task 'clean', ->
 gulp.task 'images', ->
 	images = gulp
 		.src p.images.s
-		.pipe optipng({optimizationLevel: 3})()
+#		.pipe optipng({optimizationLevel: 3})()
 #		.pipe pngquant({quality: '65-80', speed: 4})()
 #		.pipe jpegoptim({max: 70})()
 
