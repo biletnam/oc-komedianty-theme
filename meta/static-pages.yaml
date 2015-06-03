@@ -1,23 +1,8 @@
 static-pages:
-    home: {  }
-    o-teatre:
-        o-teatre-istoriya-teatra: {  }
-        o-teatre-hudozhestvennyj-rukovoditel: {  }
-        o-teatre-plan-zala: {  }
-    novosti:
-        novosti-arhiv-novostej: {  }
-        novosti-arhiv-pressy: {  }
-    afisha:
-        afisha-detskij-repertuar: {  }
-    repertuar:
-        repertuar-spektakli: {  }
-        repertuar-detskie-spektakli: {  }
-        repertuar-arhivnye-spektakli: {  }
-    truppa:
-        truppa-hudozhestvennyj-rukovoditel: {  }
-        truppa-aktyory: {  }
-        truppa-priglashennye-artisty: {  }
-        truppa-postanovochniki: {  }
-        truppa-administraciya: {  }
-    kontakty:
-        kontakty-dokumenty: {  }
+    about:
+        about-history: {  }
+        about-artistic-director: {  }
+        about-plan: {  }
+        about-scene: {  }
+    contacts:
+        documents: {  }
