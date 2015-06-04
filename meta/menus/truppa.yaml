@@ -1,0 +1,35 @@
+name: Труппа
+items:
+    -
+        title: 'Художественный руководитель'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: troupe/art-director
+        cmsPage: ''
+        replace: ''
+    -
+        title: Актёры
+        type: person-category
+        code: ''
+        reference: '1'
+        cmsPage: pages/troupe
+    -
+        title: 'Приглашенные артисты'
+        type: person-category
+        code: ''
+        reference: '2'
+        cmsPage: pages/troupe
+    -
+        title: Администрация
+        type: person-category
+        code: ''
+        reference: '4'
+        cmsPage: pages/troupe
+    -
+        title: Постановочники
+        type: person-category
+        code: ''
+        reference: '3'
+        cmsPage: pages/troupe

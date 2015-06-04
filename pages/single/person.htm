@@ -1,15 +1,25 @@
 title = "Персона"
 url = "/person/:slug"
 layout = "default"
+description = "Страница биографии"
 hidden = "0"
 
-[person]
+[theaterPerson]
+
+
+[staticMenu sideMenu]
+code = "truppa"
 ==
 <!-- Person -->
-				<div id="person-page" class="{{ slug }}">
+				<div id="person-page" class="{{ person }}">
 					<div class="container">
 						<div class="wrap">
-							{% component 'person' %}
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterTroupe' %}
+							</div>
 						</div>
 					</div>
 				</div>

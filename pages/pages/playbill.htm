@@ -1,16 +1,25 @@
 title = "Афиша"
-url = "/playbill/:category?current"
+url = "/playbill/:category?now"
 layout = "default"
 description = "Афиша на крайние 2 месяца"
 hidden = "0"
 
 [theaterPlaybill]
+
+
+[staticMenu sideMenu]
+code = "afisha"
 ==
 <!-- Playbill -->
-				<div id="playbill-page" class="page playbill">
+				<div id="playbill-page" class="page side-menu playbill">
 					<div class="container">
 						<div class="wrap">
-							{% component 'theaterPlaybill' %}
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterPlaybill' %}
+							</div>
 						</div>
 					</div>
 				</div>

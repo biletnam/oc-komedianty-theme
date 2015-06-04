@@ -1,17 +1,23 @@
-title = "Архив новостей"
-url = "/news/archive/:page?"
+title = "Новости по категориям"
+url = "/news/category/:category/:page?"
 layout = "default"
 description = "Архив новостей"
 hidden = "0"
 
 [theaterNews]
-
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :category }}"
+postsPerPage = "10"
+noPostsMessage = "Новостей нет"
+sortOrder = "published_at desc"
+categoryPage = "pages/newsCategory"
+postPage = "single/news"
 
 [staticMenu sideMenu]
 code = "novosti"
 ==
-<!-- News -->
-				<div id="news-page" class="page side-menu news">
+<!-- News Category -->
+				<div id="news-page-category" class="page side-menu news category">
 					<div class="container">
 						<div class="wrap">
 							<nav role="navigation" class="secondary-navigation">

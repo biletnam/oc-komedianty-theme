@@ -1,0 +1,31 @@
+title = "Статьи по категориям"
+url = "/press/category/:category/:page?"
+layout = "default"
+description = "Архив статей"
+hidden = "0"
+
+[theaterPress]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :category }}"
+postsPerPage = "10"
+noPostsMessage = "Статей нет"
+sortOrder = "published_at desc"
+categoryPage = "pages/pressCategory"
+postPage = "single/press"
+
+[staticMenu sideMenu]
+code = "novosti"
+==
+<!-- News Category -->
+				<div id="news-page-category" class="page side-menu news category">
+					<div class="container">
+						<div class="wrap">
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterPress' %}
+							</div>
+						</div>
+					</div>
+				</div>

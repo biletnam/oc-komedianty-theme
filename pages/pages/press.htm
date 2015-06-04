@@ -1,16 +1,25 @@
 title = "Архив прессы"
-url = "/press/:category?all/:page?"
+url = "/press/archive/:page?"
 layout = "default"
 description = "Архив прессы"
 hidden = "0"
 
 [theaterPress]
+
+
+[staticMenu sideMenu]
+code = "novosti"
 ==
 <!-- PressArchive -->
-				<div id="press-archive-page" class="page press">
+				<div id="press-archive-page" class="page side-menu press">
 					<div class="container">
 						<div class="wrap">
-							{% component 'theaterPress' %}
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterPress' %}
+							</div>
 						</div>
 					</div>
 				</div>

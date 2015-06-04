@@ -5,12 +5,21 @@ description = "Список труппы"
 hidden = "0"
 
 [theaterTroupe]
+
+
+[staticMenu sideMenu]
+code = "truppa"
 ==
 <!-- Troupe -->
-				<div id="troupe-page" class="page troupe">
+				<div id="troupe-page" class="page side-menu troupe">
 					<div class="container">
 						<div class="wrap">
-							{% component 'theaterTroupe' %}
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterTroupe' %}
+							</div>
 						</div>
 					</div>
 				</div>

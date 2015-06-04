@@ -11,46 +11,38 @@ items:
         replace: '0'
     -
         title: Новости
-        nesting: ''
-        type: url
-        url: /news
+        type: cms-page
         code: news
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        reference: pages/news
     -
         title: Афиша
         nesting: ''
-        type: url
-        url: /playbill
+        type: cms-page
+        url: ''
         code: playbill
-        reference: ''
+        reference: pages/playbill
         cmsPage: ''
         replace: ''
     -
-        title: Репертуар
+        title: 'Репертуар'
         nesting: ''
-        type: url
-        url: /repertoire
+        type: cms-page
+        url: ''
         code: repertoire
-        reference: ''
+        reference: pages/repertoire
         cmsPage: ''
         replace: ''
     -
         title: Труппа
-        nesting: ''
-        type: url
-        url: /troupe
+        type: cms-page
         code: troupe
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        reference: troupe/art-director
     -
         title: Контакты
-        nesting: '0'
-        type: static-page
+        nesting: ''
+        type: cms-page
         url: ''
         code: contacts
-        reference: contacts
+        reference: pages/contacts
         cmsPage: ''
-        replace: '0'
+        replace: ''

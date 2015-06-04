@@ -5,12 +5,21 @@ description = "Репертуар театра"
 hidden = "0"
 
 [theaterRepertoire]
+
+
+[staticMenu sideMenu]
+code = "repertuar"
 ==
 <!-- Repertoire -->
-				<div id="repertoire-page" class="page repertoire">
+				<div id="repertoire-page" class="page side-menu repertoire">
 					<div class="container">
 						<div class="wrap">
-							{% component 'theaterRepertoire' %}
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterRepertoire' %}
+							</div>
 						</div>
 					</div>
 				</div>

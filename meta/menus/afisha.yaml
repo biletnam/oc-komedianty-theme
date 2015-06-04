@@ -1,0 +1,14 @@
+name: Афиша
+items:
+    -
+        title: Афиша
+        type: playbill-now
+        code: ''
+        reference: '5'
+        cmsPage: pages/playbill
+        replace: '1'
+    -
+        title: 'Детские спектакли'
+        type: url
+        url: '#child'
+        code: ''

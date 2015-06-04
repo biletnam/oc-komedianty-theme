@@ -1,11 +1,25 @@
 title = "Спектакль"
-url = "/performance/:slug"
+url = "/performance/:performance"
 layout = "default"
 description = "Страница спектакля"
 hidden = "0"
 
-[repertoire]
+[theaterPerformance]
+
+
+[staticMenu sideMenu]
+code = "repertuar"
 ==
 <!-- Performance -->
-
-							{% component 'repertoire' %}
+				<div id="performance-page" class="{{ performance }}">
+					<div class="container">
+						<div class="wrap">
+							<nav role="navigation" class="secondary-navigation">
+								{% component 'sideMenu' %}
+							</nav>
+							<div class="content">
+								{% component 'theaterRepertoire' %}
+							</div>
+						</div>
+					</div>
+				</div>

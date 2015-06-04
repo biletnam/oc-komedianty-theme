@@ -1,24 +1,23 @@
 title = "Пресса"
-url = "/press/article/:slug"
+url = "/news/article/:slug"
 layout = "default"
 description = "Статья прессы"
 hidden = "0"
 
-[theaterPress]
+[theaterNews]
 
 
 [staticMenu sideMenu]
 code = "novosti"
 ==
-<!-- Press -->
-				<div id="press-archive-page" class="page side-menu press">
+				<div id="news-page" class="page side-menu news">
 					<div class="container">
 						<div class="wrap">
 							<nav role="navigation" class="secondary-navigation">
 								{% component 'sideMenu' %}
 							</nav>
 							<div class="content">
-								{% component 'theaterPress' %}
+								{% component 'theaterNews' %}
 							</div>
 						</div>
 					</div>
