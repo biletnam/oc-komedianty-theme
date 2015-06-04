@@ -12,17 +12,11 @@ noPostsMessage = "Статей нет"
 sortOrder = "published_at desc"
 categoryPage = "pages/pressCategory"
 postPage = "single/press"
-
-[staticMenu sideMenu]
-code = "novosti"
 ==
 <!-- News Category -->
 <div id="{{ this.param.category }}-news-page-category" class="page side-menu news category">
 	<div class="container">
 		<div class="wrap">
-			<nav role="navigation" class="secondary-navigation">
-				{% component 'sideMenu' %}
-			</nav>
 			<div class="content">
 				{% component 'theaterPress' %}
 			</div>

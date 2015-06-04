@@ -5,18 +5,11 @@ description = "Статья прессы"
 hidden = "0"
 
 [theaterNews]
-
-
-[staticMenu sideMenu]
-code = "novosti"
 ==
 <!-- Single News -->
 <div id="{{ this.param.slug }}-news-page" class="page side-menu news">
 	<div class="container">
 		<div class="wrap">
-			<nav role="navigation" class="secondary-navigation">
-				{% component 'sideMenu' %}
-			</nav>
 			<div class="content">
 				{% component 'theaterNews' %}
 			</div>

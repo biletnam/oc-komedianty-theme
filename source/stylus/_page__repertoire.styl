@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
  *  REPERTOIRE PAGE
  ********************************************************************************************************************************************/
-#repertoire-page
+.page.repertoire
 
 	$width = 65
 
@@ -50,12 +50,14 @@
 		// bottom 0
 
 		// overflow hidden
-		height 120px
+		height (7em*1.5)
 		// margin-left (2/50)*100%
 		// float left
 
 		fs (14/$rem)
 		line-height 1.5em
+
+		trim_elipsis(7)
 
 		p
 			margin 0
@@ -77,7 +79,7 @@
 	// 	margin-top 1.6em
 	// 	cf()
 
-	.playbill
+	.repertoire-cover
 		display block
 		// position absolute
 		width (29/$width)*100%

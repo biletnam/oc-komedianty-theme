@@ -1,0 +1,93 @@
+/********************************************************************************************************************************************
+ *  MAIN MENU
+ ********************************************************************************************************************************************/
+#site-navigation
+
+	position relative
+
+	ul, li
+		list-style none
+		margin 0
+		padding 0
+
+	a
+		text-decoration none
+		text-transform uppercase
+
+		color $brand_color_dark
+
+		font-weight 500
+
+		opacity .75
+
+		&:hover
+			color $brand_color_bright
+			transition color ease-out .3s
+			// font-weight 400
+
+			opacity 1
+
+	.mainMenu
+		font-size 0
+		text-align justify
+
+		&:after
+			content ""
+			display inline-block
+			width 100%
+
+		.mainMenu-item
+			display inline-block
+			padding-top 1.67em
+			fs(20/$rem)
+
+			&.active, &.child-active
+				a
+					color $brand_color_hover
+					font-weight 500
+
+					opacity 1
+
+				.sideMenu
+					display block
+
+			.sideMenu
+				display none
+				position absolute
+
+				font-weight normal
+				fs (16/$rem)
+
+				// top (20/82)*100%
+				// top 0
+				left 0
+				margin-top (4/82)*100%
+				width (15/82)*100%
+				// bottom -((12+82)/82)*100%
+				// bottom -300%
+
+				.sideMenu-item
+					display block
+
+					margin-bottom .4em
+					margin-bottom .7em
+					// margin-bottom 2.7em
+					a
+						// color $brand_color_dark
+						color $text_color
+						font-weight 300
+						text-decoration none
+						border none
+
+						line-height 1.25em
+
+						// opacity .75
+
+						&:hover
+							color $brand_color
+							&:hover
+								border none
+					&.active
+						& > a
+							color $brand_color
+							opacity 1

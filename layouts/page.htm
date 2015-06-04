@@ -1,13 +1,10 @@
-description = "Раздел «О театре»"
+description = "Шаблон страницы"
 
 [staticPage]
 
 
 [staticMenu]
 code = "main-menu"
-
-[staticMenu sideMenu]
-code = "about"
 ==
 <!-- Default -->
 <!DOCTYPE html>
@@ -29,9 +26,6 @@ code = "about"
 				<div class="page side-menu about">
 					<div class="container">
 						<div class="wrap">
-							<nav role="navigation" class="secondary-navigation">
-								{% component 'sideMenu' %}
-							</nav>
 							<div class="content">
 								{% page %}
 							</div>

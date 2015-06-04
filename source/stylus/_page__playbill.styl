@@ -1,8 +1,8 @@
 /********************************************************************************************************************************************
  *  PLAYBILL PAGE
  ********************************************************************************************************************************************/
-#playbill-page
-	height 2980px
+.page.playbill
+	min-height 2980px
 	$w = 100%/1920
 
 	background url('../images/covers/afisha_anecdot.png') no-repeat,
@@ -28,8 +28,9 @@
 		fs (40/$rem)
 		margin-top 1.5em
 
-	.performance
-		margin-bottom 2.5em
+	.event
+		margin-bottom 4em
+		position relative
 
 		.date
 			color $brand_color
@@ -42,6 +43,7 @@
 				fs (24/$rem)
 			&.weekday
 				fs (24/$rem)
+				text-transform lowercase
 
 		.date-block, .title-block, .other, .meta
 			display inline-block
@@ -79,13 +81,16 @@
 				color $brand_color - 25%
 				margin-left 1em
 		.meta
-			margin-left 1em
-			opacity 0
-			// color $gray_color
+			margin-left 4em
+			// opacity 0
+			color $gray_color
 
 			transition all 0.3s ease-out
 
 			position absolute
+
+			top 3.3em
+			left 0
 
 			fs(18/$rem)
 

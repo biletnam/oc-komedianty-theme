@@ -5,18 +5,11 @@ description = "Афиша на крайние 2 месяца"
 hidden = "0"
 
 [theaterPlaybill]
-
-
-[staticMenu sideMenu]
-code = "afisha"
 ==
 <!-- Playbill -->
 <div id="{{ this.param.category }}-playbill-page" class="page side-menu playbill">
 	<div class="container">
 		<div class="wrap">
-			<nav role="navigation" class="secondary-navigation">
-				{% component 'sideMenu' %}
-			</nav>
 			<div class="content">
 				{% component 'theaterPlaybill' %}
 			</div>
