@@ -2,63 +2,31 @@
  *  PLAYBILL PAGE
  ********************************************************************************************************************************************/
 #playbill-page
-	position relative
 	height 2980px
-	// background-size cover
 	$w = 100%/1920
-	// $p = 100%
 
 	background url('../images/covers/afisha_anecdot.png') no-repeat,
-	url('../images/covers/afisha_marlen.png') no-repeat,
-	url('../images/covers/afisha_kompromiss.png') no-repeat,
-	url('../images/covers/afisha_vor.png') no-repeat,
-	url('../images/covers/afisha_pom_mol.png') no-repeat,
-	url('../images/covers/afisha_sos.png') no-repeat
+               url('../images/covers/afisha_marlen.png') no-repeat,
+               url('../images/covers/afisha_kompromiss.png') no-repeat,
+               url('../images/covers/afisha_vor.png') no-repeat,
+               url('../images/covers/afisha_pom_mol.png') no-repeat,
+               url('../images/covers/afisha_sos.png') no-repeat
 	background-position 100% 150*$w,
-	0% 380*$w,
-	100% 850*$w,
-	0% 1250*$w,
-	96% 100%,
-	0% 100%
+                        0% 380*$w,
+                        100% 850*$w,
+                        0% 1250*$w,
+                        96% 100%,
+                        0% 100%
 	background-size 40% auto,
-	683*$w auto,
-	560*$w auto,
-	621*$w auto,
-	670*$w auto,
-	665*$w auto
+                    683*$w auto,
+                    560*$w auto,
+                    621*$w auto,
+                    670*$w auto,
+                    665*$w auto
 
-	position relative
-	top -6px
-	margin-top -(8/120)*100%
-	padding-top (9/120)*100%
-
-	margin-bottom -(9/120)*100%
-
-	.nav-menu-item, li
-		margin-bottom .5em
-
-	.content
-		position relative
-		margin-bottom (16/82)*100%
-
-		top -11px
-
-		// padding-bottom (1/82)*100%
-
-	.section
-		position relative
-		margin-top (5/82)*100%
-		width (53/82)*100%
-		margin-left (17/82)*100%
-
-		display none // For JS
-
-		&.active
-			display block // For JS
-
-		h3
-			fs (40/$rem)
-			margin-top 1.5em
+	h3
+		fs (40/$rem)
+		margin-top 1.5em
 
 	.performance
 		margin-bottom 2.5em
