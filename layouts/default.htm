@@ -9,33 +9,37 @@ code = "main-menu"
 <!-- Default -->
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 
-		<title>{{ this.page.title }} — Театр «Комедианты»</title>
-		<meta name="title" content="{{ this.page.meta_title }}" >
+<title>{{ this.page.title }} — Театр «Комедианты»</title>
+<meta name="title" content="{{ this.page.meta_title }}" >
 
-		{% partial "meta" %}
+{% partial "meta" %}
 
-	</head>
-	<body>
-		<div id="page" class="hfeed site">
+</head>
 
-			{% partial "header" %}
-			<!-- Content -->
-			<main id="main" role="main" class="site-main">
 
-				{% page %}
 
-			</main>
+<body>
+<div id="page" class="hfeed site">
 
-			{% partial "footer" %}
+	{% partial "header" %}
 
-		</div><!-- #page -->
+	<!-- Content -->
+	<main id="main" role="main" class="site-main">
 
-		<!-- Scripts -->
-		<!-- <script src="{{ ['assets/js/jquery.min.js', 'assets/js/main.js' ]|theme }}"></script> -->
-		<script src="{{ ['assets/js/jquery.min.js' ]|theme }}"></script>
-		{% framework extras %}
-		{% scripts %}
-	</body>
+		{% page %}
+
+	</main>
+
+	{% partial "footer" %}
+
+</div><!-- #page -->
+
+<!-- Scripts -->
+<!-- <script src="{{ ['assets/js/jquery.min.js', 'assets/js/main.js' ]|theme }}"></script> -->
+<script src="{{ ['assets/js/jquery.min.js' ]|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>
 </html>
