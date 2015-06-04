@@ -2,6 +2,7 @@
  *  PERFORMANCE PAGE
  ********************************************************************************************************************************************/
 .page.performance
+	position relative
 
 	.content
 		width (35/82)*100%
@@ -40,7 +41,7 @@
 
 	.add
 		position absolute
-		width (25/52)*100%
+		width (25/35)*100%
 		height 4em
 		top 19px
 		left (57/52)*100%
@@ -120,27 +121,36 @@
 
 
 	.gallery
+		position relative
+
 		margin-top 2em
-		// margin-left -3px
-		margin-right -(9.66666/(35*16))*100%
+
+		$c = 560
+		$m = 25
+		$cnt = 3
+
+		width (($c + $m)/$c)*100%
+		margin-bottom -($m/($c + $m))*100%
+
+
 		font-size 0
+
 		.gallery-item
 			display inline-block
-			margin 0 (9.66666/560)*100% (9.66666/560)*100%  0
-			// margin 4px
+			position relative
+
+			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
+			margin 0 ($m/($c + $m))*100% ($m/($c + $m))*100% 0
+
 			padding 0
 
-			// width 177px
-			// height 177px
 
-			width (177/560)*100%
-
-			// text-align center
-
-			position relative
 			overflow hidden
 
 			font-size 0
+
+			// transform scale(.8)
+			transition all 1s ease-out .5s
 
 			&:before
 				content ""
@@ -148,9 +158,27 @@
 				display block
 				width 100%
 				padding-bottom 100%
+			// &:after
+			// 	content ""
+			// 	font-size 0
+			// 	display block
+			// 	position absolute
+			// 	box-sizing border-box
+			// 	width 100%
+			// 	height 100%
+			// 	top 0
+			// 	left 0
+			// 	// border 15px solid #000
+			// 	// width 100%
+			// 	// padding-bottom 100%
+			// 	pointer-events none
 
 			&:hover
-				outline 3px solid $brand_color_dark
+				// outline 3px solid $brand_color_dark
+				transform scale(1.15)
+				transition all 1s ease-out .5s
+				// &:after
+				// 	border 0
 
 			a
 				position absolute
