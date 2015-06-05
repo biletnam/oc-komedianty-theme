@@ -6,7 +6,8 @@
 // BOX-SIZING reset
 //
 // box-sizing-reset()
-
+// *
+// 	-webkit-transition: top 500ms ease 500s;
 
 body
 	background-color $body_color
@@ -33,6 +34,10 @@ container()
 	// max-width 1200px
 
 	width (82/120)*100%
+
+	@media screen and (max-width: 1366px)
+		width (64/84)*100%
+		right (2/84)*100%
 
 	margin 0 auto
 	padding 0 (5/120)*100%

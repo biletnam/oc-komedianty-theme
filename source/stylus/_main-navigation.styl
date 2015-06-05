@@ -69,8 +69,8 @@
 				.sideMenu-item
 					display block
 
-					margin-bottom .4em
-					margin-bottom .7em
+					// margin-bottom .4em
+					margin-bottom .8em
 					// margin-bottom 2.7em
 					a
 						// color $brand_color_dark
@@ -91,3 +91,35 @@
 						& > a
 							color $brand_color
 							opacity 1
+
+	@media screen and (max-width: 1366px)
+		.mainMenu
+			// display table
+			position relative
+			// -webkit-transition: height 500ms ease 500s;
+			.mainMenu-item
+				position relative
+				vertical-align top
+				// display inline
+				width 100px // !!!!
+				&:hover
+					.sideMenu
+						display block
+						z-index 9999
+				&.active, &.child-active
+					.sideMenu
+						display none
+						// height 0
+					&:hover
+						.sideMenu
+							display block
+				.sideMenu
+					display none
+					position absolute
+					position relative
+					top 100%
+					left inherit
+					// width 10%
+					.sideMenu-item
+						// width 10%
+						// position absolute

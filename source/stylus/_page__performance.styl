@@ -3,16 +3,19 @@
  ********************************************************************************************************************************************/
 .page.performance
 	position relative
+	margin-bottom (12/120)*100%
 
 	.content
 		width (35/82)*100%
 
+		@media screen and (max-width: 1366px)
+			width (32/64)*100%
+
 	.author
 		fs (22/$rem)
 		second_font()
-		color $brand_color_bright
 		font-style italic
-		margin-top 1em
+		margin-top .8em
 
 	.title
 		header()
@@ -21,11 +24,13 @@
 		line-height (48/40em)
 
 	.description
+		color $brand_color_bright
 		second_font()
-		fs (18/$rem)
+		fs (17/$rem)
 		font-style italic
+		font-weight 100
 		// margin-top 2*(16/22em)
-		margin-top 1em
+		margin-top .2em
 
 		max-width (25/35)*100%
 
@@ -33,32 +38,92 @@
 			color $brand_color_bright
 
 	.about
-		margin-top 1.5em
+		margin-top 1.7em
 		fs (18/$rem)
 		line-height (23/18em)
 
 		max-width (32/35)*100%
 
-	.add
+	.premiere-date, .duration
 		position absolute
-		width (25/35)*100%
-		height 4em
-		top 19px
-		left (57/52)*100%
+		display block
+		margin 0
+		// width (10/20)*100%
+		// border-top 1px solid $brand_color
+		fs (14/$rem)
 
-		font-size (14/$rem)
-		line-height (22/14em)
+	.duration
+		left (37/35)*100%
+		top 0
+		color $gray_color
+		width 100%
+		margin-top 4px
+		// right 0
+		// width (17/38)*100%
+	.premiere-date
+		top 100%
+		left 0
+		margin-top (2/35)*100%
 
-		.premiere-date, .duration
-			position absolute
-			display block
-			margin 0
-			// width (10/20)*100%
-			border-top 1px solid $brand_color
-		.duration
-			left (11/25)*100%
-			// right 0
-			// width (17/38)*100%
+
+	.earliest-block
+		display block
+		margin 0
+		padding 0
+
+		width (10/35)*100%
+
+		position absolute
+		right ((7+35)/35)*100%
+		top 0
+		margin-top (9/35)*100%
+
+		h5
+			text-transform uppercase
+			color $text_color
+			margin-bottom 1.5em
+
+
+		.day
+			fs(154/$rem)
+			line-height (96/154em)
+			second_font()
+			bold()
+			position relative
+			left -.04em
+			&.num-11,
+			&.num-12,
+			&.num-13,
+			&.num-14,
+			&.num-15,
+			&.num-16,
+			&.num-17,
+			&.num-18,
+			&.num-19
+				left -.1em
+
+		.month
+			fs(35/$rem)
+			line-height 1
+			margin-top .6em
+			second_font()
+			normal()
+			text-transform uppercase
+		.weekday
+			fs(18/$rem)
+			second_font()
+			margin-top .35em
+			text-transform uppercase
+		.buy-button
+			second_font()
+			width 100%
+			margin-top 1em
+			text-align center
+			padding 1em .2em
+			text-transform uppercase
+			background rgba(white,.1)
+			a
+				text-decoration none
 
 
 	h1, h2, h3, h4, h5, h6
@@ -69,6 +134,7 @@
 		fs (16/$rem)
 		font-weight 400
 		margin-top 3em
+		margin-bottom 1.2em
 
 	h5
 		font-weight 300

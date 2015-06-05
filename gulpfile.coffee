@@ -90,7 +90,7 @@ gulp.task 'styles', ->
 
 	styles = styles
 		.pipe prefix
-			browsers: ['last 2 versions']
+			browsers: ['> 5%', 'last 2 version']
 			cascade: false
 		.pipe csso() if production
 
