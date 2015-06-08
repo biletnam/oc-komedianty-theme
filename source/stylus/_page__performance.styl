@@ -5,11 +5,20 @@
 	position relative
 	margin-bottom (12/120)*100%
 
+	z-index 10
+
+	@media screen and (max-width: 480px)
+		margin-bottom (8/30)*100%
+
 	.content
 		width (35/82)*100%
 
-		@media screen and (max-width: 1366px)
-			width (32/64)*100%
+		@media screen and (max-width: 1370px)
+			width (32/74)*100%
+
+		@media screen and (max-width: 480px)
+			width 100%
+			// margin-left 0
 
 	.author
 		fs (22/$rem)
@@ -43,6 +52,9 @@
 		line-height (23/18em)
 
 		max-width (32/35)*100%
+		@media screen and (max-width: 1370px)
+			fs(17/$rem)
+			line-height (22/17)
 
 	.premiere-date, .duration
 		position absolute
@@ -53,11 +65,13 @@
 		fs (14/$rem)
 
 	.duration
-		left (37/35)*100%
-		top 0
-		color $gray_color
-		width 100%
-		margin-top 4px
+		// left (37/35)*100%
+		top 100%
+		margin-top (2/35)*100%
+		right 0
+		// color $gray_color
+		// width 100%
+		// margin-top 4px
 		// right 0
 		// width (17/38)*100%
 	.premiere-date
@@ -68,6 +82,10 @@
 
 	.earliest-block
 		display block
+
+		@media screen and (max-width: 1370px)
+			display none
+
 		margin 0
 		padding 0
 
@@ -125,6 +143,10 @@
 			a
 				text-decoration none
 
+			&:hover
+				background $brand_color
+				cursor pointer
+
 
 	h1, h2, h3, h4, h5, h6
 		color $brand_color
@@ -133,14 +155,15 @@
 		text-transform uppercase
 		fs (16/$rem)
 		font-weight 400
-		margin-top 3em
-		margin-bottom 1.2em
+		margin-top 1.8em
+		margin-bottom .1em
 
 	h5
 		font-weight 300
 		color $brand_color_dark
 		margin-bottom .2em
 		margin-bottom 0
+		margin-top .2em
 
 	dl
 		cf()
@@ -174,22 +197,29 @@
 		list-style none
 		// margin-bottom 1.5em
 
-	.press
-		li:before
-			content "– "
+	// .press
+	// 	li:before
+	// 		content "– "
 
 	.press-list
 		margin-bottom 1.5em
 
 
 	.video
-		margin-top 2em
+		margin-top 1em
+	.video-title, .gallery-title
+		fs(18/$rem)
+		color $text_color
+		text-transform none
+
+
 
 
 	.gallery
 		position relative
 
 		margin-top 2em
+
 
 		$c = 560
 		$m = 25
@@ -198,6 +228,7 @@
 		width (($c + $m)/$c)*100%
 		margin-bottom -($m/($c + $m))*100%
 
+		// сf()
 
 		font-size 0
 

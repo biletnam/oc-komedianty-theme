@@ -9,9 +9,16 @@
 // *
 // 	-webkit-transition: top 500ms ease 500s;
 
+html, body
+	height 100%
+	width 100%
+	position relative
+
 body
 	background-color $body_color
 	color $text_color
+
+	height 100%
 
 	fs (16/$rem)
 	main_font()
@@ -25,6 +32,8 @@ body
 	// min-width 1280px
 
 	background url('../images/bg.jpg')
+	@media screen and (max-width: 480px)
+		background #000000
 	background-size 100% auto
 	background-position top center
 
@@ -34,13 +43,18 @@ container()
 	// max-width 1200px
 
 	width (82/120)*100%
+	margin-left (19/120)*100%
 
-	@media screen and (max-width: 1366px)
-		width (64/84)*100%
-		right (2/84)*100%
+	@media screen and (max-width: 1370px)
+		width (74/85)*100%
+		margin-left (7/85)*100%
+	@media screen and (max-width: 480px)
+		width (26/30)*100%
+		margin-left (2/30)*100%
+		// padding 0 (5/84)*100%
 
-	margin 0 auto
-	padding 0 (5/120)*100%
+	// margin 0 auto
+	// padding 0 (5/120)*100%
 	cf()
 
 .container
@@ -49,17 +63,3 @@ container()
 .wrap
 	position relative
 
-
-
-
-@media screen and (max-width: 1382px)
-	.container
-		// max-width 1024px
-		padding 0 (2/120)*100%
-@media screen and (max-width: 1433px)
-	.container
-		// max-width 1024px
-		padding 0 (3/120)*100%
-// @media screen and (max-width: 1199px)
-// 	.container
-// 		max-width 900px

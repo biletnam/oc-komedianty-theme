@@ -35,6 +35,7 @@ normalize-css()
 
 @import '_page__person'
 @import '_page__performance'
+@import '_page__performance_bg'
 
 @import '_page__about'
 
@@ -51,47 +52,48 @@ normalize-css()
 
 
 
-.module
-	// float left
-	z-index 10000
-	position absolute
-	top 0
-	width 100%
-	height 100%
-	pointer-events none
+// .module
+// 	// float left
+// 	z-index 10000
+// 	position absolute
+// 	top 0
+// 	width 100%
+// 	height 100%
+// 	pointer-events none
 
-	input
-		pointer-events all
+// 	input
+// 		pointer-events all
 
-	#on ~ .modules
-			display none
+// 	#on ~ .modules
+// 			display none
 
-	#on:checked ~ .modules
-		display block
-		position absolute
-		// width 1920px
-		// height 4000px
-		width 100%
-		height 100%
-		top 0
-		left 0
-		z-index 99999
-		pointer-events none
-		// background url('../images/module.png') 0 0
-		// opacity .75
+// 	#on:checked ~ .modules
+// 		display block
+// 		position absolute
+// 		// width 1920px
+// 		// height 4000px
+// 		width 100%
+// 		height 100%
+// 		top 0
+// 		left 0
+// 		z-index 99999
+// 		pointer-events none
+// 		background url('../images/module.png') 0 0
+// 		opacity .75
 
-		background linear-gradient(0deg, rgba(white,.2) 1px, rgba(0,0,0,0) 1px),
-                   linear-gradient(90deg, rgba(white,.2) 1px, rgba(0,0,0,0) 1px)
-		background-size (16/1920)*100% 16px, (16/1920)*100% 16px
-		background-position top center, top center
+// 		// background linear-gradient(0deg, rgba(white,.2) 1px, rgba(0,0,0,0) 1px),
+// 		// 		   linear-gradient(90deg, rgba(green,.2) 1px, rgba(0,0,0,0) 1px),
+// 		// 		   linear-gradient(90deg, rgba(blue,.2) 1px, rgba(0,0,0,0) 1px)
+// 		// background-size 16px 16px, 16px 16px
+// 		// background-position top left, top left
 
-		@media screen and (max-width: 1366px)
-			background-size (16/1360)*100% 16px, (16/1360)*100% 16px
+// 		// @media screen and (max-width: 1370px)
+// 		// 	background-size (100%/85)*5 16px, (100%/85) 16px, (100%/85)*5 16px
 
-	input, label
-		position absolute
-		z-index 9999999999
-		// right 20px
+// 	input, label
+// 		position absolute
+// 		z-index 9999999999
+// 		// right 20px
 
 
 // 	position absolute

@@ -48,6 +48,12 @@ p =
 		s: src + '/images/**/*.{jpg,png,jpeg}'
 		w: src + '/images/**/*.{jpg,png,jpeg}'
 		d: out + '/images/'
+	tpls:
+		s: src + '/partials/**/*.{jpg,png,jpeg}'
+		w: src + '/partials/**/*.{jpg,png,jpeg}'
+		d: './partials/'
+	php:
+		w: '../../plugins/abnmt/theater/**/*.{php|htm|yaml}'
 
 # Error handler ???
 handleError = (err) ->
@@ -91,7 +97,7 @@ gulp.task 'styles', ->
 	styles = styles
 		.pipe prefix
 			browsers: ['> 5%', 'last 2 version']
-			cascade: false
+			cascade: true
 		.pipe csso() if production
 
 	styles = styles.pipe gulp.dest p.styles.d

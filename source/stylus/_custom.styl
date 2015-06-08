@@ -299,9 +299,9 @@ bg-mid()
 
 // ------
 
-.page.performance
+.page.performance2
 
-	.bg-container
+	.bg-block
 		position absolute
 		// display table-cell
 		// vertical-allign middle
@@ -310,23 +310,32 @@ bg-mid()
 		margin 0
 		padding 0
 
+		@media screen and (max-width: 1370px)
+			text-align right
+
 		.bg
-			// display table-cell
-			// max-width 30%
-			// max-height (50/120)*100%
-			position absolute
-			// float right
 			margin 0
 			padding 0
 
 			font-size 0
 			text-align center
 
-			&:before
-				display inline-block
-				content ""
-				height 100%
-				vertical-align middle
+			@media screen and (min-width: 1367px) and (max-width: 1920px)
+				position absolute
+
+				&:before
+					display inline-block
+					content ""
+					height 100%
+					vertical-align middle
+
+			@media screen and (max-width: 1370px)
+				position relative
+				display block
+				float right
+				width (40/84)*100%
+				clear right
+
 
 			// div
 			// 	position relative
@@ -341,319 +350,331 @@ bg-mid()
 				width auto
 				height auto
 
-		.bg-1
-			width (55/120)*100%
-			top 0
-			// margin-top -(4/120)*100%
-			right 0
-			text-align right
-			img
-				vertical-align top
-				// position relative
-				// top -10%
-		.bg-2
-			width (48/120)*100%
-			height (45/120)*100%
-			bottom (35/120)*100%
-			right 0
-			text-align right
-		.bg-3
-			width (48/120)*100%
-			right 0
-			bottom 0
-			text-align right
-			img
-				vertical-align bottom
-		.bg-4
-			width (34/120)*100%
-			height (40/120)*100%
-			left 0
-			@media screen and (max-width: 1366px)
-				left inherit
-				right 0
+		@media screen and (max-width: 1370px)
+			.bg-5
 				display none
-			bottom 0
-			text-align left
-			img
-				vertical-align bottom
-		.bg-5
-			width (34/120)*100%
-			height 100%
-			// bottom (35/120)*100%
-			left 0
-			@media screen and (max-width: 1366px)
-				left inherit
-				right 0
+			.bg-6
 				display none
-			text-align left
-			img
-				vertical-align middle
-		.bg-6
-			width (18/120)*100%
-			top 0
-			left 0
-			@media screen and (max-width: 1366px)
-				left inherit
-				right 0
-				display none
-			text-align left
-			img
-				vertical-align top
 
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (55/120)*100%
+				top 0
+				// margin-top -(4/120)*100%
+				right 0
+				text-align right
+				img
+					vertical-align top
+					// position relative
+					// top -10%
+			.bg-2
+				width (48/120)*100%
+				height (45/120)*100%
+				bottom (35/120)*100%
+				right 0
+				text-align right
+			.bg-3
+				width (48/120)*100%
+				right 0
+				bottom 0
+				text-align right
+				img
+					vertical-align bottom
+			.bg-4
+				width (34/120)*100%
+				height (40/120)*100%
+				left 0
+				bottom 0
+				text-align left
+				img
+					vertical-align bottom
+			.bg-5
+				width (34/120)*100%
+				height 100%
+				// bottom (35/120)*100%
+				left 0
+				text-align left
+				img
+					vertical-align middle
+			.bg-6
+				width (18/120)*100%
+				top 0
+				left 0
+				text-align left
+				img
+					vertical-align top
 
 
 	&.beda-ot-nezhnogo-serdtsa
-		.bg-2
-			width (50/120)*100%
-			height (49/120)*100%
-			bottom (38/120)*100%
-		.bg-3
-			width (50/120)*100%
-		.bg-4
-			width (34/120)*100%
-			height (40/120)*100%
-			text-align center
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-2
+				width (50/120)*100%
+				height (49/120)*100%
+				bottom (38/120)*100%
+			.bg-3
+				width (50/120)*100%
+			.bg-4
+				width (34/120)*100%
+				height (40/120)*100%
+				text-align center
 
 	&.brys-ili-istoriya-kota-filofeya
-		.bg-1
-			width (65/120)*100%
-		.bg-2
-			width (43/120)*100%
-		.bg-3
-			width (49/120)*100%
-		.bg-4
-			width (35/120)*100%
-		.bg-5
-			width (34/120)*100%
-			height auto
-			bottom (48/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (65/120)*100%
+			.bg-2
+				width (43/120)*100%
+			.bg-3
+				width (49/120)*100%
+			.bg-4
+				width (35/120)*100%
+			.bg-5
+				width (34/120)*100%
+				height auto
+				bottom (48/120)*100%
 	&.dachnitsy
-		.bg-1
-			width (54/120)*100%
-		.bg-3
-			width (49/120)*100%
-		.bg-4
-			width (36/120)*100%
-			height (40/120)*100%
-		.bg-5
-			width (36/120)*100%
-			height auto
-			bottom (37/120)*100%
-		.bg-2
-			width (48/120)*100%
-			height (45/120)*100%
-			bottom (37/120)*100%
-		.bg-6
-			width (17/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (54/120)*100%
+			.bg-3
+				width (49/120)*100%
+			.bg-4
+				width (36/120)*100%
+				height (40/120)*100%
+			.bg-5
+				width (36/120)*100%
+				height auto
+				bottom (37/120)*100%
+			.bg-2
+				width (48/120)*100%
+				height (45/120)*100%
+				bottom (37/120)*100%
+			.bg-6
+				width (17/120)*100%
 
-	// &.durochka
+		// &.durochka
 	&.ekhala-derevnya-mimo-muzhika
-		.bg-1
-			width (51/120)*100%
-		.bg-2
-			width (56/120)*100%
-			bottom (40/120)*100%
-		.bg-4
-			width (36/120)*100%
-		.bg-5
-			width (36/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (51/120)*100%
+			.bg-2
+				width (56/120)*100%
+				bottom (40/120)*100%
+			.bg-4
+				width (36/120)*100%
+			.bg-5
+				width (36/120)*100%
 	&.esli-pozhenilis-znachit-zhit-pridetsya
-		.bg-2
-			width (51/120)*100%
-			height (45/120)*100%
-			bottom (37/120)*100%
-		.bg-4
-			width (39/120)*100%
-			height (40/120)*100%
-		.bg-5
-			width (34/120)*100%
-			height auto
-			bottom (35/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-2
+				width (51/120)*100%
+				height (45/120)*100%
+				bottom (37/120)*100%
+			.bg-4
+				width (39/120)*100%
+				height (40/120)*100%
+			.bg-5
+				width (34/120)*100%
+				height auto
+				bottom (35/120)*100%
 	&.karlson
-		.bg-1
-			width (59/120)*100%
-			top -(2/120)*100%
-		.bg-2
-			width (43/120)*100%
-			bottom (44/120)*100%
-		.bg-3
-			bottom -(2/120)*100%
-		.bg-5
-			height auto
-			width (39/120)*100%
-			bottom (43/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (59/120)*100%
+				top -(2/120)*100%
+			.bg-2
+				width (43/120)*100%
+				bottom (44/120)*100%
+			.bg-3
+				bottom -(2/120)*100%
+			.bg-5
+				height auto
+				width (39/120)*100%
+				bottom (43/120)*100%
 
 	&.kompromiss
-		.bg-1
-			width (60/120)*100%
-		.bg-5
-			width (37/120)*100%
-			height auto
-			bottom (32/120)*100%
-		.bg-3
-			width (49/120)*100%
-		.bg-4
-			width (36/120)*100%
-			height (40/120)*100%
-		.bg-2
-			width (48/120)*100%
-			height (50/120)*100%
-			bottom (34/120)*100%
-	// &.kot-v-sapogakh
-	// &.krepostnaya-lyubov
-	// &.kytsik-mytsik-i-tyotushka-mari
-	// &.les
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (60/120)*100%
+			.bg-5
+				width (37/120)*100%
+				height auto
+				bottom (32/120)*100%
+			.bg-3
+				width (49/120)*100%
+			.bg-4
+				width (36/120)*100%
+				height (40/120)*100%
+			.bg-2
+				width (48/120)*100%
+				height (50/120)*100%
+				bottom (34/120)*100%
+		// &.kot-v-sapogakh
+		// &.krepostnaya-lyubov
+		// &.kytsik-mytsik-i-tyotushka-mari
+		// &.les
 	&.marlen-rozhdennaya-dlya-lyubvi
-		.bg-1
-			width (66/120)*100%
-			top -(4/120)*100%
-		.bg-3
-			width (44/120)*100%
-		.bg-2
-			width (56/120)*100%
-			height (45/120)*100%
-			bottom (41/120)*100%
-		.bg-4
-			width (36/120)*100%
-			height (40/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (66/120)*100%
+				top -(4/120)*100%
+			.bg-3
+				width (44/120)*100%
+			.bg-2
+				width (56/120)*100%
+				height (45/120)*100%
+				bottom (41/120)*100%
+			.bg-4
+				width (36/120)*100%
+				height (40/120)*100%
 	&.ne-vsyakii-vor-grabitel
-		.bg-1
-			width (50/120)*100%
-			top (4/120)*100%
-		.bg-3
-			// width (40/120)*100%
-			height (32/120)*100%
-			text-align center
-		.bg-2
-			width (45/120)*100%
-			height (40/120)*100%
-			bottom (36/120)*100%
-		.bg-5
-			width (30/120)*100%
-			// height (35/120)*100%
-			height auto
-			bottom (36/120)*100%
-		.bg-6
-			width (16/120)*100%
-		.bg-4
-			width (33/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (50/120)*100%
+				top (4/120)*100%
+			.bg-3
+				// width (40/120)*100%
+				height (32/120)*100%
+				text-align center
+			.bg-2
+				width (45/120)*100%
+				height (40/120)*100%
+				bottom (36/120)*100%
+			.bg-5
+				width (30/120)*100%
+				// height (35/120)*100%
+				height auto
+				bottom (36/120)*100%
+			.bg-6
+				width (16/120)*100%
+			.bg-4
+				width (33/120)*100%
 
 	&.pominalnaya-molitva
-		.bg-1
-			width (52/120)*100%
-			top (2/120)*100%
-		.bg-2
-			width (42/120)*100%
-			height (45/120)*100%
-			bottom (42/120)*100%
-		.bg-5
-			width (34/120)*100%
-			height (42/120)*100%
-			bottom (34/120)*100%
-		.bg-6
-			width (17/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (52/120)*100%
+				top (2/120)*100%
+			.bg-2
+				width (42/120)*100%
+				height (45/120)*100%
+				bottom (42/120)*100%
+			.bg-5
+				width (34/120)*100%
+				height (42/120)*100%
+				bottom (34/120)*100%
+			.bg-6
+				width (17/120)*100%
 
 	&.progulka-v-lyu-blyo
-		.bg-1
-			width (50/120)*100%
-			top (4/120)*100%
-		.bg-3
-			width (50/120)*100%
-			bottom -(2/120)*100%
-		.bg-4
-			width (36/120)*100%
-			height (40/120)*100%
-			bottom (1/120)*100%
-		.bg-5
-			width (36/120)*100%
-			height (42/120)*100%
-			bottom (33/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (50/120)*100%
+				top (4/120)*100%
+			.bg-3
+				width (50/120)*100%
+				bottom -(2/120)*100%
+			.bg-4
+				width (36/120)*100%
+				height (40/120)*100%
+				bottom (1/120)*100%
+			.bg-5
+				width (36/120)*100%
+				height (42/120)*100%
+				bottom (33/120)*100%
 	&.provintsialnye-anekdoty
-		.bg-1
-			width (65/120)*100%
-			top -(2/120)*100%
-		.bg-2
-			width (55/120)*100%
-			height auto
-			bottom (42/120)*100%
-		.bg-5
-			width (55/120)*100%
-			height auto
-			bottom (48/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (65/120)*100%
+				top -(2/120)*100%
+			.bg-2
+				width (55/120)*100%
+				height auto
+				bottom (42/120)*100%
+			.bg-5
+				width (55/120)*100%
+				height auto
+				bottom (48/120)*100%
 
-	// &.sirano-de-berzherak
-	// &.staraya-zaichikha
-	// &.strasti-po-italyanski
+		// &.sirano-de-berzherak
+		// &.staraya-zaichikha
+		// &.strasti-po-italyanski
 	&.uchilka-iz-buduschego
-		.bg-1
-			width (66/120)*100%
-			top -(3/120)*100%
-		.bg-2
-			width (46/120)*100%
-			height auto
-			bottom (43/120)*100%
-		.bg-5
-			width (35/120)*100%
-			height auto
-			bottom (45/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (66/120)*100%
+				top -(3/120)*100%
+			.bg-2
+				width (46/120)*100%
+				height auto
+				bottom (43/120)*100%
+			.bg-5
+				width (35/120)*100%
+				height auto
+				bottom (45/120)*100%
 
 	&.v-parizh
-		.bg-2
-			width (48/120)*100%
-			height (40/120)*100%
-			bottom (40/120)*100%
-			text-align center
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-2
+				width (48/120)*100%
+				height (40/120)*100%
+				bottom (40/120)*100%
+				text-align center
 	&.volki-i-ovtsy
-		.bg-1
-			width (51/120)*100%
-		.bg-4
-			width (36/120)*100%
-			height (41/120)*100%
-		.bg-2
-			width (45/120)*100%
-			height (45/120)*100%
-			bottom (33/120)*100%
-		.bg-5
-			width (36/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (51/120)*100%
+			.bg-4
+				width (36/120)*100%
+				height (41/120)*100%
+			.bg-2
+				width (45/120)*100%
+				height (45/120)*100%
+				bottom (33/120)*100%
+			.bg-5
+				width (36/120)*100%
 	&.volshebnye-sosulki
-		.bg-1
-			width (57/120)*100%
-		.bg-2
-			height (50/120)*100%
-			width (60/120)*100%
-			bottom 0
-		.bg-3
-			width (35/120)*100%
-			left 0
-		.bg-4
-			bottom (37/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (57/120)*100%
+			.bg-2
+				height (50/120)*100%
+				width (60/120)*100%
+				bottom 0
+			.bg-3
+				width (35/120)*100%
+				left 0
+			.bg-4
+				bottom (37/120)*100%
 
-	// &.zapisnye-knizhki-trigorina
+		// &.zapisnye-knizhki-trigorina
 	&.zemlyaki
-		.bg-1
-			width (65/120)*100%
-			top -(4/120)*100%
-		.bg-2
-			width (54/120)*100%
-			height (45/120)*100%
-			bottom (40/120)*100%
-		.bg-5
-			width (45/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (65/120)*100%
+				top -(4/120)*100%
+			.bg-2
+				width (54/120)*100%
+				height (45/120)*100%
+				bottom (40/120)*100%
+			.bg-5
+				width (45/120)*100%
 
 	&.zhenitba
-		.bg-1
-			width (66/120)*100%
-			top -(3/120)*100%
-		.bg-3
-			width (50/120)*100%
-		.bg-4
-			width (37/120)*100%
-			height (40/120)*100%
-		.bg-5
-			width (43/120)*100%
-			height auto
-			bottom (32/120)*100%
-		.bg-2
-			width (54/120)*100%
-			height (45/120)*100%
-			bottom (37/120)*100%
+		@media screen and (min-width: 1367px) and (max-width: 1920px)
+			.bg-1
+				width (66/120)*100%
+				top -(3/120)*100%
+			.bg-3
+				width (50/120)*100%
+			.bg-4
+				width (37/120)*100%
+				height (40/120)*100%
+			.bg-5
+				width (43/120)*100%
+				height auto
+				bottom (32/120)*100%
+			.bg-2
+				width (54/120)*100%
+				height (45/120)*100%
+				bottom (37/120)*100%

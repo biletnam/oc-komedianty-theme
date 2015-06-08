@@ -1,6 +1,12 @@
 .descriptor
 	height (75/16)rem
 
+	@media screen and (max-width: 1370px)
+		height (50/16)rem
+	@media screen and (max-width: 480px)
+		display none
+
+
 	.items
 		text-transform uppercase
 
@@ -14,7 +20,9 @@
 
 	.item
 		display inline-block
-		fs .9rem
+		fs (14/$rem)
+		@media screen and (max-width: 1370px)
+			fs (16/$rem)
 
 		margin 0
 		padding 0
@@ -24,23 +32,43 @@
 
 	.text, .search
 		padding-top 1.5em
+		@media screen and (max-width: 1370px)
+			padding-top 1.6em
 
 	.search
+		font-size 0
+		// padding 0
+		background-color rgba(white,.1)
+		position relative
+		top 2px
+
 		a
-			color $gray_color
+			display inline-block
+			// top .07em
+			width 1.2em
+			padding .5em
+
+			text-align center
+			fs(20/$rem)
+			color $brand_color
+			color $text_color
+			&:hover
+				color $text_color
+		&:hover
+			background-color $brand_color_hover
+			// position relative
+			// top -0.3em
+			// margin-left (-.3em)
+			// font-size 20px
 
 	.social-top
 		font-size 0
 
 		a
 			position relative
-			// top -.7em
 			display inline-block
 
-			// outline $gray_color 1px solid
-
 			padding .6em
-			// padding-top 1em
 			width 1.2em
 
 			text-align center
@@ -58,6 +86,8 @@
 			&.facebook:hover
 				background-color $facebook_color
 				outline-color $facebook_color
+			&.google-plus
+				display none
 			&.google-plus:hover
 				background-color $google-plus_color
 				outline-color $google-plus_color
@@ -75,16 +105,18 @@
 				outline-color $rss_color
 
 
-		@media screen and (max-width: 1200px)
-			display none
+		// @media screen and (max-width: 1200px)
+		// 	display none
 
-	@media screen and (max-width: 1366px)
+	@media screen and (max-width: 1370px)
 		.company
 			display none
 		.items
 			text-align right
 			.item
 				padding-right 1em
+			.search
+				padding-right 0
 			// &:after
 			// 	content ""
 			// 	display inline-block

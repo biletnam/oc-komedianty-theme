@@ -2,6 +2,9 @@
 
 	position relative
 	width (17/82)*100%
+	@media screen and (max-width: 1370px)
+		width (20/85)*100%
+
 	float left
 
 	font-family 'Proba Pro' sans-serif
@@ -16,15 +19,21 @@
 		width 72px
 		height 72px
 
+		@media screen and (max-width: 1370px)
+			width 55px
+			height 55px
+
 	.title
 		text-transform uppercase
+		@media screen and (max-width: 1370px)
+			font-size .85em
 		.top
 			position relative
 			left -.25em
 
 			color $brand_color + 20%
 
-			font-size 18.7px
+			font-size (18.7/16em)
 			line-height 1em
 			letter-spacing .02em
 
@@ -37,7 +46,7 @@
 			left -.12em
 
 			font-weight bolder
-			font-size 23px
+			font-size (23/16em)
 			line-height 1em
 			letter-spacing .03em
 

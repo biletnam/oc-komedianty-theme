@@ -5,6 +5,9 @@
 
 	position relative
 
+	@media screen and (max-width: 480px)
+		display none
+
 	ul, li
 		list-style none
 		margin 0
@@ -31,6 +34,7 @@
 		font-size 0
 		text-align justify
 
+
 		&:after
 			content ""
 			display inline-block
@@ -40,6 +44,7 @@
 			display inline-block
 			padding-top 1.67em
 			fs(20/$rem)
+
 
 			&.active, &.child-active
 				a
@@ -92,16 +97,17 @@
 							color $brand_color
 							opacity 1
 
-	@media screen and (max-width: 1366px)
+	@media screen and (max-width: 1370px)
 		.mainMenu
 			// display table
 			position relative
 			// -webkit-transition: height 500ms ease 500s;
 			.mainMenu-item
-				position relative
+				// position relative
 				vertical-align top
 				// display inline
-				width 100px // !!!!
+				// width 80px // !!!!
+				padding-top 1.56em
 				&:hover
 					.sideMenu
 						display block
@@ -115,11 +121,29 @@
 							display block
 				.sideMenu
 					display none
-					position absolute
-					position relative
+					position static
+					margin-top -5em
+					padding-top 5.5em
+					&:hover
+						display block
+					// position absolute
+					// position relative
 					top 100%
 					left inherit
-					// width 10%
+					width 50px
+
+					z-index 999
+
+
 					.sideMenu-item
-						// width 10%
+						a
+							color $gray_color
+							text-transform inherit
+						&.active
+							a
+								color $text_color
+						width 300%
+						// white-space nowrap
+						padding-right 100%
+						margin-bottom .5em
 						// position absolute
