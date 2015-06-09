@@ -3,230 +3,160 @@
  ********************************************************************************************************************************************/
 
 #footer
-	// cf()
 	color $gray_color
-	// margin 4em 0 0 0
-	//margin-top 160px // TODO: Rewrite
 	margin-top 0
-
-
-	fs (12/$rem)
-
-	.container
-		&:before
-			display block
-			content ""
-			width 100%
-			padding-bottom (56/82)*100%
-		// cf()
-		// max-width 1472px
-		// border-top 1px solid
-		// padding 0.66*4em 0
-		// position relative
-
-	.sitemap
-		position absolute
-		width 100%
-		height (20/82)*100%
-		top 0
-	.colophon
-		position absolute
-		width 100%
-		height (8/82)*100%
-		top (8/82)*100%
-	.sponsors
-		position absolute
-		width 100%
-		height (8/82)*100%
-		top (16/82)*100%
-	.info-sponsors
-		position absolute
-		width 100%
-		height (8/82)*100%
-		top (24/82)*100%
-	.culture
-		position absolute
-		width 100%
-		height (8/82)*100%
-		top (32/82)*100%
+	fs (14/$rem)
 
 	ul, li, p
 		margin 0
 		padding 0
 		list-style none
 
-	.colophon
-		border-top 1px solid
-
-
-		.copyrights, .design, .address, .email
-			display block
-			width (1/4)*100%
-			float left
-
-			@media screen and (max-width: 480px)
-				float none
-				width 100%
-				margin-bottom 2em
-
-			text-align center
-
-			color $text_color
-			fs: (14/16)rem
-			p
-				margin 0
-				padding 0
-			a
-				color inherit
-				&:hover
-					text-decoration none
-					color $gray_color
-
-	.sitemap
-		border-top 1px solid
-
-		a
-			link $gray_color
-			text-decoration none
+	a
+		link $text_color
+		text-decoration none
+		border none
+		&:hover
 			border none
-			&:hover
-				border none
-				text-decoration none
-				color $text_color
+			text-decoration none
+			color $brand_color
 
-
-		.nav-menu
-			position relative
-			text-align justify
-			font-size 0
-			&:after
-				content " "
-				display inline-block
-				width 100%
-
-		.page_item
-			position relative
-			box-sizing border-box
-			display inline-block
-
-			// height (16/82)*100%
-
-			@media screen and (max-width: 480px)
-				display block
-				margin-bottom 2em
-
-			vertical-align top
-			fs (16/$rem)
-
-			text-align center
-
-			// a
-			// 	link $text_color
-			// 	text-decoration none
-			// 	border none
-			// 	&:hover
-			// 		border none
-			// 		text-decoration none
-			// 		color white
-
-			&.about
-				width (12/68)*100%
-				@media screen and (max-width: 480px)
-					width 100%
-
-		.subnav, .data
-			// margin-top 1.2em
-			// text-align left
-		.subpage_item, .data
-			fs (14/$rem)
-
-			a
-				link $gray_color
-				text-decoration none
-				border none
-				&:hover
-					border none
-					text-decoration none
-					color $text_color
+	.container
+		position relative
+		&:before
+			display block
+			content ""
+			width 100%
+			padding-bottom (56/82)*100%
+			@media screen and (max-width: 1600px)
+				padding-bottom (60/82)*100%
+	.wrap
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		// width 100%
+		// height 100%
 
 	.social-bottom
-		text-align center
 		position absolute
 		width 100%
 		bottom 100%
-		top 2px
+		text-align center
 		.social-items
-			margin-left .5em
-			margin-right .5em
-
+			margin-left .25em
+			margin-right .25em
 		.ssk-
 			&youtube
 				background-color $youtube_color
 				&:hover
-					background-color darken($youtube_color, 10%)
+					background-color darken($youtube_color, 20%)
 			&vimeo
 				background-color $vimeo_color
 				&:hover
-					background-color darken($vimeo_color, 10%)
-
-		// height 24px
-		// margin-top 8px
-		// a
-		// 	display inline-block
-		// 	// width 100%
-		// 	text-align center
-		// 	padding 0 .33em
-		// 	fs (18/$rem)
-		// 	&.vk
-		// 		// background-color $vk_color
-		// 		color $vk_color
-		// 	&.facebook
-		// 		// background-color $facebook_color
-		// 		color $facebook_color
-		// 	&.google-plus
-		// 		// background-color $google-plus_color
-		// 		color $google-plus_color
-		// 		color $youtube_color
-		// 		color $vimeo_color
-		// 	&.twitter
-		// 		// background-color $twitter_color
-		// 		color $twitter_color
-		// 	&.rss
-		// 		// background-color $rss_color
-		// 		color $rss_color
-		// 	&:hover
-		// 		color $text_color
+					background-color darken($vimeo_color, 20%)
 
 
+	.sitemap, .colophon ,colophon.small, .sponsors, .partners, .culture
+		border-top 1px solid $gray_color
+
+	.sitemap
+		padding (4/82)*100% 0
+		height (12/56)*100%
+		@media screen and (max-width: 1600px)
+			height (12/60)*100%
+
+		.nav-menu
+			fs 0
+			text-align justify
+			&:after
+				content ""
+				display inline-block
+				width 100%
+		.page_item
+			display inline-block
+			vertical-align top
+			text-align center
+			fs (14/$rem)
+		// .subnav
+		.subpage_item, .data p
+			margin-top 1.2em
+			@media screen and (max-width: 1600px)
+				margin-top .8em
+			a
+				link $gray_color
+				&:hover
+					color $brand_color
+					border none
 
 
+	.colophon
+		display block
+		height (7/56)*100%
+		padding-top (1/82)*100%
+		@media screen and (max-width: 1600px)
+			display none
+	.colophon.small
+		display none
+		height (10/60)*100%
+		padding-top (2/82)*100%
+		@media screen and (max-width: 1600px)
+			display block
 
-	.sponsors, .info-sponsors
-		clear both
-		text-align center
-		// line-height 1.5rem
-		border-top 1px solid
-		// margin-top 2.5rem
-		// padding 2rem (1/92)*100%
-
+	.colophon ,colophon.small
+		color $text_color
+		fs 0
 		text-align justify
-		font-size 0
-		line-height 0
 		&:after
-			content " "
+			content ""
 			display inline-block
 			width 100%
-
-		.sponsor
-			vertical-align middle
+		.colophon-item
 			display inline-block
+
+			text-align center
+			fs (14/$rem)
+
+			p
+				margin-top 1.2em
+				@media screen and (max-width: 1600px)
+					margin-top .8em
+
+	.sponsors, .partners
+		position relative
+		// height (8/60)*100%
+		fs 0
+		text-align justify
+		&:after
+			content ""
+			display inline-block
+			width 100%
+		.sponsor
+			display inline-block
+			height 128px
+			// width 75%
+			// vertical-align middle
+			text-align center
 			a
-				display block
+				display inline-block
+				vertical-align middle
+				height 100%
+				&:before
+					content ""
+					display inline-block
+					vertical-align middle
+					height 100%
+
+			img
+				display inline-block
+				vertical-align middle
+				max-width 100px
+				max-height 100%
+				height auto
+				width auto
 
 	.culture
-		span(1/1) // TODO: Rewrite!
-		display block
-		width 100%
 		text-align center
 		line-height 2rem
 		border-top 1px solid

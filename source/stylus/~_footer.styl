@@ -1,0 +1,291 @@
+/********************************************************************************************************************************************
+ *  FOOTER
+ ********************************************************************************************************************************************/
+
+#footer
+	color $gray_color
+	margin-top 0
+	fs (14/$rem)
+
+	ul, li, p
+		margin 0
+		padding 0
+		list-style none
+
+	.container
+		// width 100%
+		// margin 0
+		&:before
+			display block
+			content ""
+			width 100%
+			padding-bottom (56/82)*100%
+			@media screen and (max-width: 1370px)
+				padding-bottom (60/82)*100%
+			// padding-bottom 100%
+		// cf()
+		// max-width 1472px
+		// border-top 1px solid
+		// padding 0.66*4em 0
+		// position relative
+
+	.social-bottom, .sitemap, .colophon, ,colophon.small, .sponsors, .info-sponsors, .culture
+		position absolute
+		width 100%
+
+	.colophon, .colophon.small
+		border-top 1px solid
+		height (8/56)*100%
+		font-size 0
+	.sponsors, .info-sponsors
+		border-top 1px solid
+		height (8/56)*100%
+		font-size 0
+		// &:before
+		// 	content ""
+		// 	display inline-block
+		// 	height 100%
+		// 	vertical-align middle
+
+
+	.culture
+		border-top 1px solid
+		height (8/56)*100%
+
+
+	.sitemap
+		border-top 1px solid
+		height (12/56)*100%
+		// height 100%
+		top 0
+
+	.colophon.small
+		height (12/56)*100%
+
+	.colophon
+		top (20/56)*100%
+		@media screen and (max-width: 1600px)
+			display none
+	.colophon.small
+		top (20/56)*100%
+		display none
+		@media screen and (max-width: 1600px)
+			display block
+	.sponsors
+		top (28/56)*100%
+		@media screen and (max-width: 1600px)
+			top (32/56)*100%
+	.info-sponsors
+		top (36/56)*100%
+		@media screen and (max-width: 1600px)
+			top (40/56)*100%
+	.culture
+		top (44/56)*100%
+		@media screen and (max-width: 1600px)
+			top (48/56)*100%
+
+	.social-bottom
+		text-align center
+		bottom 100%
+		.social-items
+			margin-left .5em
+			margin-right .5em
+
+		.ssk-
+			&youtube
+				background-color $youtube_color
+				&:hover
+					background-color darken($youtube_color, 10%)
+			&vimeo
+				background-color $vimeo_color
+				&:hover
+					background-color darken($vimeo_color, 10%)
+
+	.sitemap
+		padding-top (4/82)*100%
+
+		.nav-menu
+			position relative
+			height (12/56)*100%
+			text-align justify
+			font-size 0
+			&:after
+				content " "
+				display inline-block
+				width 100%
+
+		.page_item
+			position relative
+			box-sizing border-box
+			display inline-block
+			padding 0 (1/82)*100%
+
+
+			@media screen and (max-width: 480px)
+				display block
+				margin-bottom 2em
+
+			vertical-align top
+			fs (16/$rem)
+
+			text-align center
+
+			a
+				link $text_color
+				text-decoration none
+				border none
+				display block
+				&:hover
+					border none
+					text-decoration none
+					color $brand_color
+
+			&.about
+				width (12/68)*100%
+				@media screen and (max-width: 480px)
+					width 100%
+
+		.subnav, .data
+			fs (14/$rem)
+			// position absolute
+			// top 1em
+			// left 0
+			// padding-left 100%
+			// max-width 75%
+			// margin auto
+			// display inline-block
+
+
+		.subpage_item, .data p
+			margin-top 1em
+			margin-top 1.6em
+			@media screen and (max-width: 1600px)
+				margin-top 0.8em
+			// padding 0 3em
+			a
+				link $gray_color
+				text-decoration none
+				border none
+				&:hover
+					border none
+					text-decoration none
+					color $text_color
+
+
+	.colophon, .colophon.small
+		text-align justify
+		line-height 1.6
+		vertical-align middle
+		&:after
+			display inline-block
+			content ""
+			width 100%
+			// vertical-align middle
+			// height 100%
+		// &:before
+		// 	display inline-block
+		// 	content ""
+		// 	height 100%
+		// 	vertical-align middle
+
+		.copyrights, .design, .address, .email, .contacts
+			display inline-block
+			vertical-align middle
+			fs (14/$rem)
+			// width (1/4)*100%
+			// float left
+			margin-top 2.8em
+			@media screen and (max-width: 1600px)
+				margin-top 3.1em
+
+			@media screen and (max-width: 480px)
+				float none
+				width 100%
+				margin-bottom 2em
+
+			text-align center
+			color $text_color
+			p
+				margin 0
+				padding 0
+			a
+				color inherit
+				&:hover
+					text-decoration none
+					color $gray_color
+
+
+
+
+
+	.sponsors, .info-sponsors
+		// clear both
+		text-align center
+		// line-height 1.5rem
+		border-top 1px solid
+		// margin-top 2.5rem
+		// padding 2rem (1/92)*100%
+
+		// text-align justify
+		font-size 0
+		line-height 0
+		// &:after
+		// 	content " "
+		// 	display inline-block
+		// 	width 100%
+		@media screen and (max-width: 1600px)
+			display table
+			table-layout fixed
+
+		.sponsor
+			// width 15%
+			// display inline-block
+			vertical-align middle
+			// height 100%
+			// &:before
+			// 	display inline-block
+			// 	content ""
+			// 	height 100%
+			// 	vertical-align middle
+			a
+				// display inline-block
+				// width 50%
+				img
+					height auto
+			@media screen and (max-width: 1600px)
+				display table-cell
+				width 100%
+			// 	padding 0 1em
+			// 	img
+			// 		width auto
+			// 		height auto
+			// 		max-width 100%
+			// 		max-height 100%
+
+	.culture
+		span(1/1) // TODO: Rewrite!
+		display block
+		width 100%
+		text-align center
+		line-height 2rem
+		border-top 1px solid
+		// margin-top 2rem
+		padding 2rem 0
+		h4
+			color $text_color
+			normal()
+			fs (16/$rem)
+			second_font()
+			margin 0
+			margin-bottom 1rem
+
+		a.logo
+			// width 75px
+			display block
+			text-align center
+
+			img
+				display block
+				margin 0 auto
+				width 70px
+				height auto
