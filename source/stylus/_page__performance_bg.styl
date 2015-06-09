@@ -1,38 +1,5 @@
-.cover-mobile
-	display none
-	position relative
-	// width (30/26)*100%
-	// left -(4/26)*100%
-	margin-bottom -2em
 
-	// z-index -1
-
-	img
-		width 100%
-		height auto
-
-	@media screen and (max-width: 480px)
-		display block
-
-.bg-block
-	@media screen and (max-width: 480px)
-		display none
-
-	position absolute
-	height 100%
-	// width 100%
-	top 0
-	left 0
-	bottom 0
-	right 0
-	font-size 0
-	line-height 1
-
-	// padding-left (50/82)*100%
-
-	@media screen and (max-width: 1370px)
-		padding-left (39/85)*100%
-
+.bg
 	img, svg
 		display inline-block
 		vertical-align middle
@@ -42,111 +9,134 @@
 		width auto
 		height auto
 
-	.bg
-		text-align right
-		font-size 0
-		padding 6% 0
-		width 100%
-		// padding-left 75%
-		// max-width 50%
+	pointer-events none
 
-		@media screen and (max-width: 1370px)
-			padding 5% 0
+.bg-1,.bg-2,.bg-3
+	text-align right
+.bg-4,.bg-5,.bg-5
+	text-align left
 
-		&:before
-			content ""
-			display inline-block
-			height 100%
-			vertical-align middle
+.bg-1
+	position absolute
+	top 0
+	width (54/120)*100%
+	right 0
 
-	.top
-		padding-top 0
-	.bottom
-		padding-bottom 0
+.bg-2
+	position absolute
+	top 33%
+	width (49/120)*100%
+	right 0
 
+.bg-3
+	position absolute
+	bottom 0
+	width (49/120)*100%
+	right 0
+	// width 350px
+
+.bg-4
+	position absolute
+	bottom 0
+	width (36/120)*100%
+	left 0
+
+.bg-5
+	position absolute
+	top 0
+	padding-top (34/120)*100%
+	width (36/120)*100%
+	left 0
+
+.bg-6
+	position absolute
+	top 0
+	width (19/120)*100%
+	left 0
+
+@media screen and (max-width: 1370px)
 	.bg-1
-		margin-left -(10/85)*100%
-		// margin-top -(1/85)*100%
-	.bg-1, .bg-2
-		position absolute
-		right 0
-		// max-width 33%
+		width (50/84)*100%
+
 	.bg-2
-		height 100%
-		top 1%
-		margin 0
-		padding 0
+		top 33%
+		width (45/84)*100%
+
+	.bg-3
+		width (45/84)*100%
+
+	.bg-4, .bg-5, .bg-6
+		display none
+
+
+#zemlyaki-performance-page
+	@media screen and (max-width: 1370px)
+		.bg-4
+			display block
+			width (45/84)*100%
+			left (39/84)*100%
+			bottom 0
+			// right 0
+
+			text-align right
+			img, svg
+				transform scale(-1,1)
+		.bg-2
+			top 24%
+			width (40/84)*100%
+		.bg-3
+			width (40/84)*100%
+			bottom 170%
+
+#kompromiss-performance-page
+	.bg-2
+		top 26%
+#les-performance-page
+	.bg-2
+		top 31%
+#v-parizh-performance-page
+	.bg-2
+		top 27%
+#dachnitsy-performance-page
+	.bg-2
+		top 35%
+	.bg-5
+		padding-top (42/120)*100%
+#volki-i-ovtsy-performance-page
+	.bg-2
+		top 45%
+	.bg-5
+		padding-top (46/120)*100%
+#karlson-performance-page
+	.bg-2
+		// top 45%
+		width (30/84)*100%
+	.bg-5
+		padding-top (25/120)*100%
+#brys-ili-istoriya-kota-filofeya-performance-page
+	.bg-5
+		padding-top (40/120)*100%
+#volshebnye-sosulki-performance-page
 	.bg-3
 		position absolute
 		bottom 0
-		right 0
-	.bg-4, .bg-5, .bg-6
+		width (36/120)*100%
+		left 0
+	.bg-2
 		position absolute
-		text-align left
-
+		bottom 0
+		top inherit
+		width (49/120)*100%
+		right 0
 	.bg-4
+		position absolute
+		// top 0
+		padding-top (34/120)*100%
+		width (36/120)*100%
 		left 0
-		bottom 0
-	.bg-6
-		top 0
-		left0
-	.bg-5
-		height 100%
-		left 0
-		top -6%
-		bottom 0
-		margin 0
-		padding 0
-
-@media screen and (max-width: 1600px)
-	.bg-6
-		display none
-
-@media screen and (max-width: 1370px)
-	.bg-4, .bg-5, .bg-6
-		transform scale(-1,1)
-		text-align left
-	.bg-4, .bg-5, .bg-6
-		display none
-
-
-
-
-
-
-// .bg-table
-//     display table
-//     table-layout fixed
-//     width 100%
-//     height 100%
-
-
-// .bg-row
-//     display table-row
-//     position relative
-//     vertical-align middle
-//     padding 10%
-//     /* height 20% */
-
-// .bg-cell
-//     font-size 0
-//     display inline-block
-//     position relative
-//     text-align center
-//     /* float right */
-//     width 100%
-//     height 100%
-//     vertical-align middle
-//     /* height 33% */
-//     background-size contain
-//     background-repeat no-repeat
-//     background-position right
-
-
-// .bg-1
-//     background-position top right
-//     /* margin-left -100px */
-// .bg-4
-//     background-position bottom right
-// .bg-6, .bg-5
-//     display none
+		bottom 90%
+	@media screen and (max-width: 1370px)
+		.bg-3
+			display none
+		.bg-2
+			width (44/84)*100%

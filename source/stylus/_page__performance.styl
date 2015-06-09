@@ -11,14 +11,15 @@
 		margin-bottom (8/30)*100%
 
 	.content
-		width (35/82)*100%
+		width (35/120)*100%
+		margin-left ((19+17)/120)*100%
 
 		@media screen and (max-width: 1370px)
-			width (32/74)*100%
+			width (32/84)*100%
+			margin-left ((10)/120)*100%
 
 		@media screen and (max-width: 480px)
 			width 100%
-			// margin-left 0
 
 	.author
 		fs (22/$rem)
@@ -27,10 +28,24 @@
 		margin-top .8em
 
 	.title
+		position relative
 		header()
 		font-weight normal
 		fs (40/$rem)
 		line-height (48/40em)
+
+		.buy-button
+			display none
+			@media screen and (max-width: 1370px)
+				display block
+				width 12em
+				margin 0
+				padding 0
+				position absolute
+				top 0
+				left 100%
+				fs(14/$rem)
+
 
 	.description
 		color $brand_color_bright
@@ -38,7 +53,6 @@
 		fs (17/$rem)
 		font-style italic
 		font-weight 100
-		// margin-top 2*(16/22em)
 		margin-top .2em
 
 		max-width (25/35)*100%
@@ -60,20 +74,12 @@
 		position absolute
 		display block
 		margin 0
-		// width (10/20)*100%
-		// border-top 1px solid $brand_color
 		fs (14/$rem)
 
 	.duration
-		// left (37/35)*100%
 		top 100%
 		margin-top (2/35)*100%
 		right 0
-		// color $gray_color
-		// width 100%
-		// margin-top 4px
-		// right 0
-		// width (17/38)*100%
 	.premiere-date
 		top 100%
 		left 0
@@ -89,12 +95,12 @@
 		margin 0
 		padding 0
 
-		width (10/35)*100%
+		width (10/120)*100%
 
 		position absolute
-		right ((7+35)/35)*100%
+		left ((19)/120)*100%
 		top 0
-		margin-top (9/35)*100%
+		margin-top (11/120)*100%
 
 		h5
 			text-transform uppercase
@@ -132,20 +138,28 @@
 			second_font()
 			margin-top .35em
 			text-transform uppercase
-		.buy-button
+		.header
 			second_font()
-			width 100%
-			margin-top 1em
-			text-align center
-			padding 1em .2em
-			text-transform uppercase
-			background rgba(white,.1)
-			a
-				text-decoration none
+			margin .5em 0
 
+	.buy-button
+		second_font()
+		width 100%
+		margin-top 1em
+		text-align center
+		padding 1em .2em
+		text-transform uppercase
+		background rgba(white,.1)
+		a
+			text-decoration none
 			&:hover
-				background $brand_color
-				cursor pointer
+				color $text_color
+				text-decoration none
+				border none
+
+		&:hover
+			background $brand_color
+			cursor pointer
 
 
 	h1, h2, h3, h4, h5, h6
@@ -171,8 +185,6 @@
 		margin 0
 		padding 0
 	dt
-		// float left
-		// clear left
 		display inline
 		margin 0
 		padding 0
@@ -195,11 +207,6 @@
 		padding 0
 	li
 		list-style none
-		// margin-bottom 1.5em
-
-	// .press
-	// 	li:before
-	// 		content "– "
 
 	.press-list
 		margin-bottom 1.5em
@@ -220,15 +227,12 @@
 
 		margin-top 2em
 
-
 		$c = 560
 		$m = 25
 		$cnt = 3
 
 		width (($c + $m)/$c)*100%
 		margin-bottom -($m/($c + $m))*100%
-
-		// сf()
 
 		font-size 0
 
@@ -245,8 +249,6 @@
 			overflow hidden
 
 			font-size 0
-
-			// transform scale(.8)
 			transition all 1s ease-out .5s
 
 			&:before
@@ -255,69 +257,16 @@
 				display block
 				width 100%
 				padding-bottom 100%
-			// &:after
-			// 	content ""
-			// 	font-size 0
-			// 	display block
-			// 	position absolute
-			// 	box-sizing border-box
-			// 	width 100%
-			// 	height 100%
-			// 	top 0
-			// 	left 0
-			// 	// border 15px solid #000
-			// 	// width 100%
-			// 	// padding-bottom 100%
-			// 	pointer-events none
-
 			&:hover
-				// outline 3px solid $brand_color_dark
 				transform scale(1.15)
 				transition all 1s ease-out .5s
-				// &:after
-				// 	border 0
-
 			a
 				position absolute
 				top 0
 				width 100%
 				height 100%
-				// text-align center
 				display block
-				// right -50%
 
 			img
-				// height 177px
-				// width auto
-				// max-width 100%
-				// max-height 100%
-				// max-width inherit
-				// display block
-
-				// margin-left auto
-				// margin-right auto
-
 				position relative
-				// top 100%
 				opacity 0
-
-				// left -50%
-				// margin-left (-265/2px)
-
-				// position absolute
-				// top -9999px
-				// bottom -9999px
-				// left -9999px
-				// right -9999px
-				// margin auto
-
-
-	&.kompromiss
-		.title
-			fs (56/$rem)
-
-	// 	.title, h1, h2, h3, h4, h5, h6, .author
-	// 		color #E59E2C
-
-	// 	.premiere-date, .duration
-	// 		border-color #E59E2C
