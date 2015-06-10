@@ -45,8 +45,8 @@ container()
 	width (82/120)*100%
 	margin-left (19/120)*100%
 
-	@media screen and (max-width: 1370px)
-		width (74/85)*100%
+	@media screen and (max-width: 1440px)
+		width (72/85)*100%
 		margin-left (7/85)*100%
 	@media screen and (max-width: 480px)
 		width (26/30)*100%
@@ -63,3 +63,53 @@ container()
 .wrap
 	position relative
 
+
+
+ .buy-popup
+	width 100%
+	min-height 100%
+	background-color rgba(0,0,0,0.8)
+	overflow hidden
+	position fixed
+	top 0
+
+	z-index 9999
+
+	.buy-popup-content
+		position relative
+		margin 13em auto 0 auto
+		width 500px
+		height 250px
+		text-align center
+		box-shadow 0 0 10px #000
+	.header
+		second_font()
+		fs (36/$rem)
+		line-height (50/36)
+		margin-bottom 2em
+
+	.sponsor
+		margin-top 1em
+		&:hover
+			transform scale(1.1)
+		a
+			display block
+
+	.close
+		position absolute
+		display block
+		top 0
+		right 0
+		width 44px
+		height 44px
+
+		transform scale(1.5)
+
+		background-image url('../images/default.svg')
+		background-position 0 -44px
+
+		pointer-events pointer
+
+		&:hover
+			transform scale(2)
+			cursor pointer

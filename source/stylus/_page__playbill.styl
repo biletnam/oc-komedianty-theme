@@ -2,104 +2,126 @@
  *  PLAYBILL PAGE
  ********************************************************************************************************************************************/
 .page.playbill
-	min-height 2980px
-	$w = 100%/1920
+	// min-height 2980px
+	// $w = 100%/1920
 
-	background url('../images/covers/afisha_anecdot.png') no-repeat,
-               url('../images/covers/afisha_marlen.png') no-repeat,
-               url('../images/covers/afisha_kompromiss.png') no-repeat,
-               url('../images/covers/afisha_vor.png') no-repeat,
-               url('../images/covers/afisha_pom_mol.png') no-repeat,
-               url('../images/covers/afisha_sos.png') no-repeat
-	background-position 100% 150*$w,
-                        0% 380*$w,
-                        100% 850*$w,
-                        0% 1250*$w,
-                        96% 100%,
-                        0% 100%
-	background-size 40% auto,
-                    683*$w auto,
-                    560*$w auto,
-                    621*$w auto,
-                    670*$w auto,
-                    665*$w auto
+	//	background url('../images/covers/afisha_anecdot.png') no-repeat,
+	//               url('../images/covers/afisha_marlen.png') no-repeat,
+	//               url('../images/covers/afisha_kompromiss.png') no-repeat,
+	//               url('../images/covers/afisha_vor.png') no-repeat,
+	//               url('../images/covers/afisha_pom_mol.png') no-repeat,
+	//               url('../images/covers/afisha_sos.png') no-repeat
+	//	background-position 100% 150*$w,
+	//                        0% 380*$w,
+	//                        100% 850*$w,
+	//                        0% 1250*$w,
+	//                        96% 100%,
+	//                        0% 100%
+	//	background-size 40% auto,
+	//                    683*$w auto,
+	//                    560*$w auto,
+	//                    621*$w auto,
+	//                    670*$w auto,
+	//                    665*$w auto
 
 	h3
 		fs (40/$rem)
+		normal()
 		margin-top 1.5em
 
 	.event
-		margin-bottom 4em
 		position relative
-
-		.date
-			color $brand_color
-			second_font()
-			&:after
-				content ' '
-
-			&.day
-				font-weight bold
-				fs (24/$rem)
-			&.weekday
-				fs (24/$rem)
-				text-transform lowercase
-
-		.date-block, .title-block, .other, .meta
-			display inline-block
-
-		.date-block
-			width 4em
+		padding-bottom (5/72)*100%
 		.title-block
-			position relative
-			// max-width (55%)
-			.title
-				text-transform uppercase
-				// letter-spacing 0.05em
-				fs(22/$rem)
-				a
-					link $text_color
-					text-decoration none
+			position absolute
+			top 0
+			left (17/72)*100%
+		.title
+			text-transform uppercase
+			// letter-spacing 0.05em
+			fs(22/$rem)
+			a
+				link $text_color
+				text-decoration none
+				border none
+				&:hover
 					border none
-					&:hover
-						border none
-						text-decoration none
-						color $brand_color
-			.author, .description
-				position absolute
-				top 100%
-				left 0
-
-				fs (22/$rem)
-				color $gray_color
-
-				white-space nowrap
-		.other
-			.rate
-				second_font()
-				fs(22/$rem)
-				color $brand_color - 25%
-				margin-left 1em
+					text-decoration none
+					color $brand_color
 		.meta
-			margin-left 4em
-			// opacity 0
-			color $gray_color
-
-			transition all 0.3s ease-out
-
 			position absolute
 
-			top 3.3em
-			left 0
+		// margin-bottom 4em
+		// position relative
 
-			fs(18/$rem)
+		// .date
+		// 	color $brand_color
+		// 	second_font()
+		// 	&:after
+		// 		content ' '
 
-			.duration, .start-time
-				white-space nowrap
-				&:after
-					content ' '
+		// 	&.day
+		// 		font-weight bold
+		// 		fs (24/$rem)
+		// 	&.weekday
+		// 		fs (24/$rem)
+		// 		text-transform lowercase
 
-		&:hover
-			.meta
-				opacity 1
-				transition all 1s ease
+		// .date-block, .title-block, .other, .meta
+		// 	display inline-block
+
+		// .date-block
+		// 	width 4em
+		// .title-block
+		// 	position relative
+		// 	// max-width (55%)
+		// 	.title
+		// 		text-transform uppercase
+		// 		// letter-spacing 0.05em
+		// 		fs(22/$rem)
+		// 		a
+		// 			link $text_color
+		// 			text-decoration none
+		// 			border none
+		// 			&:hover
+		// 				border none
+		// 				text-decoration none
+		// 				color $brand_color
+		// 	.author, .description
+		// 		position absolute
+		// 		top 100%
+		// 		left 0
+
+		// 		fs (22/$rem)
+		// 		color $gray_color
+
+		// 		white-space nowrap
+		// .other
+		// 	.rate
+		// 		second_font()
+		// 		fs(22/$rem)
+		// 		color $brand_color - 25%
+		// 		margin-left 1em
+		// .meta
+		// 	margin-left 4em
+		// 	// opacity 0
+		// 	color $gray_color
+
+		// 	transition all 0.3s ease-out
+
+		// 	position absolute
+
+		// 	top 3.3em
+		// 	left 0
+
+		// 	fs(18/$rem)
+
+		// 	.duration, .start-time
+		// 		white-space nowrap
+		// 		&:after
+		// 			content ' '
+
+		// &:hover
+		// 	.meta
+		// 		opacity 1
+		// 		transition all 1s ease

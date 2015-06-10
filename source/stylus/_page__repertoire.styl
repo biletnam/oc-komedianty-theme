@@ -3,103 +3,174 @@
  ********************************************************************************************************************************************/
 .page.repertoire
 
-	$width = 65
-
 	.performance
 		position relative
-		cf()
-		margin-bottom (4/$width)*100%
+		margin-bottom (4/65)*100%
+		@media screen and (max-width: 1440px)
+			margin-bottom (4/72)*100%
+		&:before
+			content ""
+			display block
+			padding-bottom (20/65)*100%
+			@media screen and (max-width: 1440px)
+				padding-bottom (16/72)*100%
 
-	.title-block, .synopsis
-		margin-left (31/$width)*100%
+	.repertoire-cover
+		position absolute
+		top 0
+		left 0
+		display block
+		background-size cover !important
 
+		width (30/65)*100%
+		@media screen and (max-width: 1440px)
+			width (24/72)*100%
+
+		&:before
+			content ""
+			display block
+			padding-bottom (16/24)*100%
+
+	.title-block, .synopsis, .performance-link
+		position absolute
+		width (28/65)*100%
+		left (33/65)*100%
+		@media screen and (max-width: 1440px)
+			width (33/72)*100%
+			left (28/72)*100%
 	.title-block
-		position relative
-		top -1em
+		top -.75em
 		.title
-			margin-bottom .2em
-			second_font()
+			margin-bottom .4em
 			fs (28/$rem)
-			font-weight bold
+			line-height (31/28)
+			color $brand_color
+			second_font()
 			a
-				color $brand_color
 				text-decoration none
 				&:hover
 					color $brand_color_bright
-					border none
 		.author
-			fs (16/$rem)
-			line-height 2em
+			margin-bottom .4em
 		.description
-			fs (14/$rem)
-			line-height 1.5em
 			second_font()
-			font-style italic
+			italic()
+			white-space nowrap
 
 		.rate
 			main_font()
+			color $text_color
 			position absolute
-			top .2em
-			margin-left 1em
-			// left 100%
+			top .1em
+			left 100%
+			// margin-left 1em
 			fs (24/$rem)
 			font-weight 200
+
 	.synopsis
-		// position relative
-		width (29/$width)*100%
-		// bottom 0
-
-		// overflow hidden
-		height (7em*1.5)
-		// margin-left (2/50)*100%
-		// float left
-
-		fs (14/$rem)
-		line-height 1.5em
-
-		trim_elipsis(7)
-
-		p
-			margin 0
+		top (7/20)*100%
+		fs (16/$rem)
+		line-height (22/16)
+		trim_elipsis(6)
+		@media screen and (max-width: 1440px)
+			top (6/16)*100%
+			fs (15/$rem)
+			line-height (20/15)
+			trim_elipsis(6)
+		@media screen and (max-width: 1280px)
+			trim_elipsis(5)
 
 	.performance-link
-		position absolute
-		bottom 1px
-		// width (29/$width)*100%
-		left (31/$width)*100%
+		// bottom -.2em
+		bottom 0
 		a
 			color $brand_color_dark
 			text-decoration none
 			border-bottom 1px solid
 			&:hover
 				color $brand_color_bright
+	// $width = 65
 
-	// .content-block
+	// .performance
 	// 	position relative
-	// 	margin-top 1.6em
 	// 	cf()
+	// 	margin-bottom (4/$width)*100%
 
-	.repertoire-cover
-		display block
-		// position absolute
-		width (29/$width)*100%
-		float left
-		background-color $brand_color_dark - 50% !important
-		background-size cover !important
+	// .title-block, .synopsis
+	// 	margin-left (31/$width)*100%
 
-		&:before
-			content ""
-			display block
-			padding-top (20/29)*100%
+	// .title-block
+	// 	position relative
+	// 	top -1em
+	// 	.title
+	// 		margin-bottom .2em
+	// 		second_font()
+	// 		fs (28/$rem)
+	// 		font-weight normal
+	// 		a
+	// 			color $brand_color
+	// 			text-decoration none
+	// 			&:hover
+	// 				color $brand_color_bright
+	// 				border none
+	// 	.author
+	// 		fs (16/$rem)
+	// 		line-height 2em
+	// 	.description
+	// 		fs (14/$rem)
+	// 		line-height 1.5em
+	// 		second_font()
+	// 		font-style italic
 
-	@media screen and (max-width: 1399px)
-		.title-block
-			position absolute
-			margin 0
-			width 100%
-			left 0
-		.playbill
-			position relative
-			margin-top (4/$width)*100%
-		.synopsis
-			margin-top (4/$width)*100%
+	// 	.rate
+	// 		main_font()
+	// 		position absolute
+	// 		top .2em
+	// 		margin-left 1em
+	// 		fs (24/$rem)
+	// 		font-weight 200
+	// .synopsis
+	// 	width (29/$width)*100%
+	// 	height (7em*1.5)
+	// 	fs (14/$rem)
+	// 	line-height 1.5em
+
+	// trim_elipsis(7)
+
+	// 	p
+	// 		margin 0
+
+	// .performance-link
+	// 	position absolute
+	// 	bottom 1px
+	// 	left (31/$width)*100%
+	// 	a
+	// 		color $brand_color_dark
+	// 		text-decoration none
+	// 		border-bottom 1px solid
+	// 		&:hover
+	// 			color $brand_color_bright
+
+	// .repertoire-cover
+	// 	display block
+	// 	width (29/$width)*100%
+	// 	float left
+	// 	background-color $brand_color_dark - 50% !important
+	// 	background-size cover !important
+
+	// 	&:before
+	// 		content ""
+	// 		display block
+	// 		padding-top (20/29)*100%
+
+	// @media screen and (max-width: 1440px)
+	// 	.title-block
+	// 		position absolute
+	// 		margin 0
+	// 		width 100%
+	// 		left 0
+	// 	.playbill
+	// 		position relative
+	// 		margin-top (4/$width)*100%
+	// 	.synopsis
+	// 		margin-top (4/$width)*100%

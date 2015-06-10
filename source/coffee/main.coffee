@@ -40,3 +40,24 @@ SocialShareKit.init();
 # 			unless dest.attr("class") is "active"
 # 				$('.content .section').removeClass "active"
 # 				dest.addClass "active"
+
+BuyPopUpShow = ->
+    $('.buy-popup').show()
+
+BuyPopUpHide = ->
+    $('.buy-popup').hide()
+
+$(document).ready ->
+    BuyPopUpHide()
+
+$('.buy-button').click (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+
+    BuyPopUpShow()
+
+# $('.buy-popup').click (e) ->
+#     e.preventDefault()
+#     e.stopPropagation()
+
+#     BuyPopUpHide()
