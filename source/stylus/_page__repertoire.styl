@@ -5,26 +5,33 @@
 
 	.performance
 		position relative
-		margin-bottom (4/65)*100%
+		margin-bottom 4*16px
+		margin-right 4*16px
+		height 20*16px
 		@media screen and (max-width: 1440px)
-			margin-bottom (4/72)*100%
-		&:before
-			content ""
-			display block
-			padding-bottom (20/65)*100%
-			@media screen and (max-width: 1440px)
-				padding-bottom (16/72)*100%
+			height 18*16px
+		// &:before
+		// 	content ""
+		// 	display block
+		// 	// padding-bottom (20/65)*100%
+		// 	padding-bottom 20*16px
+		// 	@media screen and (max-width: 1440px)
+		// 		// padding-bottom (16/72)*100%
+		// 		padding-bottom 16*16px
 
 	.repertoire-cover
+		z-index 10
 		position absolute
 		top 0
 		left 0
 		display block
 		background-size cover !important
 
-		width (30/65)*100%
+		// width (30/65)*100%
+		width 30*16px
 		@media screen and (max-width: 1440px)
-			width (24/72)*100%
+		// 	width (24/72)*100%
+			width 24*18px
 
 		&:before
 			content ""
@@ -33,16 +40,21 @@
 
 	.title-block, .synopsis, .performance-link
 		position absolute
-		width (28/65)*100%
-		left (33/65)*100%
+		left 0
+		right 0
+		// width (30/65)*100%
+		// width 100%
+		// left (33/65)*100%
+		padding-left 33*16px
 		@media screen and (max-width: 1440px)
-			width (33/72)*100%
-			left (28/72)*100%
+		// 	// width (35/72)*100%
+		// 	// left (28/72)*100%
+			padding-left 30*16px
 	.title-block
 		top -.75em
 		.title
 			margin-bottom .4em
-			fs (28/$rem)
+			fs 28px
 			line-height (31/28)
 			color $brand_color
 			second_font()
@@ -52,6 +64,7 @@
 					color $brand_color_bright
 		.author
 			margin-bottom .4em
+			white-space nowrap
 		.description
 			second_font()
 			italic()
@@ -62,23 +75,27 @@
 			color $text_color
 			position absolute
 			top .1em
-			left 100%
+			right -4*16px
+			// left 100%
 			// margin-left 1em
-			fs (24/$rem)
+			fs 24px
 			font-weight 200
 
 	.synopsis
-		top (7/20)*100%
-		fs (16/$rem)
+		// top (7/20)*100%
+		top 7*16px
+		fs 16px
 		line-height (22/16)
 		trim_elipsis(6)
 		@media screen and (max-width: 1440px)
-			top (6/16)*100%
-			fs (15/$rem)
-			line-height (20/15)
-			trim_elipsis(6)
+			// top (6/16)*100%
+			top 6*16px
+			fs 15px
+			line-height (21/15)
+			trim_elipsis(7)
 		@media screen and (max-width: 1280px)
-			trim_elipsis(5)
+			top 7*16px
+			trim_elipsis(6)
 
 	.performance-link
 		// bottom -.2em

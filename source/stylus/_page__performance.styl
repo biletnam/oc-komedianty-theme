@@ -3,26 +3,29 @@
  ********************************************************************************************************************************************/
 .page.performance
 	position relative
-	margin-bottom (12/120)*100%
+	margin-bottom 12*16px
 
 	z-index 10
 
 	@media screen and (max-width: 480px)
-		margin-bottom (8/30)*100%
+		margin-bottom 8*16px
 
 	.content
-		width (35/120)*100%
-		margin-left ((19+17)/120)*100%
+		// width (35/82)*100%
+		// margin-left (17/82)*100%
+		width 35*16px
+		margin-left 17*16px
 
 		@media screen and (max-width: 1440px)
-			width (32/84)*100%
-			margin-left ((10)/120)*100%
+			// width (35/67)*100%
+			width 35*16px
+			margin-left 0
 
 		@media screen and (max-width: 480px)
 			width 100%
 
 	.author
-		fs (22/$rem)
+		fs 22px
 		second_font()
 		font-style italic
 		margin-top .8em
@@ -31,26 +34,26 @@
 		position relative
 		header()
 		font-weight normal
-		fs (40/$rem)
-		line-height (48/40em)
+		fs 40px
+		line-height (48/40)
 
 		.buy-button
 			display none
 			@media screen and (max-width: 1440px)
 				display block
-				width 12em
+				width 10em
 				margin 0
-				padding 0
+				padding 1em .5em
 				position absolute
 				top 0
 				left 100%
-				fs(14/$rem)
+				fs 14px
 
 
 	.description
 		color $brand_color_bright
 		second_font()
-		fs (17/$rem)
+		fs 17px
 		font-style italic
 		font-weight 100
 		margin-top .2em
@@ -62,28 +65,28 @@
 
 	.about
 		margin-top 1.7em
-		fs (18/$rem)
-		line-height (23/18em)
+		fs 18px
+		line-height (23/18)
 
 		max-width (32/35)*100%
 		@media screen and (max-width: 1440px)
-			fs(17/$rem)
+			fs 17px
 			line-height (22/17)
 
 	.premiere-date, .duration
 		position absolute
 		display block
 		margin 0
-		fs (14/$rem)
+		fs 14px
 
 	.duration
 		top 100%
-		margin-top (2/35)*100%
+		margin-top 2*16px
 		right 0
 	.premiere-date
 		top 100%
 		left 0
-		margin-top (2/35)*100%
+		margin-top 2*16px
 
 
 	.earliest-block
@@ -95,12 +98,12 @@
 		margin 0
 		padding 0
 
-		width (10/120)*100%
+		width (10/82)*100%
 
 		position absolute
-		left ((19)/120)*100%
+		left 0
 		top 0
-		margin-top (11/120)*100%
+		margin-top 10*16px
 
 		h5
 			text-transform uppercase
@@ -109,8 +112,8 @@
 
 
 		.day
-			fs(154/$rem)
-			line-height (96/154em)
+			fs 154px
+			line-height (96/154)
 			second_font()
 			bold()
 			position relative
@@ -127,14 +130,14 @@
 				left -.1em
 
 		.month
-			fs(35/$rem)
+			fs 35px
 			line-height 1
 			margin-top .6em
 			second_font()
 			normal()
 			text-transform uppercase
 		.weekday
-			fs(18/$rem)
+			fs 18px
 			second_font()
 			margin-top .35em
 			text-transform uppercase
@@ -167,7 +170,7 @@
 
 	h4
 		text-transform uppercase
-		fs (16/$rem)
+		fs 16px
 		font-weight 400
 		margin-top 1.8em
 		margin-bottom .1em
@@ -199,8 +202,8 @@
 			display block
 
 	.creators, .roles
-		fs (16/$rem)
-		line-height (23/16em)
+		fs 16px
+		line-height (23/16)
 
 	ul, li
 		margin 0
@@ -215,7 +218,7 @@
 	.video
 		margin-top 1em
 	.video-title, .gallery-title
-		fs(18/$rem)
+		fs 18px
 		color $text_color
 		text-transform none
 

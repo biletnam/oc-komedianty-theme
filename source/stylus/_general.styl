@@ -23,6 +23,8 @@ body
 	fs (16/$rem)
 	main_font()
 
+	min-width 1200px
+
 #page
 	padding 0
 	background-color $page_color
@@ -39,26 +41,32 @@ body
 
 container()
 	position relative
-	// max-width 1312px
+	max-width (82+9+9)*16px
 	// max-width 1200px
 
-	width (82/120)*100%
-	margin-left (19/120)*100%
+	// width (82/120)*100%
+	// margin-left (19/120)*100%
 
-	@media screen and (max-width: 1440px)
-		width (72/85)*100%
-		margin-left (7/85)*100%
-	@media screen and (max-width: 480px)
-		width (26/30)*100%
-		margin-left (2/30)*100%
-		// padding 0 (5/84)*100%
+	// @media screen and (max-width: 1440px)
+	// 	width (72/85)*100%
+	// 	margin-left (7/85)*100%
+	// @media screen and (max-width: 480px)
+	// 	width (26/30)*100%
+	// 	margin-left (2/30)*100%
 
-	// margin 0 auto
+
+	margin 0 auto
 	// padding 0 (5/120)*100%
 	cf()
 
 .container
 	container()
+	& > .wrap
+		margin 0 (9/(82+9+9))*100%
+		@media screen and (max-width: 1440px)
+			margin 0 (9/85)*100%
+
+
 
 .wrap
 	position relative
@@ -66,6 +74,7 @@ container()
 
 
  .buy-popup
+ 	display none
 	width 100%
 	min-height 100%
 	background-color rgba(0,0,0,0.8)
