@@ -56,8 +56,31 @@ $('.buy-button').click (e) ->
 
     BuyPopUpShow()
 
-# $('.buy-popup').click (e) ->
-#     e.preventDefault()
-#     e.stopPropagation()
 
-#     BuyPopUpHide()
+# ShowSideMenu = (e) ->
+#     e.show
+
+
+$(".mainMenu .mainMenu-item > a").click (e) ->
+    mainMenuLink = $(this)
+    mainMenuItem = mainMenuLink.parent()
+    mainMenuItems = mainMenuItem.parent().children()
+    sideMenu = mainMenuItem.children(".sideMenu")
+    sideMenus = mainMenuItems.children(".sideMenu")
+    # item.parent().addClass('parent')
+    # dest = $(mainMenuLink.attr("href"))
+    # window.location = mainMenuLink.attr("href")
+
+    if $(window).width() <= 1440
+        e.preventDefault()
+        unless sideMenu.is(':visible')
+            # mainMenuItems.removeClass "active"
+            # mainMenuItems.removeClass "child-active"
+            # mainMenuItem.addClass "active"
+            # mainMenuItem.addClass "child-active"
+            sideMenus.hide()
+            sideMenu.show()
+        else
+            # mainMenuItem.removeClass "active"
+            # mainMenuItem.removeClass "child-active"
+            sideMenu.hide()

@@ -1,0 +1,114 @@
+// ************************************************************************************************
+// BASE
+// ************************************************************************************************
+
+html
+	font-size $rem
+	line-height 1.5
+
+body
+	reset-box-model()
+
+	first()
+	fs rem(16px)
+
+	color $text
+	background-color $bg
+
+	background url('../images/bg.jpg')
+	@media screen and (max-width $phone)
+		background #000000
+	background-size 100% auto
+	background-position top center
+
+a
+	reset-link()
+	colors()
+	transition all .5s ease-out-quart
+
+
+h1, h2, h3
+	second()
+	normal()
+	uppercase()
+h4, h5, h6
+	normal()
+	uppercase()
+	// margin-top 1em
+h1
+	fs rem(52px)
+
+hr
+	border none
+	border-bottom 1px $gray solid
+
+// ************************************************************************************************
+// LAYOUT
+// ************************************************************************************************
+
+#page, .page, .container, .wrap
+	relative()
+	transition all .5s ease
+
+
+.container
+	// max-width (82 + 8 + 8)*$rem
+	max-width 1312px+2*155px
+	min-width 960px
+	margin 0 auto
+	@media screen and (max-width $small)
+		max-width 1056px+2*110px
+
+	& > .wrap
+		margin 0 155px
+		// margin 0 div(((85-66)/2)/85)
+		@media screen and (max-width $small)
+			// max-width 1056px
+			margin 0 110px
+
+.bg-container
+	min-width 960px
+
+.page.side-menu
+	margin-top $top_page_margin
+	@media screen and (max-width $small)
+		margin-top $top_page_margin_small
+	.container
+		& > .wrap
+			padding-left $side
+			@media screen and (max-width $normal)
+				padding-left 0
+
+// ************************************************************************************************
+// STYLES
+// ************************************************************************************************
+
+.page
+	transition all .5s ease-out-quart
+	margin-bottom 2*$mod
+
+	// a
+	// 	border-bottom 1px solid rgba($text,.5)
+	// 	&:hover
+	// 		border-bottom 1px solid rgba($brand,.5)
+
+
+// ************************************************************************************************
+// HELPERS
+// ************************************************************************************************
+.nowrap
+	nowrap()
+
+
+// ************************************************************************************************
+// HELPERS
+// ************************************************************************************************
+.content
+	.video
+		display block
+		relative()
+		ratio-box(16/9)
+
+		& > iframe
+			absolute top left
+			size 100%

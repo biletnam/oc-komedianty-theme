@@ -1,0 +1,174 @@
+// ************************************************************************************************
+// VARS
+// ************************************************************************************************
+
+// Rems
+$rem = 16px
+$line = 1.5*$rem
+
+$mod = 4*$rem
+
+
+// Sizes
+$top_page_margin = 2*$mod
+$top_page_margin_small = 1*$mod
+$side = 18*$rem
+$side_normal = 15*$rem
+$side_tablet = 12*$rem
+// Colors
+$bg           = #000
+$text         = darken(#fff, 15%)
+
+$brand        = #EE433C
+$brand_dark   = darken($brand, 40%)
+$brand_bright = lighten($brand, 25%)
+
+$gray         = #8C8383
+$button       = rgba(#fff, .15)
+
+// Social Colors
+$vk          = #45668e
+$facebook    = #3b5998
+$google-plus = #dd4b39
+$youtube     = #bb0000
+$vimeo       = #1ab7ea
+$twitter     = #00aced
+$rss         = #ff6600
+//
+
+
+// Axis vars
+base-font-size = $rem
+
+// Fonts
+first()
+	font-family "Proba Pro", "Calibri", "Helvetica", "Arial", sans-serif
+second()
+	font-family "Mignon", "Georgia", serif
+
+
+// Media brakes
+$large  = 1920px
+$medium = 1600px
+$normal = 1440px
+$small  = 1360px
+$tablet = 1280px
+$phone  = 480px
+
+
+
+
+
+
+// ************************************************************************************************
+// UTILITES
+// ************************************************************************************************
+
+nowrap()
+	white-space no-wrap
+
+trim_elipsis(num = 3, lh = 24px)
+	display block // Fallback for non-webkit
+	display -webkit-box
+	-webkit-line-clamp num
+	-webkit-box-orient vertical
+	overflow hidden
+	height num * lh
+	text-overflow ellipsis
+
+test()
+	outline 1px dashed rgba(gray, .2)
+	background-image repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(gray,.2) 1px, rgba(gray,.2) 10px)
+
+
+div(val)
+	return val*100%
+
+
+
+middle()
+	&:before
+		content ""
+		vertical-align middle
+
+distribute()
+	fs 1px // For IE (!)
+	text-align justify
+	/* Лекарство для IE6-7 */
+	text-justify newspaper
+	zoom 1
+	/* Включаем в работу последнюю строку */
+	text-align-last justify
+	&:after
+		content ''
+		inline-block()
+		size 100% 0
+	& > *
+		text-align left
+
+
+// distribute()
+// 	text-align justify
+// 	fs 1px
+// 	line-height 0
+// 	&:after
+// 		content ''
+// 		inline-block()
+// 		size 100% 0
+// 		// visibility hidden
+// 		// overflow hidden
+
+
+
+colors(current = $text, hover = $brand, active = $brand_dark)
+	color current
+	&:hover
+		color hover
+	&:active
+		color active
+
+
+
+
+// ************************************************************************************************
+// STYLE MIXINS
+// ************************************************************************************************
+
+button(color = $button, hover = $brand, text = $text, hovertext = #fff)
+	relative()
+	inline-block()
+	padding .8em 2em
+	// bottom .8em
+
+	reset-link()
+
+	fs rem(16px)
+
+	cursor pointer
+
+	color text
+	transition all .5s ease-out-quart
+	border none
+
+	&:before
+		content ""
+
+		absolute()
+		top 0
+		right 0
+		bottom 0
+		left 0
+
+		background color
+		z-index -1
+
+		transition background .5s ease-out-quart
+
+	&:hover
+		color hovertext
+		&:before
+			background hover
+
+	&:active
+		&:before
+			margin .2em

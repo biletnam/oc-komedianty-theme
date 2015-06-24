@@ -1,27 +1,29 @@
 .block
-	position absolute
+	absolute()
 	top 0
 	left 0
 	right 0
 	bottom 0
 	// outline 1px dotted rgba(white, .1)
 
+	pointer-events none
 
 .bg-container
 	z-index -100
-	position absolute
+	absolute()
 	width 100%
 	top 0
 	bottom 0
 	font-size 0
 
 	.bg
-		position absolute
+		absolute()
 		right 0
 		box-sizing border-box
 
 		width 50%
 		height 100%
+
 
 		&:before
 			content ""

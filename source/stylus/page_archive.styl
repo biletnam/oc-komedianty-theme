@@ -1,0 +1,93 @@
+// *****************************************************************************************************************************************
+// ARCHIVE PAGE
+// *****************************************************************************************************************************************/
+.page.news, .page.press
+
+	ul, li
+		reset-list()
+
+	.post-item
+		relative()
+		margin-bottom 4*$rem
+		// margin-right 4*$rem
+		// height 20*$rem
+		// padding-bottom div(16/64)
+		// @media screen and (max-width $normal)
+		// 	height 18*$rem
+
+	.post-cover
+		display block
+		width div(26/64)
+		background-position center center
+		background-size contain !important
+		background-size cover !important
+		background-repeat no-repeat
+		z-index 10
+		ratio-box(26/16)
+		@media screen and (max-width $normal)
+			width div(26/66)
+			ratio-box(26/16)
+		// absolute top left
+		&:hover
+			opacity .6
+
+	.title-block, .excerpt, .post-link, .post-info
+		absolute()
+		left 0
+		right 0
+		padding-left div(28/64)
+		@media screen and (max-width $normal)
+			padding-left div(28/66)
+	.title-block
+		top .2em
+		@media screen and (max-width $normal)
+			top 0
+		.title
+			relative()
+			margin-bottom .4em
+			fs rem(28px)
+			line-height (31/28)
+			a
+				inline-block()
+				min-width 100%
+				margin-right 1em
+			second()
+			nowrap()
+			a
+				colors($brand, $brand_dark, darken($brand_dark, 15%))
+
+	.excerpt
+		top 7.5*$rem
+		fs rem(16px)
+		line-height (22/16)
+		trim_elipsis(7, rem(22px))
+		@media screen and (max-width $large)
+			trim_elipsis(5, rem(22px))
+		@media screen and (max-width $normal)
+			top 7*$rem
+			fs rem(15px)
+			line-height (21/15)
+			// trim_elipsis(7)
+		@media screen and (max-width $small)
+			top 7*$rem
+			trim_elipsis(4, rem(22px))
+
+	.post-link
+		bottom 0
+		a
+			colors($brand, $brand_dark, darken($brand_dark, 15%))
+			border-bottom 1px solid
+
+
+	.pagination
+		fs rem(24px)
+		margin 0 -.5em
+
+		&-item, .prev, .next
+			inline-block()
+			padding 0 .5em
+			a
+				colors($gray, $brand, $brand_dark)
+			&.active
+				a
+					colors($brand, $brand, $brand_dark)

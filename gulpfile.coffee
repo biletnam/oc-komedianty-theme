@@ -37,7 +37,7 @@ out  = './assets'
 
 p =
 	styles:
-		s: src + '/stylus/main.styl'
+		s: src + '/stylus/_main.styl'
 		w: src + '/stylus/*'
 		d: out + '/css/'
 	scripts:
@@ -90,14 +90,14 @@ gulp.task 'styles', ->
 		.pipe sourcemaps.init()
 		.pipe stylus
 			set: ['include css']
-			use: [axis(), jeet()]
+			use: [axis()]
 		.pipe sourcemaps.write()
 		.on 'error', handleError
 
 	styles = styles
-		.pipe prefix
-			browsers: ['> 5%', 'last 2 version']
-			cascade: true
+		# .pipe prefix
+		# 	browsers: ['> 5%', 'last 2 version']
+		# 	cascade: true
 		.pipe csso() if production
 
 	styles = styles.pipe gulp.dest p.styles.d
