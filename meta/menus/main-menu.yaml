@@ -2,33 +2,212 @@ name: 'Главное меню'
 items:
     -
         title: 'О театре'
-        nesting: ''
-        type: cms-page
+        nesting: '1'
+        type: static-page
         url: ''
         code: about
-        reference: pages/about
+        reference: about-history
         cmsPage: ''
-        replace: ''
+        replace: '0'
+        items:
+            -
+                title: 'История театра'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: about-history
+                cmsPage: ''
+                replace: '0'
+            -
+                title: 'Художественный руководитель'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: about-artistic-director
+                cmsPage: ''
+                replace: '0'
+            -
+                title: 'План зала'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: about-plan
+                cmsPage: ''
+                replace: '0'
+            -
+                title: 'Параметры сцены'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: about-scene
+                cmsPage: ''
+                replace: '0'
+            -
+                title: 'Нормативные документы'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: documents
+                cmsPage: ''
+                replace: '0'
     -
         title: Новости
-        type: url
-        url: /news
+        nesting: '1'
+        type: cms-page
+        url: ''
         code: news
+        reference: pages/news
+        cmsPage: ''
+        replace: ''
+        items:
+            -
+                title: 'Архив новостей'
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: pages/news
+                cmsPage: ''
+                replace: ''
+            -
+                title: 'Архив прессы'
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: pages/press
+                cmsPage: ''
+                replace: ''
+            -
+                title: Журнал
+                type: url
+                url: 'http://journal.komedianty.com'
+                code: ''
     -
         title: Афиша
-        type: url
-        url: /playbill
+        nesting: '1'
+        type: cms-page
+        url: ''
         code: playbill
+        reference: pages/playbill
+        cmsPage: ''
+        replace: ''
+        items:
+            -
+                title: Афиша
+                nesting: ''
+                type: playbill-now
+                url: ''
+                code: ''
+                reference: '5'
+                cmsPage: pages/playbill
+                replace: '1'
+            -
+                title: 'Детские спектакли'
+                nesting: ''
+                type: url
+                url: '#child'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
     -
-        title: Репертуар
-        type: url
-        url: /repertoire
+        title: 'Репертуар'
+        nesting: '1'
+        type: cms-page
+        url: ''
         code: repertoire
+        reference: pages/repertoire
+        cmsPage: ''
+        replace: ''
+        items:
+            -
+                title: Спектакли
+                nesting: ''
+                type: performance-category
+                url: ''
+                code: normal
+                reference: '1'
+                cmsPage: pages/repertoire
+                replace: ''
+            -
+                title: 'Детские спектакли'
+                nesting: ''
+                type: performance-category
+                url: ''
+                code: ''
+                reference: '3'
+                cmsPage: pages/repertoire
+                replace: ''
+            -
+                title: 'Архивные спектакли'
+                nesting: ''
+                type: performance-category
+                url: ''
+                code: ''
+                reference: '4'
+                cmsPage: pages/repertoire
+                replace: ''
     -
         title: Труппа
-        type: url
-        url: /troupe
+        nesting: '1'
+        type: cms-page
+        url: ''
         code: troupe
+        reference: troupe/art-director
+        cmsPage: ''
+        replace: ''
+        items:
+            -
+                title: 'Художественный руководитель'
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: troupe/art-director
+                cmsPage: ''
+                replace: ''
+            -
+                title: Актёры
+                nesting: ''
+                type: person-category
+                url: ''
+                code: ''
+                reference: '1'
+                cmsPage: pages/troupe
+                replace: ''
+            -
+                title: 'Приглашенные артисты'
+                nesting: ''
+                type: person-category
+                url: ''
+                code: ''
+                reference: '2'
+                cmsPage: pages/troupe
+                replace: ''
+            -
+                title: Администрация
+                nesting: ''
+                type: person-category
+                url: ''
+                code: ''
+                reference: '4'
+                cmsPage: pages/troupe
+                replace: ''
+            -
+                title: Постановочники
+                nesting: ''
+                type: person-category
+                url: ''
+                code: ''
+                reference: '3'
+                cmsPage: pages/troupe
+                replace: ''
     -
         title: Контакты
         nesting: ''

@@ -37,7 +37,7 @@ out  = './assets'
 
 p =
 	styles:
-		s: src + '/stylus/main.styl'
+		s: src + '/stylus/_main.styl'
 		w: src + '/stylus/*'
 		d: out + '/css/'
 	scripts:
@@ -48,6 +48,12 @@ p =
 		s: src + '/images/**/*.{jpg,png,jpeg}'
 		w: src + '/images/**/*.{jpg,png,jpeg}'
 		d: out + '/images/'
+	tpls:
+		s: src + '/partials/**/*.{jpg,png,jpeg}'
+		w: src + '/partials/**/*.{jpg,png,jpeg}'
+		d: './partials/'
+	php:
+		w: '../../plugins/abnmt/theater/**/*.{php|htm|yaml}'
 
 # Error handler ???
 handleError = (err) ->
@@ -84,14 +90,14 @@ gulp.task 'styles', ->
 		.pipe sourcemaps.init()
 		.pipe stylus
 			set: ['include css']
-			use: [axis(), jeet()]
+			use: [axis()]
 		.pipe sourcemaps.write()
 		.on 'error', handleError
 
 	styles = styles
-		.pipe prefix
-			browsers: ['last 2 versions']
-			cascade: false
+		# .pipe prefix
+		# 	browsers: ['> 5%', 'last 2 version']
+		# 	cascade: true
 		.pipe csso() if production
 
 	styles = styles.pipe gulp.dest p.styles.d

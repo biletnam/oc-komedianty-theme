@@ -1,0 +1,19 @@
+title = "Репертуар"
+url = "/repertoire/:category?normal"
+layout = "default"
+description = "Репертуар театра"
+hidden = "0"
+
+[theaterRepertoire]
+==
+<!-- Repertoire -->
+<div id="{{ this.param.category }}-repertoire-page" class="page side-menu repertoire">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterRepertoire' %}
+			</div>
+		</div>
+	</div>
+</div>
+

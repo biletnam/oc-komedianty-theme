@@ -1,0 +1,277 @@
+/********************************************************************************************************************************************
+ *  PERFORMANCE PAGE
+ ********************************************************************************************************************************************/
+.page.performance
+	relative()
+	margin-bottom 12*$rem
+
+	z-index 10
+
+	@media screen and (max-width $phone)
+		margin-bottom 8*$rem
+
+	.content
+		width 35*$rem
+		// margin-left 17*$rem
+
+		@media screen and (max-width $normal)
+			width 35*$rem
+			margin-left 0
+
+		@media screen and (max-width $phone)
+			width 100%
+
+		a
+			text-decoration underline
+
+	.author
+		fs rem(22px)
+		second()
+		italic()
+		margin-top .8em
+
+	.title
+		relative()
+		normal()
+		second()
+		fs rem(40px)
+		line-height (48/40)
+
+		.buy-button
+			a
+				button()
+			display none
+			@media screen and (max-width $normal)
+				display block
+				width 10em
+				margin 0
+				padding 1em .5em
+				absolute top 0 left 100%
+				fs rem(14px)
+
+		z-index 1000
+
+
+	.description
+		color $brand_bright
+		second()
+		fs rem(17px)
+		italic()
+		font-weight 100
+		margin-top .2em
+
+		max-width div(25/35)
+
+		&.alone
+			color $brand_bright
+
+	.about
+		margin-top 1.7em
+		fs rem(18px)
+		line-height (23/18)
+
+		max-width div(32/35)
+		@media screen and (max-width $normal)
+			fs rem(17px)
+			line-height (22/17)
+
+	.premiere-date, .duration
+		absolute()
+		display block
+		margin 0
+		fs rem(14px)
+
+	.duration
+		top 100%
+		right 0
+		margin-top 2*$rem
+	.premiere-date
+		top 100%
+		left 0
+		margin-top 2*$rem
+
+
+	.earliest-block
+		z-index 1000
+		display block
+
+		@media screen and (max-width $normal)
+			display none
+
+		margin 0
+		padding 0
+
+		width 10*$rem
+
+		absolute()
+		left 0
+		// top 0
+		margin-top 10*$rem
+		margin-top rem(42px)
+
+		fs rem(18px)
+		line-height (23/18)
+
+		h5
+			upcase()
+			color $text
+			margin-bottom 1.5em
+
+
+		.day
+			fs rem(154px)
+			line-height (96/154)
+			second()
+			normal()
+			relative()
+			left -.04em
+			&.num-11,
+			&.num-12,
+			&.num-13,
+			&.num-14,
+			&.num-15,
+			&.num-16,
+			&.num-17,
+			&.num-18,
+			&.num-19
+				left -.1em
+
+		.month
+			fs rem(35px)
+			line-height 1
+			margin-top .6em
+			second()
+			normal()
+			upcase()
+		.weekday
+			fs rem(18px)
+			second()
+			margin-top .35em
+			upcase()
+		.header
+			second()
+			margin .5em 0
+
+	.buy-button
+		a
+			button()
+			upcase()
+			nowrap()
+			fs rem(16)
+			padding 1em 1.2em
+		second()
+		width 100%
+		margin-top 1em
+		text-align left
+
+
+	h1, h2, h3, h4, h5, h6
+		color $brand
+
+	h4
+		upcase()
+		fs rem(16px)
+		font-weight 400
+		margin-top 1.8em
+		margin-bottom .1em
+
+	h5
+		fs rem(15px)
+		line-height (23/16)
+		font-weight 300
+		color $brand_bright
+		margin-bottom .2em
+		margin-bottom 0
+		margin-top .2em
+		margin-top 1em*1.5
+
+	dl
+		display block
+		margin 0
+		padding 0
+	dt
+		display inline
+		margin 0
+		padding 0
+		&:after
+			content " — "
+	dd
+		display inline
+		margin 0
+		padding 0
+		&:after
+			content: " "
+			display block
+
+	.creators, .roles
+		fs rem(16px)
+		line-height (23/16)
+
+	ul, li
+		reset-list()
+
+	.press-list
+		margin-bottom 1.5em
+
+
+	.video
+		margin-top 1em
+		// ratio-box(2/1)
+		img
+			absolute top left
+			size 100%
+	.video-title, .gallery-title
+		fs rem(18px)
+		color $text
+		text-transform none
+
+
+
+
+	.gallery
+		relative()
+
+		margin-top 2em
+
+		$c = 560
+		$m = 25
+		$cnt = 3
+
+		width (($c + $m)/$c)*100%
+		margin-bottom -($m/($c + $m))*100%
+
+		fs 0
+
+		.gallery-item
+			inline-block()
+			relative()
+
+			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
+			margin 0 ($m/($c + $m))*100% ($m/($c + $m))*100% 0
+
+			padding 0
+
+
+			overflow hidden
+
+			font-size 0
+			transition all .1s ease-out
+
+			&:before
+				content ""
+				font-size 0
+				display block
+				width 100%
+				padding-bottom 100%
+			&:hover
+				transform scale(1.15)
+			a
+				absolute()
+				top 0
+				width 100%
+				height 100%
+				display block
+
+			img
+				relative()
+				opacity 0

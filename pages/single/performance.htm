@@ -4,8 +4,12 @@ layout = "default"
 description = "Страница спектакля"
 hidden = "0"
 
-[repertoire]
+[theaterPerformance]
 ==
-<!-- Performance -->
+<!-- Single Performance -->
+<article id="{{ this.param.slug }}-performance-page" class="page side-menu performance">
 
-							{% component 'repertoire' %}
+{% component 'theaterPerformance' %}
+
+</article>
+

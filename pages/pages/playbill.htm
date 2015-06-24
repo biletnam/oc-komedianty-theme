@@ -1,0 +1,19 @@
+title = "Афиша"
+url = "/playbill/:category?now"
+layout = "default"
+description = "Афиша на крайние 2 месяца"
+hidden = "0"
+
+[theaterPlaybill]
+==
+<!-- Playbill -->
+<div id="{{ this.param.category }}-playbill-page" class="page side-menu playbill">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPlaybill' %}
+			</div>
+		</div>
+	</div>
+</div>
+
