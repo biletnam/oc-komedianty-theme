@@ -85,13 +85,9 @@ items:
                 replace: ''
             -
                 title: Журнал
-                nesting: ''
                 type: url
-                url: journal.komedianty.com
+                url: 'http://journal.komedianty.com'
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
     -
         title: Афиша
         nesting: '1'

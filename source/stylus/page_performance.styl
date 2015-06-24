@@ -2,118 +2,128 @@
  *  PERFORMANCE PAGE
  ********************************************************************************************************************************************/
 .page.performance
-	position relative
-	margin-bottom (12/120)*100%
+	relative()
+	margin-bottom 12*$rem
 
 	z-index 10
 
-	@media screen and (max-width: 480px)
-		margin-bottom (8/30)*100%
+	@media screen and (max-width $phone)
+		margin-bottom 8*$rem
 
 	.content
-		width (35/120)*100%
-		margin-left ((19+17)/120)*100%
+		width 35*$rem
+		// margin-left 17*$rem
 
-		@media screen and (max-width: 1440px)
-			width (32/84)*100%
-			margin-left ((10)/120)*100%
+		@media screen and (max-width $normal)
+			width 35*$rem
+			margin-left 0
 
-		@media screen and (max-width: 480px)
+		@media screen and (max-width $phone)
 			width 100%
 
+		a
+			text-decoration underline
+
 	.author
-		fs (22/$rem)
-		second_font()
-		font-style italic
+		fs rem(22px)
+		second()
+		italic()
 		margin-top .8em
 
 	.title
-		position relative
-		header()
-		font-weight normal
-		fs (40/$rem)
-		line-height (48/40em)
+		relative()
+		normal()
+		second()
+		fs rem(40px)
+		line-height (48/40)
 
 		.buy-button
+			a
+				button()
 			display none
-			@media screen and (max-width: 1440px)
+			@media screen and (max-width $normal)
 				display block
-				width 12em
+				width 10em
 				margin 0
-				padding 0
-				position absolute
-				top 0
-				left 100%
-				fs(14/$rem)
+				padding 1em .5em
+				absolute top 0 left 100%
+				fs rem(14px)
+
+		z-index 1000
 
 
 	.description
-		color $brand_color_bright
-		second_font()
-		fs (17/$rem)
-		font-style italic
+		color $brand_bright
+		second()
+		fs rem(17px)
+		italic()
 		font-weight 100
 		margin-top .2em
 
-		max-width (25/35)*100%
+		max-width div(25/35)
 
 		&.alone
-			color $brand_color_bright
+			color $brand_bright
 
 	.about
 		margin-top 1.7em
-		fs (18/$rem)
-		line-height (23/18em)
+		fs rem(18px)
+		line-height (23/18)
 
-		max-width (32/35)*100%
-		@media screen and (max-width: 1440px)
-			fs(17/$rem)
+		max-width div(32/35)
+		@media screen and (max-width $normal)
+			fs rem(17px)
 			line-height (22/17)
 
 	.premiere-date, .duration
-		position absolute
+		absolute()
 		display block
 		margin 0
-		fs (14/$rem)
+		fs rem(14px)
 
 	.duration
 		top 100%
-		margin-top (2/35)*100%
 		right 0
+		margin-top 2*$rem
 	.premiere-date
 		top 100%
 		left 0
-		margin-top (2/35)*100%
+		margin-top 2*$rem
 
 
 	.earliest-block
+		z-index 1000
 		display block
 
-		@media screen and (max-width: 1440px)
+		@media screen and (max-width $normal)
 			display none
 
 		margin 0
 		padding 0
 
-		width (10/120)*100%
+		width 10*$rem
 
-		position absolute
-		left ((19)/120)*100%
-		top 0
-		margin-top (11/120)*100%
+		absolute()
+		left 0
+		// top 0
+		margin-top 10*$rem
+		margin-top rem(42px)
+
+		fs rem(18px)
+		line-height (23/18)
 
 		h5
-			text-transform uppercase
-			color $text_color
+			upcase()
+			color $text
 			margin-bottom 1.5em
 
 
 		.day
-			fs(154/$rem)
-			line-height (96/154em)
-			second_font()
-			bold()
-			position relative
+			fs rem(154px)
+			line-height (96/154)
+			second()
+			normal()
+			relative()
 			left -.04em
 			&.num-11,
 			&.num-12,
@@ -127,60 +137,55 @@
 				left -.1em
 
 		.month
-			fs(35/$rem)
+			fs rem(35px)
 			line-height 1
 			margin-top .6em
-			second_font()
+			second()
 			normal()
-			text-transform uppercase
+			upcase()
 		.weekday
-			fs(18/$rem)
-			second_font()
+			fs rem(18px)
+			second()
 			margin-top .35em
-			text-transform uppercase
+			upcase()
 		.header
-			second_font()
+			second()
 			margin .5em 0
 
 	.buy-button
-		second_font()
+		a
+			button()
+			upcase()
+			nowrap()
+			fs rem(16)
+			padding 1em 1.2em
+		second()
 		width 100%
 		margin-top 1em
-		text-align center
-		padding 1em .2em
-		text-transform uppercase
-		background rgba(white,.1)
-		a
-			text-decoration none
-			&:hover
-				color $text_color
-				text-decoration none
-				border none
-
-		&:hover
-			background $brand_color
-			cursor pointer
+		text-align left
 
 
 	h1, h2, h3, h4, h5, h6
-		color $brand_color
+		color $brand
 
 	h4
-		text-transform uppercase
-		fs (16/$rem)
+		upcase()
+		fs rem(16px)
 		font-weight 400
 		margin-top 1.8em
 		margin-bottom .1em
 
 	h5
+		fs rem(15px)
+		line-height (23/16)
 		font-weight 300
-		color $brand_color_dark
+		color $brand_bright
 		margin-bottom .2em
 		margin-bottom 0
 		margin-top .2em
+		margin-top 1em*1.5
 
 	dl
-		cf()
 		display block
 		margin 0
 		padding 0
@@ -189,7 +194,7 @@
 		margin 0
 		padding 0
 		&:after
-			content " — "
+			content " — "
 	dd
 		display inline
 		margin 0
@@ -199,14 +204,11 @@
 			display block
 
 	.creators, .roles
-		fs (16/$rem)
-		line-height (23/16em)
+		fs rem(16px)
+		line-height (23/16)
 
 	ul, li
-		margin 0
-		padding 0
-	li
-		list-style none
+		reset-list()
 
 	.press-list
 		margin-bottom 1.5em
@@ -214,16 +216,20 @@
 
 	.video
 		margin-top 1em
+		// ratio-box(2/1)
+		img
+			absolute top left
+			size 100%
 	.video-title, .gallery-title
-		fs(18/$rem)
-		color $text_color
+		fs rem(18px)
+		color $text
 		text-transform none
 
 
 
 
 	.gallery
-		position relative
+		relative()
 
 		margin-top 2em
 
@@ -234,11 +240,11 @@
 		width (($c + $m)/$c)*100%
 		margin-bottom -($m/($c + $m))*100%
 
-		font-size 0
+		fs 0
 
 		.gallery-item
-			display inline-block
-			position relative
+			inline-block()
+			relative()
 
 			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
 			margin 0 ($m/($c + $m))*100% ($m/($c + $m))*100% 0
@@ -249,7 +255,7 @@
 			overflow hidden
 
 			font-size 0
-			transition all 1s ease-out .5s
+			transition all .1s ease-out
 
 			&:before
 				content ""
@@ -259,14 +265,13 @@
 				padding-bottom 100%
 			&:hover
 				transform scale(1.15)
-				transition all 1s ease-out .5s
 			a
-				position absolute
+				absolute()
 				top 0
 				width 100%
 				height 100%
 				display block
 
 			img
-				position relative
+				relative()
 				opacity 0

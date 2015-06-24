@@ -1,0 +1,103 @@
+// *****************************************************************************************************************************************
+// PLAYBILL PAGE
+// *****************************************************************************************************************************************
+.page.playbill
+
+	h3
+		fs rem(40px)
+		@media screen and (max-width $normal)
+			margin-left $side_normal
+		@media screen and (max-width $tablet)
+			margin-left $side_tablet
+
+	.event
+		// margin-bottom 2*$rem
+		line-height 1.2
+		fs rem(22px)
+		@media screen and (max-width $normal)
+			&:hover
+				.buy-button-block
+					opacity 1
+			display table
+			table-layout fixed
+			margin-bottom $rem - 2px
+
+	.buy-button-block
+		inline-block()
+		width $side_normal - 4*$rem
+		opacity 0
+		.buy-button
+			button()
+		@media screen and (min-width $normal + 1)
+			display none
+		@media screen and (max-width $normal)
+			display table-cell
+			relative()
+			top -.4em
+		@media screen and (max-width $tablet)
+			width $side_tablet - 4*$rem
+			.buy-button
+				width 3*$rem
+				text-align center
+				padding .5em 1.5em
+
+	.date-block
+		inline-block()
+		width 4*$rem
+		second()
+		color $brand
+		line-height 1
+		.date
+			&:after
+				content ' '
+			&.day
+				bold()
+				fs rem(24px)
+			&.weekday
+				fs rem(24px)
+				lowercase()
+		@media screen and (max-width $normal)
+			display table-cell
+			vertical-align top
+			relative()
+			top .08em
+
+	.title-block
+		inline-block()
+		relative()
+		vertical-align top
+		.title
+			// test()
+			inline-block()
+			upcase()
+			fs rem(22px)
+			colors()
+		.rate
+			inline-block()
+			margin-left 1em
+			fs rem(22px)
+			second()
+			color $brand_dark
+		.author, .description
+			// display none
+			fs rem(22px)
+			color $gray
+			// nowrap()
+			// &:before
+			// 	content ""
+			// 	display block
+		.meta
+			// display none
+			fs rem(18px)
+			color $gray
+			opacity 0
+			transition all .5s ease-out-quart
+			margin-bottom .5em
+		&:hover
+			.meta
+				opacity 1
+				transition all .5s ease-out-quart
+
+		@media screen and (max-width $normal)
+			display table-cell
+			// max-width 23*$rem
