@@ -10,8 +10,8 @@
 
 	#google-map
 		relative()
-		padding-bottom 7*$mod
-		margin-bottom 9*$mod
+		ratio-box(2/1)
+		margin-bottom 1*$mod
 
 		background url('../images/map_blur.jpg') 100% 100% no-repeat
 
@@ -23,10 +23,10 @@
 
 	.content
 		cf()
-		@media screen and (max-width $normal)
-			absolute()
-			top 8.5*$mod
-			width 100%
+		// @media screen and (max-width $normal)
+		// 	absolute()
+		// 	top 8.5*$mod
+		// 	width 100%
 
 	.info
 		width $side

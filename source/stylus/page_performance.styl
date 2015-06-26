@@ -49,7 +49,7 @@
 				absolute top 0 left 100%
 				fs rem(14px)
 
-		z-index 1000
+		z-index 2
 
 
 	.description
@@ -81,18 +81,20 @@
 		margin 0
 		fs rem(14px)
 
-	.duration
-		top 100%
-		right 0
-		margin-top 2*$rem
-	.premiere-date
-		top 100%
-		left 0
-		margin-top 2*$rem
+	.meta
+		relative()
+		.duration
+			top 100%
+			right 0
+			margin-top 2*$rem
+		.premiere-date
+			top 100%
+			left 0
+			margin-top 2*$rem
 
 
 	.earliest-block
-		z-index 1000
+		z-index 2
 		display block
 
 		@media screen and (max-width $normal)

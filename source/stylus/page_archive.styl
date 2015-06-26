@@ -31,6 +31,19 @@
 		&:hover
 			opacity .6
 
+	.post-source
+		width div(26/64)
+		height 16*$rem
+		second()
+		.source-title
+			fs rem(28px)
+			line-height (36/28)
+		.source-author
+			fs rem(20px)
+			line-height (36/20)
+			color $gray
+
+
 	.title-block, .excerpt, .post-link, .post-info
 		absolute()
 		left 0
@@ -52,9 +65,14 @@
 				min-width 100%
 				margin-right 1em
 			second()
-			nowrap()
+			// nowrap()
 			a
 				colors($brand, $brand_dark, darken($brand_dark, 15%))
+
+	.post-info
+		absolute top left 100%
+		margin 0
+		padding 0
 
 	.excerpt
 		top 7.5*$rem
@@ -91,3 +109,14 @@
 			&.active
 				a
 					colors($brand, $brand, $brand_dark)
+
+
+	.content
+		width 48*$rem
+		h1
+			second()
+			fs rem(36px)
+			line-height 1.5
+
+		a
+			text-decoration underline
