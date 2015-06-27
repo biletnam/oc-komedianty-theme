@@ -11,8 +11,8 @@ code = "main-menu"
 <html>
 <head>
 
-<title>{{ this.page.title }} — Театр «Комедианты»</title>
-<meta name="title" content="{{ this.page.meta_title }}" >
+<title>{{ post.title ? post.title : this.page.title }} — Театр «Комедианты»</title>
+<meta name="title" content="{{ post.title ? post.title : this.page.meta_title }}" >
 
 {% partial "meta" %}
 
