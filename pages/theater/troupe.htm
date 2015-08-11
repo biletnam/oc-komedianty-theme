@@ -1,0 +1,25 @@
+title = "Труппа"
+url = "/troupe/:category?normal"
+layout = "default"
+description = "Список труппы"
+is_hidden = "0"
+
+[theater theaterTroupe]
+type = "person"
+categories = "{{ :category }}"
+sort = "family_name asc, given_name asc"
+with = "relation, relation.taxonomy, participation, portrait, featured"
+performancePage = "theater/performance"
+personPage = "theater/person"
+articlePage = "theater/article"
+==
+<!-- Troupe -->
+<div id="{{ this.param.category }}-troupe-page" class="page side-menu troupe">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterTroupe' %}
+			</div>
+		</div>
+	</div>
+</div>

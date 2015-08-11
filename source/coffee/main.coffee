@@ -1,6 +1,4 @@
-console.log 'foobar'
-
-SocialShareKit.init();
+# SocialShareKit.init();
 
 # hash = window.location.hash
 

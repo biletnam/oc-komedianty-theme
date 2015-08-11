@@ -1,0 +1,16 @@
+title = "Тест"
+url = "/test"
+layout = "default"
+is_hidden = "1"
+==
+<?php
+function onInit()
+{
+
+    $test = Abnmt\Theater\Models\Performance::byCategory()
+        ->get();
+
+    \Clockwork\Support\Laravel\Facade::info($test);
+}
+?>
+==

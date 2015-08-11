@@ -1,0 +1,25 @@
+title = "Пресса"
+url = "/press/article/:slug"
+layout = "default"
+description = "Статья прессы"
+is_hidden = "0"
+
+[theater theaterPress]
+type = "article"
+categories = "press"
+sort = "published_at desc"
+scopes = "Press"
+performancePage = "theater/performance"
+personPage = "theater/person"
+articlePage = "theater/article"
+==
+<!-- Single Press -->
+<div id="{{ this.param.slug }}-press-page" class="page side-menu press">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPress' %}
+			</div>
+		</div>
+	</div>
+</div>
