@@ -1,14 +1,20 @@
 title = "Главная страница"
 url = "/"
 layout = "default"
-hidden = "0"
+is_hidden = "0"
 
+[theaterEvents theaterCalendar]
+scopes = "Calendar"
+sort = "event_date asc"
+date = "{{ :date }}"
+performancePage = "theater/performance"
+newsPage = "theater/news"
 ==
 <!-- Home -->
 <div id="home">
 
 	<div id="playbill" class="home-block">
-
+		{% component 'theaterCalendar' %}
 	</div><!-- #playbill -->
 
 	<div id="newsfeed" class="home-block">
@@ -32,4 +38,3 @@ hidden = "0"
 	</div><!-- #directors-word -->
 
 </div><!-- #home -->
-

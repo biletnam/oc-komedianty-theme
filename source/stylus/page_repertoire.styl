@@ -40,7 +40,7 @@
 		.title
 			relative()
 			margin-bottom .4em
-			fs rem(28px)
+			fs -rem(28px)
 			line-height (31/28)
 			a
 				inline-block()
@@ -64,24 +64,24 @@
 			// absolute()
 			// top 0
 			// right -4*$rem
-			fs rem(24px)
+			fs -rem(24px)
 			font-weight 200
 
 	.synopsis
 		top 7.5*$rem
-		fs rem(16px)
+		fs -rem(16px)
 		line-height (22/16)
-		trim_elipsis(7, rem(22px))
+		trim_elipsis(7, -rem(22px))
 		@media screen and (max-width $large)
-			trim_elipsis(5, rem(22px))
+			trim_elipsis(5, -rem(22px))
 		@media screen and (max-width $normal)
 			top 7*$rem
-			fs rem(15px)
+			fs -rem(15px)
 			line-height (21/15)
 			// trim_elipsis(7)
 		@media screen and (max-width $small)
 			top 7*$rem
-			trim_elipsis(4, rem(22px))
+			trim_elipsis(4, -rem(22px))
 
 	.performance-link
 		bottom 0

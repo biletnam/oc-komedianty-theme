@@ -36,10 +36,10 @@
 		height 16*$rem
 		second()
 		.source-title
-			fs rem(28px)
+			fs -rem(28px)
 			line-height (36/28)
 		.source-author
-			fs rem(20px)
+			fs -rem(20px)
 			line-height (36/20)
 			color $gray
 
@@ -58,7 +58,7 @@
 		.title
 			relative()
 			margin-bottom .4em
-			fs rem(28px)
+			fs -rem(28px)
 			line-height (31/28)
 			a
 				inline-block()
@@ -76,19 +76,19 @@
 
 	.excerpt
 		top 7.5*$rem
-		fs rem(16px)
+		fs -rem(16px)
 		line-height (22/16)
-		trim_elipsis(7, rem(22px))
+		trim_elipsis(7, -rem(22px))
 		@media screen and (max-width $large)
-			trim_elipsis(5, rem(22px))
+			trim_elipsis(5, -rem(22px))
 		@media screen and (max-width $normal)
 			top 7*$rem
-			fs rem(15px)
+			fs -rem(15px)
 			line-height (21/15)
 			// trim_elipsis(7)
 		@media screen and (max-width $small)
 			top 7*$rem
-			trim_elipsis(4, rem(22px))
+			trim_elipsis(4, -rem(22px))
 
 	.post-link
 		bottom 0
@@ -98,7 +98,7 @@
 
 
 	.pagination
-		fs rem(24px)
+		fs -rem(24px)
 		margin 0 -.5em
 
 		&-item, .prev, .next
@@ -115,7 +115,7 @@
 		width 48*$rem
 		h1
 			second()
-			fs rem(36px)
+			fs -rem(36px)
 			line-height 1.5
 
 		a
