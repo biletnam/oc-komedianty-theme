@@ -15,6 +15,12 @@ articlePage = "theater/news"
 pageNumber = "{{ :page }}"
 postsPerPage = "10"
 ==
+
+function onInit()
+{
+    $this['activeMenuItem'] = 'news';
+}
+==
 <!-- News Archive -->
 <div id="{{ this.param.category ? this.param.category + '-' : '' }}press-page" class="page side-menu news">
 	<div class="container">

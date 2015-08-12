@@ -94,38 +94,47 @@ items:
                 replace: ''
     -
         title: Афиша
-        nesting: ''
-        type: cms-page
-        url: ''
+        type: playbill
         code: playbill
-        reference: theater/playbill
-        cmsPage: ''
-        replace: ''
+        cmsPage: theater/playbill
+        replace: '0'
     -
         title: Репертуар
+        nesting: ''
         type: repertoire
+        url: ''
         code: repertoire
         reference: spektakl
         cmsPage: theater/repertoire
+        replace: ''
         items:
             -
                 title: Спектали
+                nesting: ''
                 type: repertoire
+                url: ''
                 code: ''
                 reference: spektakl
                 cmsPage: theater/repertoire
+                replace: ''
             -
                 title: 'Детские спектакли'
+                nesting: ''
                 type: repertoire
+                url: ''
                 code: ''
                 reference: detskiy-spektakl
                 cmsPage: theater/repertoire
+                replace: ''
             -
                 title: 'Архивные спектакли'
+                nesting: ''
                 type: repertoire
+                url: ''
                 code: ''
                 reference: arkhivnyy-spektakl
                 cmsPage: theater/repertoire
+                replace: ''
     -
         title: Труппа
         nesting: ''
@@ -147,16 +156,22 @@ items:
                 replace: ''
             -
                 title: Актёры
+                nesting: ''
                 type: troupe
+                url: ''
                 code: ''
                 reference: akter
                 cmsPage: theater/troupe
+                replace: ''
             -
                 title: 'Приглашенные артисты'
+                nesting: ''
                 type: troupe
+                url: ''
                 code: ''
                 reference: priglashennyy-artist
                 cmsPage: theater/troupe
+                replace: ''
     -
         title: Контакты
         nesting: ''

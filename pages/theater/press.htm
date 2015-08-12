@@ -13,6 +13,11 @@ performancePage = "theater/performance"
 personPage = "theater/person"
 articlePage = "theater/article"
 ==
+function onInit()
+{
+    $this['activeMenuItem'] = 'press';
+}
+==
 <!-- Single Press -->
 <div id="{{ this.param.slug }}-press-page" class="page side-menu press">
 	<div class="container">

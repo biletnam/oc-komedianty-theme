@@ -6,6 +6,11 @@ hidden = "0"
 
 [theaterPerformance]
 ==
+function onInit()
+{
+    $this['activeMenuItem'] = 'repertoire';
+}
+==
 <!-- Single Performance -->
 <article id="{{ this.param.slug }}-performance-page" class="page side-menu performance">
 

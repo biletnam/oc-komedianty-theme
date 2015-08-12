@@ -11,6 +11,11 @@ date = "{{ :date }}"
 performancePage = "theater/performance"
 newsPage = "theater/news"
 ==
+function onInit()
+{
+    $this['activeMenuItem'] = 'playbill';
+}
+==
 <!-- Playbill -->
 <div id="{{ this.param.category }}-playbill-page" class="page side-menu playbill">
 	<div class="container">

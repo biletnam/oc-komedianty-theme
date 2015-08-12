@@ -21,7 +21,7 @@
             {% partial __SELF__ ~ "::gallery" %}
 
             <div class="content meta">
-                <div class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | humanDate }}</span></div>
+                <div class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | dateLocale('%e %h %Y года') }}</span></div>
 
                 <div class="duration">
                     Длительность спектакля<br>

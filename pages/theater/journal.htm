@@ -13,6 +13,12 @@ performancePage = "theater/performance"
 personPage = "theater/person"
 articlePage = "theater/article"
 ==
+
+function onInit()
+{
+    $this['activeMenuItem'] = 'journal';
+}
+==
 <!-- Single Journal -->
 <div id="{{ this.param.slug }}-journal-page" class="page side-menu journal">
 	<div class="container">

@@ -13,6 +13,11 @@ performancePage = "theater/performance"
 personPage = "theater/person"
 articlePage = "theater/press"
 ==
+function onInit()
+{
+    $this['activeMenuItem'] = 'press';
+}
+==
 <!-- Press Archive -->
 <div id="{{ this.param.category ? this.param.category + '-' : '' }}press-page" class="page side-menu press">
 	<div class="container">

@@ -1,5 +1,5 @@
 title = "Репертуар"
-url = "/repertoire/:category?normal"
+url = "/repertoire/:category?spektakl"
 layout = "default"
 description = "Репертуар театра"
 is_hidden = "0"
@@ -8,10 +8,17 @@ is_hidden = "0"
 type = "performance"
 categories = "{{ :category }}"
 sort = "premiere_date desc"
-with = "playbill"
+scopes = "Repertoire"
 performancePage = "theater/performance"
 personPage = "theater/person"
 articlePage = "theater/article"
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'repertoire';
+}
 ==
 <!-- Repertoire -->
 <div id="{{ this.param.category }}-repertoire-page" class="page side-menu repertoire">

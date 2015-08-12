@@ -13,6 +13,11 @@ performancePage = "theater/performance"
 personPage = "theater/person"
 articlePage = "theater/article"
 ==
+function onInit()
+{
+    $this['activeMenuItem'] = 'troupe';
+}
+==
 <!-- Troupe -->
 <div id="{{ this.param.category }}-troupe-page" class="page side-menu troupe">
 	<div class="container">
