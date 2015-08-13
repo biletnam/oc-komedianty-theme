@@ -1,20 +1,22 @@
 <!-- Events -->
-						{% for event in events %}<!-- {{ event.slug }} -->
-						<div style="background: url('{{ event.playbill.path }}');" id="{{ event.class }}" class="event {{ event.active }} {{ event.slug }}">
+						{% for event in events %}<!-- {{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }} -->
+						<div style="background: url('{{ event.relation.playbill.path }}');" id="{{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }}" class="event {{ event.active }} {{ event.relation.slug }}">
 							<div class="container">
-								<div class="ratio">
-									<h3 class="section-header"><a href="{{ 'theater/playbill' | page }}">Афиша</a></h3>
-									<div class="title-block">
-										<div class="author">{{ event.author }}</div>
-										<div class="title">
-											<a href="{{ event.relation.url }}">{{ event.relation.title }}</a>
+								<div class="wrap">
+									<div class="ratio">
+										<h3 class="section-header"><a href="{{ 'theater/playbill' | page }}">Афиша</a></h3>
+										<div class="title-block">
+											<div class="author">{{ event.relation.author }}</div>
+											<div class="title">
+												<a href="{{ event.relation.url }}">{{ event.relation.title }}</a>
+											</div>
 										</div>
-									</div>
-									<div class="date-block">
-										<div class="date day {{ event.event_date | date('') }} "><span>{{ event.event_date | date('j') }}</span></div>
-										<div class="date month {{ event.event_date | date('') }}"><span>{{ event.event_date | dateLocale('%h') }}</span></div>
-										<div class="date weekday {{ event.event_date | date('') }}"><span>{{ event.event_date | dateLocale('%A') }}</span></div>
-										<div class="button-buy"><a href="#">Купить билет</a></div>
+										<div class="date-block">
+											<div class="date day day{{ event.event_date | date('j') }} "><span>{{ event.event_date | date('j') }}</span></div>
+											<div class="date month {{ event.event_date | date('M') }}"><span>{{ event.event_date | dateLocale('%h') }}</span></div>
+											<div class="date weekday {{ event.event_date | date('D') }}"><span>{{ event.event_date | dateLocale('%A') }}</span></div>
+											<div class="button-buy"><a href="#">Купить билет</a></div>
+										</div>
 									</div>
 								</div>
 							</div>

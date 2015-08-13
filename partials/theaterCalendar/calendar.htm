@@ -1,10 +1,10 @@
                         <div class="calendar">
                             <div class="container">
-                                <div class="wraper">
+                                <div class="wrap">
                                     <button type="button" data-role="none" class="nav slick-prev" style="display: block;">Назад</button>
                                     <div class="slider">
-                                        {% for event in events %}<!-- {{ event.slug }} -->
-                                        <a href="#{{ event.event_date | date('Y-m-d') ~ event.relation.slug }}" class="{{ event.active }}">
+                                        {% for event in events %}<!-- {{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }} -->
+                                        <a href="#{{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }}" class="slider-item {{ event.active }}">
                                             <div class="day">{{ event.event_date | date('d') }}</div>
                                             <div class="weekday {{ event.event_date | date('D') }}">{{ event.event_date | dateLocale('%a') }}</div>
                                         </a>

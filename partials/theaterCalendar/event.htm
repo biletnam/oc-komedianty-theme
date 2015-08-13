@@ -1,6 +1,6 @@
 <!-- Events -->
-                        {% for event in events %}<!-- {{ event.event_date | date('Y-m-d') ~ event.relation.slug }} -->
-                        <div style="background: url('{{ event.playbill.path }}');" id="{{ event.event_date | date('Y-m-d') ~ event.relation.slug }}" class="event {{ event.active }} {{ event.relation.slug }}">
+                        {% for event in events %}<!-- {{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }} -->
+                        <div style="background: url('{{ event.playbill.path }}');" id="{{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }}" class="event {{ event.active }} {{ event.relation.slug }}">
                             <div class="container">
                                 <div class="ratio">
                                     <h3 class="section-header"><a href="{{ 'pages/playbill' | page }}">Афиша</a></h3>
