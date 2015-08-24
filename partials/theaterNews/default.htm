@@ -2,7 +2,7 @@
 
 {% partial __SELF__ ~ "::article" post = post %}
 
-{% else %}
+{% elseif posts %}
 
 {% partial __SELF__ ~ "::article-list" posts = posts%}
 
