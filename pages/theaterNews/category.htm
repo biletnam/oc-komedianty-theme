@@ -1,0 +1,20 @@
+title = "Категория новостей"
+url = "/arkhiv-novostey/:slug?novosti/:page?"
+layout = "default"
+description = "Страница категории новостей"
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'newsArchive';
+}
+==
+<!-- News Category-->
+<div id="{{ this.param.category }}-news-category-page" class="page side-menu news-category">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+
+			</div>
+		</div>
+	</div>
+</div>

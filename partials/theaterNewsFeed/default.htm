@@ -1,0 +1,12 @@
+{% set posts = __SELF__.posts %}<!-- News Feed -->
+							<div class="post-list">
+								{% for post in posts %}<!-- {{ post.slug }} -->
+								{% partial __SELF__ ~ "::entry" post = post %}
+								{% else %}
+								{% partial __SELF__ ~ "::nodata" %}
+								{% endfor %}<!-- /End -->
+							</div>
+
+							<div class="newsArchive-link">
+								<a href="{{ 'pages/theaterNews/archive'|page }}">Все новости</a>
+							</div>

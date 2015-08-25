@@ -9,6 +9,11 @@ sort = "event_date asc"
 date = "{{ :date }}"
 performancePage = "theater/performance"
 newsPage = "theater/news"
+
+[theaterNewsFeed]
+postPage = "theaterNews/post"
+categoryPage = "theaterNews/category"
+archivePage = "theaterNews/archive"
 ==
 <!-- Home -->
 <div id="home">
@@ -21,7 +26,7 @@ newsPage = "theater/news"
 		<div class="container">
 			<div class="wrap">
 				<h3 class="section-header"><a href="{{ 'pages/news'|page }}">Новости</a></h3>
-
+				{% component 'theaterNewsFeed' %}
 			</div>
 		</div>
 	</div><!-- #newsfeed -->

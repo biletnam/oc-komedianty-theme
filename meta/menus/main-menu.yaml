@@ -67,13 +67,9 @@ items:
         items:
             -
                 title: 'Архив новостей'
-                nesting: ''
                 type: cms-page
-                url: ''
-                code: ''
-                reference: theater/news-archive
-                cmsPage: ''
-                replace: ''
+                code: newsArchive
+                reference: theaterNews/archive
             -
                 title: 'Архив прессы'
                 nesting: ''
@@ -94,8 +90,11 @@ items:
                 replace: ''
     -
         title: Афиша
+        nesting: ''
         type: playbill
+        url: ''
         code: playbill
+        reference: ''
         cmsPage: theater/playbill
         replace: '0'
     -

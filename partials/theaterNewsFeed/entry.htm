@@ -1,0 +1,23 @@
+                                <article class="news">
+                                    <div class="featured">
+                                        <img src="{{ post.cover.thumb(416, 256, { mode: 'crop', extension: 'jpg' }) }}" />
+                                    </div>
+                                    <div class="entry-content">
+                                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="excerpt">{{ post.excerpt }}</p>
+                                    </div>
+
+                                    <a class="link" href="{{ post.url }}">Читать полностью</a>
+
+                                    <p class="meta">
+                                        <span class="comments">
+                                            <i class="fa fa-comments-o"></i> 12
+                                        </span>
+                                        <span class="views">
+                                            <i class="fa fa-eye"></i> 456
+                                        </span>
+                                    </p>
+
+                                    <p class="info">{{ post.published_at|date('Y.m.d') }}</p>
+
+                                </article>
