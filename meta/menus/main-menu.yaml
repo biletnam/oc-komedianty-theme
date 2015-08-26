@@ -57,19 +57,19 @@ items:
                 replace: '0'
     -
         title: Новости
-        nesting: ''
         type: cms-page
-        url: ''
-        code: news
-        reference: theater/news-archive
-        cmsPage: ''
-        replace: ''
+        code: newsArchive
+        reference: theaterNews/archive
         items:
             -
                 title: 'Архив новостей'
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: newsArchive
                 reference: theaterNews/archive
+                cmsPage: ''
+                replace: ''
             -
                 title: 'Архив прессы'
                 nesting: ''
