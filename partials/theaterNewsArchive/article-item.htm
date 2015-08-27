@@ -1,8 +1,8 @@
 
         <!-- {{ post.slug }} -->
         <li class="post-item">
-            {% if post.featured | length != 0 %}<!-- Background -->
-            <a href="{{ post.url }}" class="post-cover" style="background-image: url('{{ post.featured.thumb("416", "256", "crop") }}');" title="{{ post.title }}" alt="{{ post.title }}"></a>
+            {% if post.cover | length != 0 %}<!-- Background -->
+            <a href="{{ post.url }}" class="post-cover" style="background-image: url('{{ post.cover.thumb("416", "256", "crop") }}');" title="{{ post.title }}" alt="{{ post.title }}"></a>
             {% else %}<!-- No backgrounds -->
             <a href="{{ post.url }}" class="post-cover" title="{{ post.title }}" alt="{{ post.title }}"></a>
             <!-- /End -->{% endif %}
