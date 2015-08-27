@@ -1,11 +1,5 @@
-{% if post %}
+{% if article %}
 
-{% partial __SELF__ ~ "::article" post=post %}
-
-{% else %}
-
-{% partial __SELF__ ~ "::article-list" posts = __SELF__.posts%}
-
-{% partial __SELF__ ~ "::pagination" posts = __SELF__.posts %}
+{% partial __SELF__ ~ "::article" article=article %}
 
 {% endif %}

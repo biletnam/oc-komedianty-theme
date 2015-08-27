@@ -1,11 +1,11 @@
-{% if post.relation | length > 0 %}<!-- Press -->
+{% if post.press | length > 0 %}<!-- Press -->
 <div class="content">
 
 
 <h4>Пресса</h4>
 <div class="press">
     <ul class="press-list">
-        {% for article in post.relation|slice(0, 3) %}<!-- Article -->
+        {% for article in post.press|slice(0, 3) %}<!-- Article -->
         <li>«<a href="{{ article.url }}">{{ article.title }}</a>» / {{ article.source }}{{ article.source_date ? " / " ~ article.source_date | dateLocale }}</li>
         {% endfor %}<!-- /End -->
     </ul>

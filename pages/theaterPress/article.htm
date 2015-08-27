@@ -1,21 +1,14 @@
 title = "Пресса"
-url = "/press/article/:slug"
+url = "/pressa/:slug"
 layout = "default"
 description = "Статья прессы"
 is_hidden = "0"
 
-[theater theaterPress]
-type = "article"
-categories = "press"
-sort = "published_at desc"
-scopes = "Press"
-performancePage = "theater/performance"
-personPage = "theater/person"
-articlePage = "theater/article"
+[theaterPress]
 ==
 function onInit()
 {
-    $this['activeMenuItem'] = 'press';
+    $this['activeMenuItem'] = 'pressArchive';
 }
 ==
 <!-- Single Press -->

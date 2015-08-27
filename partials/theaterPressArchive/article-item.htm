@@ -1,0 +1,21 @@
+
+        <!-- {{ article.slug }} -->
+        <li class="article-item">
+            {% if article.cover | length != 0 %}<!-- Background -->
+            <a href="{{ article.url }}" class="article-cover" style="background-image: url('{{ article.cover.thumb("416", "256", "crop") }}');" title="{{ article.title }}" alt="{{ article.title }}"></a>
+            {% else %}<!-- No backgrounds -->
+            <div class="article-source">
+                <div class="source-title">{{ article.source }}</div>
+                <div class="source-author">{{ article.author }}</div>
+            </div>
+            <!-- /End -->{% endif %}
+            <div class="title-block">
+                <div class="title">
+                    <a href="{{ article.url }}">{{ article.title }}</a>
+                </div>
+            </div>
+            <div class="excerpt">{{ article.excerpt|raw }}</div>
+            <div class="article-info">{{ article.published_at|date('d.m.Y') }}</div>
+            <div class="article-link"><a href="{{ article.url }}">Читать полностью</a></div>
+        </li>
+
