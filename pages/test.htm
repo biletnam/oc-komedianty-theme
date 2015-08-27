@@ -1,16 +1,11 @@
-title = "Тест"
+title = "Test"
 url = "/test"
-layout = "default"
-is_hidden = "1"
-==
-<?php
-function onInit()
-{
+is_hidden = "0"
 
-    $test = Abnmt\Theater\Models\Performance::byCategory()
-        ->get();
-
-    \Clockwork\Support\Laravel\Facade::info($test);
-}
-?>
+[theaterPartners Partners]
+category = "partnery"
+[theaterPartners Sponsors]
+category = "sponsory"
 ==
+{% component 'Partners' %}
+{% component 'Sponsors' %}

@@ -1,0 +1,5 @@
+{% set partners = __SELF__.partners %}<!-- Partners -->
+			{% for partner in partners %}<!-- {{ partner.slug }} -->
+			{% partial __SELF__ ~ "::entry" partner = partner %}
+
+			{% endfor %}<!-- /End -->
