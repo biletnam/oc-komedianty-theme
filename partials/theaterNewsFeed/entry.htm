@@ -1,6 +1,8 @@
                                 <article class="news">
                                     <div class="featured">
-                                        <img src="{{ post.cover.thumb(416, 256, { mode: 'crop', extension: 'jpg' }) }}" />
+                                        <a href="{{ post.url }}" class="featured-link">
+                                            <img src="{{ post.cover.thumb(416, 256, { mode: 'crop', extension: 'jpg' }) }}" />
+                                        </a>
                                     </div>
                                     <div class="entry-content">
                                         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
