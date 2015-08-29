@@ -37,20 +37,40 @@
 </div>
 
 
+<style type="text/css">
+    {% for layout in post.bg_layouts %}
+
+    {{ layout.query }} {
+        {% for bg in layout.positions %}
+
+        .bg-{{ bg.bg + 1 }} {
+            display: block !important;
+            top: {{ bg.top_perc }};
+            height: {{ bg.height_perc }};
+            bottom: {{ bg.bottom_perc }};
+            text-align: {{ bg.halign ?: bg.column }};
+            vertical-align: {{ bg.valign ?: 'middle' }};
+            {% if bg.column == 'right' %}
+            right: 0 !important;
+            padding-left: {{ 960 - bg.width }}px;
+            {% endif %}
+            {% if bg.column == 'left' %}
+            left: 0 !important;
+            padding-right: {{ 960 - bg.width }}px;
+            {% endif %}
+        }
+        {% endfor %}
+
+    }
+    {% endfor %}
+</style>
+
+
 <div class="block">
-    <div class="bg-container top">
-        {% partial __SELF__ ~ "::background" key = 0 class="top right" %}
-        {% partial __SELF__ ~ "::background" key = 5 class="top left" %}
-    </div>
-
-    <div class="bg-container middle">
-        {% partial __SELF__ ~ "::background" key = 1 class="middle right" %}
-        {% partial __SELF__ ~ "::background" key = 4 class="middle left" %}
-    </div>
-
-    <div class="bg-container bottom">
-        {% partial __SELF__ ~ "::background" key = 2 class="bottom right" %}
-        {% partial __SELF__ ~ "::background" key = 3 class="bottom left" %}
+    <div class="bg-container">
+        {% for key, bg in post.background %}
+        {% partial __SELF__ ~ "::background" key = key %}
+        {% endfor %}
     </div>
 </div>
 

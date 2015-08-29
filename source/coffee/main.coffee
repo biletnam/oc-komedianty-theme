@@ -82,3 +82,29 @@ $(".mainMenu .mainMenu-item > a").click (e) ->
             # mainMenuItem.removeClass "active"
             # mainMenuItem.removeClass "child-active"
             sideMenu.hide()
+
+
+
+
+
+AlignBackgrounds = ->
+    backgrounds = $('.bg-container .bg')
+    console.log backgrounds
+
+    images = []
+
+    for image in backgrounds
+        do (image) ->
+            svg = $('svg', image)
+            width = svg.attr('width')
+            height = svg.attr('height')
+
+            images.push [width, height]
+
+    console.log images
+
+
+
+
+$(document).ready ->
+    AlignBackgrounds()

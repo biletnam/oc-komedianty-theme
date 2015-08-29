@@ -16,13 +16,20 @@
 	bottom 0
 	font-size 0
 
+	.bg-1,.bg-2,.bg-3,.bg-4,.bg-5,.bg-6
+		display none
+
 	.bg
 		absolute()
 		right 0
 		box-sizing border-box
 
+		// display none
+
 		width 50%
-		height 100%
+		// height 100%
+
+
 
 
 		&:before
@@ -31,28 +38,52 @@
 			vertical-align middle
 			height 100%
 
+		img, svg
+			max-width 100%
+			max-height 100%
+			width auto
+			height auto
+			// outline 1px dotted rgba(white, .1)
+			vertical-align inherit
+
+
+
+
 		&.left
 			left 0
+			padding-right 23*16px
 			text-align left
-			padding-right 24*16px
-			&.top
-				padding-right 41*16px
-				@media screen and (max-width 1700px)
-					display none
-			@media screen and (min-width 1441px) and (max-width 1600px)
-				padding 0
-				width 272px + 130px
-			@media screen and (max-width 1440px)
-				display none
+			// @media screen and (min-width 1441px) and (max-width 1600px)
+			// 	padding 0
+			// 	width 272px + 130px
+			// @media screen and (max-width 1440px)
+			// 	display none
+		&.top.left
+			left 0
+			padding-right 41*16px
+			// @media screen and (max-width 1700px)
+			// 	display none
+
 		&.right
+			padding-left 12*16px
 			text-align right
-			padding-left 11*16px
-			@media screen and (min-width 1441px) and (max-width 1600px)
-				width 100%
-				padding-left 130px + 272px + 560px
-			@media screen and (max-width 1440px)
-				width 100%
-				padding-left (35+9)*16px
+			// @media screen and (min-width 1441px) and (max-width 1600px)
+			// 	width 100%
+			// 	padding-left 130px + 272px + 560px
+			// @media screen and (max-width 1440px)
+			// 	width 100%
+			// 	padding-left (35+9)*16px
+		&.top.right
+			right 0
+			// padding-left 2*16px
+			padding-left 0
+			// @media screen and (min-width 1441px) and (max-width 1600px)
+			// 	width 100%
+			// 	padding-left 130px + 272px + 560px - 9*16px
+			// @media screen and (max-width 1440px)
+			// 	width 100%
+			// 	padding-left (35+9)*16px - 9*16px
+
 		&.middle
 			vertical-align middle
 			img, svg
@@ -61,83 +92,28 @@
 			vertical-align bottom
 			img, svg
 				vertical-align bottom
-		&.center
-			text-align center
+
 		&.top.right
-			padding-left 2*16px
-			@media screen and (min-width 1441px) and (max-width 1600px)
-				width 100%
-				padding-left 130px + 272px + 560px - 9*16px
-			@media screen and (max-width 1440px)
-				width 100%
-				padding-left (35+9)*16px - 9*16px
-
-
-		img, svg
-			max-width 100%
-			max-height 100%
-			width auto
-			height auto
-			// outline 1px dotted rgba(white, .1)
-			vertical-align top
-
-
-
-#esli-pozhenilis-znachit-zhit-pridetsya-performance-page
-	.bg-2
-		text-align center
-	.bg-3
-		text-align center
-#kompromiss-performance-page
-	.bg-2
-		text-align center
-#v-parizh-performance-page
-	.bg-2
-		text-align center
-#beda-ot-nezhnogo-serdtsa-performance-page
-	.bg-5
-		text-align center
-#karlson-performance-page
-	.bg-2
-		text-align center
-		padding-top: 676px !important;
-		padding-bottom: 838px !important;
-#brys-ili-istoriya-kota-filofeya-performance-page
-	.bg-2
-		text-align center
-	.bg-5
-		text-align center
-#ekhala-derevnya-mimo-muzhika-performance-page
-	.bg-5
-		text-align center
-
-#volshebnye-sosulki-performance-page
-	.bg-2
-		padding-top 0 !important
-		padding-bottom 0 !important
-		vertical-align bottom
-		img, svg
-			vertical-align bottom
-	.bg-3
-		left 0
-		text-align left
-		padding-right 24*16px
-		padding-left 0
-		@media screen and (min-width 1441px) and (max-width 1600px)
-			padding 0
-			width 272px + 130px
-		@media screen and (max-width 1440px)
-			display none
-	.bg-4
-		vertical-align middle
-		img, svg
-			vertical-align middle
-
-#marlen-rozhdennaya-dlya-lyubvi-performance-page
-	.bg-2
-		padding-top 0 !important
-		padding-bottom 130px !important
-
-#ne-vsyakii-vor-grabitel-performance-page
-	.bg-3
-		text-align center
+			top -3%
+			height 37%
+			bottom 63%
+		&.middle.right
+			top 37%
+			height 30%
+			bottom 33%
+		&.bottom.right
+			top 67%
+			height 33%
+			bottom 0
+		&.bottom.left
+			top 70%
+			height 30%
+			bottom 0
+		&.middle.left
+			top 35%
+			height 30%
+			bottom 35%
+		&.top.left
+			top 0
+			height 35%
+			bottom 65%
