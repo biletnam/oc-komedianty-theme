@@ -16,15 +16,14 @@
 	bottom 0
 	font-size 0
 
-	.bg-1,.bg-2,.bg-3,.bg-4,.bg-5,.bg-6
-		display none
+	display none
+	// .bg-1,.bg-2,.bg-3,.bg-4,.bg-5,.bg-6
+	// 	display none
 
 	.bg
 		absolute()
 		right 0
 		box-sizing border-box
-
-		// display none
 
 		width 50%
 		// height 100%
@@ -53,67 +52,80 @@
 			left 0
 			padding-right 23*16px
 			text-align left
-			// @media screen and (min-width 1441px) and (max-width 1600px)
-			// 	padding 0
-			// 	width 272px + 130px
-			// @media screen and (max-width 1440px)
-			// 	display none
+			@media screen and (min-width 1441px) and (max-width 1600px)
+				padding 0
+				width 272px + 130px
+			@media screen and (max-width 1440px)
+				display none
 		&.top.left
 			left 0
 			padding-right 41*16px
-			// @media screen and (max-width 1700px)
-			// 	display none
+			@media screen and (max-width 1700px)
+				display none
 
 		&.right
 			padding-left 12*16px
 			text-align right
-			// @media screen and (min-width 1441px) and (max-width 1600px)
-			// 	width 100%
-			// 	padding-left 130px + 272px + 560px
-			// @media screen and (max-width 1440px)
-			// 	width 100%
-			// 	padding-left (35+9)*16px
+			@media screen and (min-width 1441px) and (max-width 1600px)
+				width 100%
+				padding-left 130px + 272px + 560px
+			@media screen and (max-width 1440px)
+				width 100%
+				padding-left (35+9)*16px
 		&.top.right
 			right 0
 			// padding-left 2*16px
 			padding-left 0
-			// @media screen and (min-width 1441px) and (max-width 1600px)
-			// 	width 100%
-			// 	padding-left 130px + 272px + 560px - 9*16px
-			// @media screen and (max-width 1440px)
-			// 	width 100%
-			// 	padding-left (35+9)*16px - 9*16px
+			@media screen and (min-width 1441px) and (max-width 1600px)
+				width 100%
+				padding-left 130px + 272px + 560px - 9*16px
+			@media screen and (max-width 1440px)
+				width 100%
+				padding-left (35+9)*16px - 9*16px
 
 		&.middle
 			vertical-align middle
-			img, svg
-				vertical-align middle
 		&.bottom
 			vertical-align bottom
-			img, svg
-				vertical-align bottom
 
-		&.top.right
-			top -3%
-			height 37%
-			bottom 63%
-		&.middle.right
-			top 37%
-			height 30%
-			bottom 33%
-		&.bottom.right
-			top 67%
-			height 33%
-			bottom 0
-		&.bottom.left
-			top 70%
-			height 30%
-			bottom 0
-		&.middle.left
-			top 35%
-			height 30%
-			bottom 35%
-		&.top.left
-			top 0
-			height 35%
-			bottom 65%
+		// &.top.right
+		// 	top -3%
+		// 	height 37%
+		// 	bottom 63%
+		// &.middle.right
+		// 	top 37%
+		// 	height 30%
+		// 	bottom 33%
+		// &.bottom.right
+		// 	top 67%
+		// 	height 33%
+		// 	bottom 0
+		// &.bottom.left
+		// 	top 70%
+		// 	height 30%
+		// 	bottom 0
+		// &.middle.left
+		// 	top 35%
+		// 	height 30%
+		// 	bottom 35%
+		// &.top.left
+		// 	top 0
+		// 	height 35%
+		// 	bottom 65%
+
+
+.w1920
+	@media screen and (min-width 1601px)
+		display block
+// .w1700
+// 	@media screen and (min-width 1601px) and (max-width 1700px)
+// 		display block
+.w1600
+	@media screen and (min-width 1441px) and (max-width 1600px)
+		display block
+.w1440
+	@media screen and (min-width 1281px) and (max-width 1440px)
+		display block
+.w1280
+	@media screen and (max-width 1280px)
+		display block

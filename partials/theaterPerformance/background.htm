@@ -1,41 +1,54 @@
-
-{% set bg   = post.background[key] %}
+{% set key = data.bg %}
+{% set bg = post.background[key] %}
 {# {% set pos  = post.bg_pos[key] %} #}
 {% set mask = post.background_mask[key] %}
 {% set flat = post.background_flat[key] %}
 
 {% if bg and flat | length != 0 and mask | length != 0 %}<!-- Backgrounds -->
-    <div class="bg bg-{{key+1}}" >
+    <div
+        class="bg bg-{{ key+1 }} {{ data.class }}"
+        style="
+            top: {{ data.top_perc }};
+            height: {{ data.height_perc }};
+            bottom: {{ data.bottom_perc }};
+        "
+    >
 
         <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 {{ bg.sizes[0] }} {{ bg.sizes[1] }}"
-            {{ bg.sizes[3] |raw }}
+            viewBox="0 0 {{ data.width }} {{ data.height }}"
+            width="{{ data.width }}"
+            height="{{ data.height }}"
         >
             <defs>
-                <mask id="MaskG-{{key+1}}">
+                <mask id="MaskG-{{ key+1 }}">
                     <image
-                        xlink:href="{{mask.path}}"
+                        xlink:href="{{ mask.thumb(data.width, data.height) }}"
                         x="0" y="0"
-                        width="{{ bg.sizes[0] }}px"
-                        height="{{ bg.sizes[1] }}px">
+                        width="{{ data.width }}px"
+                        height="{{ data.height }}px"
+                    >
                     </image>
                 </mask>
             </defs>
             <image
-                xlink:href="{{flat.path}}"
+                xlink:href="{{ flat.thumb(data.width, data.height) }}"
                 x="0" y="0"
-                width="{{ bg.sizes[0] }}px"
-                height="{{ bg.sizes[1] }}px"
-                mask="url(#MaskG-{{key+1}})">
+                width="{{ data.width }}px"
+                height="{{ data.height }}px"
+                mask="url(#MaskG-{{ key+1 }})">
             </image>
         </svg>
 
     </div>
 {% elseif bg %}
-    <div class="bg bg-{{key+1}} {{ class }}">
-        {# <img src="{{bg.path}}" {{ bg.sizes[3] |raw }}> #}
+    <div class="bg bg-{{key+1}} {{ data.class }}">
+        <img
+            src="{{ bg.thumb(data.width, data.height) }}"
+            width="{{ data.width }}px"
+            height="{{ data.height }}px"
+        >
     </div>
 {% endif %}

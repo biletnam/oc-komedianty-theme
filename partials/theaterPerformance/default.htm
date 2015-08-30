@@ -36,7 +36,7 @@
     </div>
 </div>
 
-
+{#
 <style type="text/css">
     {% for layout in post.bg_layouts %}
 
@@ -64,14 +64,18 @@
     }
     {% endfor %}
 </style>
-
+ #}
 
 <div class="block">
-    <div class="bg-container">
-        {% for key, bg in post.background %}
-        {% partial __SELF__ ~ "::background" key = key %}
+    {% for layout in post.bg_layouts %}
+
+    <div class="bg-container {{layout.query}}">
+        {% for bg in layout.positions %}
+        {% partial __SELF__ ~ "::background" data = bg %}
         {% endfor %}
     </div>
+    {% endfor %}
+
 </div>
 
 
