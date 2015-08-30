@@ -8,9 +8,9 @@
     <div
         class="bg bg-{{ key+1 }} {{ data.class }}"
         style="
-            top: {{ data.top_perc }};
-            height: {{ data.height_perc }};
-            bottom: {{ data.bottom_perc }};
+            {{ data.top_perc ? 'top:' ~ data.top_perc ~ ';' }}
+            {{ data.height_perc ? 'height:' ~ data.height_perc ~ ';' }}
+            {{ data.bottom_perc ? 'bottom:' ~ data.bottom_perc ~ ';' }}
         "
     >
 

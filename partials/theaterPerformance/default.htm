@@ -36,40 +36,26 @@
     </div>
 </div>
 
-{#
+
 <style type="text/css">
     {% for layout in post.bg_layouts %}
+    {% set min = layout.query.min %}
+    {% set max = layout.query.max %}
 
-    {{ layout.query }} {
-        {% for bg in layout.positions %}
-
-        .bg-{{ bg.bg + 1 }} {
-            display: block !important;
-            top: {{ bg.top_perc }};
-            height: {{ bg.height_perc }};
-            bottom: {{ bg.bottom_perc }};
-            text-align: {{ bg.halign ?: bg.column }};
-            vertical-align: {{ bg.valign ?: 'middle' }};
-            {% if bg.column == 'right' %}
-            right: 0 !important;
-            padding-left: {{ 960 - bg.width }}px;
-            {% endif %}
-            {% if bg.column == 'left' %}
-            left: 0 !important;
-            padding-right: {{ 960 - bg.width }}px;
-            {% endif %}
-        }
-        {% endfor %}
-
+    @media screen {% if min != 'no' %}{{ " and (min-width: #{min}px)" }}{% endif %}{% if max != 'no' %}{{ " and (max-width: #{max}px)" }}{% endif %} {
+        .bg-container.q{{min}}-{{max}} {display: block !important;}
     }
     {% endfor %}
+
 </style>
- #}
+
 
 <div class="block">
     {% for layout in post.bg_layouts %}
+    {% set min = layout.query.min %}
+    {% set max = layout.query.max %}
 
-    <div class="bg-container {{layout.query}}">
+    <div class="bg-container q{{min}}-{{max}}">
         {% for bg in layout.positions %}
         {% partial __SELF__ ~ "::background" data = bg %}
         {% endfor %}

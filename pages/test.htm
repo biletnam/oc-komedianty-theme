@@ -1,11 +1,20 @@
 title = "Test"
 url = "/test"
 is_hidden = "0"
+layout = "default"
 
-[theaterPartners Partners]
-category = "partnery"
-[theaterPartners Sponsors]
-category = "sponsory"
 ==
-{% component 'Partners' %}
-{% component 'Sponsors' %}
+function onInit()
+{
+    $this['activeMenuItem'] = 'repertoire';
+}
+==
+<article class="page side-menu performance test">
+    <div class="test"></div>
+    <div class="test2"></div>
+    <div class="container">container
+        <div class="wrap">wrap
+            <div class="content">content</div>
+        </div>
+    </div>
+</article>
