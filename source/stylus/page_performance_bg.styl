@@ -16,20 +16,19 @@
 	bottom 0
 	font-size 0
 
-	display none
-	// .bg-1,.bg-2,.bg-3,.bg-4,.bg-5,.bg-6
-	// 	display none
-
 	.bg
 		absolute()
-		// right 0
 		box-sizing border-box
 
-		// width 50%
-		// height 100%
+		vertical-align middle
+		text-align center
 
+		top 0
+		left 0
+		right 0
+		bottom 0
 
-
+		padding 0
 
 		&:before
 			content ""
@@ -47,25 +46,100 @@
 			text-align inherit
 
 
-
-
-		&.right
-			right 0
+		&.rt,
+		&.rm,
+		&.rb
 			left 50%
-			padding-left 12*16px // 192px
+			padding-left 192px
 			text-align right
-			@media screen and (min-width 1441px) and (max-width 1622px)
+			// max-width 768px
+
+			@media screen and (max-width 1622px)
 				left 0
-				padding-left 155px + 288px + 560px // 1003px
-			@media screen and (min-width 1361px) and (max-width 1440px)
+				padding-left 1003px
+				// max-width 619px
+			@media screen and (max-width 1440px)
 				left 0
-				padding-left 155px + 560px // 715px
-			@media screen and (min-width 1281px) and (max-width 1360px)
+				padding-left 715px
+				// max-width 725px
+			@media screen and (max-width 1360px)
 				left 50%
-				padding-left 2*16px // 32px
+				padding-left 32px
+				// max-width 648px
 			@media screen and (max-width 1280px)
 				left 0
-				padding-left 110px + 560px // 670px
+				padding-left 670px
+				// max-width 610px
+		&.rt
+			top 0
+			// bottom 60%
+			vertical-align top
+		&.rm
+			top 30%
+			bottom 30%
+			vertical-align middle
+		&.rb
+			// top 70%
+			vertical-align bottom
+
+
+		&.ls
+			top 0
+			left 0
+			right 50%
+			padding-right 656px
+			text-align left
+			vertical-align bottom
+			height 475px
+
+			@media screen and (max-width 1700px)
+				display none
+
+		&.lm,
+		&.lb
+			left 0
+			right 50%
+			// padding-top 475px
+			padding-right 368px
+			text-align left
+			// max-width 592px
+
+			@media screen and (max-width 1622px)
+				right 0
+				padding-right 0
+				// padding-top 475px
+				width 443px
+			@media screen and (max-width 1440px)
+				display none
+
+		&.lm
+			bottom 30%
+			margin-top 475px
+			vertical-align middle
+		&.lb
+			margin-top 475px
+			// top 70%
+			vertical-align bottom
+
+
+
+		// &.right
+		// 	right 0
+		// 	left 50%
+		// 	padding-left 12*16px // 192px
+		// 	text-align right
+		// 	@media screen and (min-width 1441px) and (max-width 1622px)
+		// 		left 0
+		// 		padding-left 155px + 288px + 560px // 1003px
+		// 	@media screen and (min-width 1361px) and (max-width 1440px)
+		// 		left 0
+		// 		padding-left 155px + 560px // 715px
+		// 	@media screen and (min-width 1281px) and (max-width 1360px)
+		// 		left 50%
+		// 		padding-left 2*16px // 32px
+		// 	@media screen and (max-width 1280px)
+		// 		left 0
+		// 		padding-left 110px + 560px // 670px
 		// &.top.right
 		// 	right 0
 		// 	padding-left 0
@@ -73,54 +147,31 @@
 		// 		width 64.12%
 		// 		padding-left 2*16px // 32px
 
-		&.left
-			left 0
-			right 50%
-			padding-right 23*16px
-			text-align left
-			@media screen and (min-width 1441px) and (max-width 1622px)
-				padding 0
-				width 288px + 155px
-			@media screen and (max-width 1440px)
-				display none
-		&.side
-			left 0
-			padding-right 41*16px
-			@media screen and (max-width 1700px)
-				display none
+		// &.left
+		// 	left 0
+		// 	right 50%
+		// 	padding-right 23*16px
+		// 	text-align left
+		// 	@media screen and (min-width 1441px) and (max-width 1622px)
+		// 		padding 0
+		// 		width 288px + 155px
+		// 	@media screen and (max-width 1440px)
+		// 		display none
+		// &.side
+		// 	left 0
+		// 	padding-right 41*16px
+		// 	@media screen and (max-width 1700px)
+		// 		display none
 
 
-		&.middle
-			vertical-align middle
-		&.bottom
-			vertical-align bottom
-		&.center
-			text-align center
+		// &.middle
+		// 	vertical-align middle
+		// &.bottom
+		// 	vertical-align bottom
+		// &.center
+		// 	text-align center
 
-		// &.top.right
-		// 	top -3%
-		// 	height 37%
-		// 	bottom 63%
-		// &.middle.right
-		// 	top 37%
-		// 	height 30%
-		// 	bottom 33%
-		// &.bottom.right
-		// 	top 67%
-		// 	height 33%
-		// 	bottom 0
-		// &.bottom.left
-		// 	top 70%
-		// 	height 30%
-		// 	bottom 0
-		// &.middle.left
-		// 	top 35%
-		// 	height 30%
-		// 	bottom 35%
-		// &.top.left
-		// 	top 0
-		// 	height 35%
-		// 	bottom 65%
+
 
 
 // @media screen and (min-width 1601px)

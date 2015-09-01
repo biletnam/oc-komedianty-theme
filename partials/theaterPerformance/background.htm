@@ -1,54 +1,50 @@
-{% set key = data.bg %}
-{% set bg = post.background[key] %}
-{# {% set pos  = post.bg_pos[key] %} #}
+{% set width  = data.width %}
+{% set height = data.height %}
+{% set class  = data.class %}
+
+{% set bg   = post.background[key] %}
 {% set mask = post.background_mask[key] %}
 {% set flat = post.background_flat[key] %}
 
-{% if bg and flat | length != 0 and mask | length != 0 %}<!-- Backgrounds -->
-    <div
-        class="bg bg-{{ key+1 }} {{ data.class }}"
-        style="
-            {{ data.top_perc ? 'top:' ~ data.top_perc ~ ';' }}
-            {{ data.height_perc ? 'height:' ~ data.height_perc ~ ';' }}
-            {{ data.bottom_perc ? 'bottom:' ~ data.bottom_perc ~ ';' }}
-        "
-    >
+{% if bg and flat | length != 0 and mask | length != 0 %}<!-- bg {{ key+1 }} -->
+    <div class="bg bg-{{ key+1 }} {{ class }}">
 
         <svg
-            version="1.1"
+{#             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 {{ data.width }} {{ data.height }}"
-            width="{{ data.width }}"
-            height="{{ data.height }}"
+            xmlns:xlink="http://www.w3.org/1999/xlink" #}
+            preserveAspectRatio="xMinYMin meet"
+            viewBox="0 0 {{ width }} {{ height }}"
+            width="{{ width }}"
+            height="{{ height }}"
         >
             <defs>
                 <mask id="MaskG-{{ key+1 }}">
                     <image
-                        xlink:href="{{ mask.thumb(data.width, data.height) }}"
+                        xlink:href="{{ mask.thumb(width, height) }}"
                         x="0" y="0"
-                        width="{{ data.width }}px"
-                        height="{{ data.height }}px"
+                        width="{{ width }}px"
+                        height="{{ height }}px"
                     >
                     </image>
                 </mask>
             </defs>
             <image
-                xlink:href="{{ flat.thumb(data.width, data.height) }}"
+                xlink:href="{{ flat.thumb(width, height) }}"
                 x="0" y="0"
-                width="{{ data.width }}px"
-                height="{{ data.height }}px"
+                width="{{ width }}px"
+                height="{{ height }}px"
                 mask="url(#MaskG-{{ key+1 }})">
             </image>
         </svg>
 
     </div>
 {% elseif bg %}
-    <div class="bg bg-{{key+1}} {{ data.class }}">
+    <div class="bg bg-{{key+1}} {{ class }}">
         <img
-            src="{{ bg.thumb(data.width, data.height) }}"
-            width="{{ data.width }}px"
-            height="{{ data.height }}px"
+            src="{{ bg.thumb(width, height) }}"
+            width="{{ width }}px"
+            height="{{ height }}px"
         >
     </div>
 {% endif %}

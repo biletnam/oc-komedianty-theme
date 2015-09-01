@@ -37,31 +37,35 @@
 </div>
 
 
-<style type="text/css">
-    {% for layout in post.bg_layouts %}
-    {% set min = layout.query.min %}
-    {% set max = layout.query.max %}
-
-    @media screen {% if min != 'no' %}{{ " and (min-width: #{min}px)" }}{% endif %}{% if max != 'no' %}{{ " and (max-width: #{max}px)" }}{% endif %} {
-        .bg-container.q{{min}}-{{max}} {display: block !important;}
-    }
-    {% endfor %}
-
-</style>
-
-
 <div class="block">
-    {% for layout in post.bg_layouts %}
-    {% set min = layout.query.min %}
-    {% set max = layout.query.max %}
+    <style type="text/css">
 
-    <div class="bg-container q{{min}}-{{max}}">
-        {% for bg in layout.positions %}
-        {% partial __SELF__ ~ "::background" data = bg %}
-        {% endfor %}
+{% for query, data in post.bg_query %}
+    {% if query != '' %}
+
+        @media screen and (max-width: {{ query }}px) {
+            {% for key, item in data %}{% if item.styles %}
+            .bg-container .bg.{{ item.class }} { {{ item.styles }} }
+            {% endif %}{% endfor %}
+        }
+
+    {% elseif query == '' %}
+
+        {% for key, item in data %}{% if item.styles %}
+        .bg-container .bg.{{ item.class }} { {{ item.styles }} }
+        {% endif %}{% endfor %}
+
+    {% endif %}
+{% endfor %}
+    </style>
+
+    <div class="bg-container">
+        <!-- Backgrounds -->
+        {% for key, background in post.background %}
+
+        {% partial __SELF__ ~ "::background" key = key data = background %}
+        {% endfor %}<!-- End -->
     </div>
-    {% endfor %}
-
 </div>
 
 
