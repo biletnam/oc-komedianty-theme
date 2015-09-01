@@ -23,10 +23,10 @@
 		vertical-align middle
 		text-align center
 
-		top 0
-		left 0
-		right 0
-		bottom 0
+		// top 0
+		// left 0
+		// right 0
+		// bottom 0
 
 		padding 0
 
@@ -50,36 +50,38 @@
 		&.rm,
 		&.rb
 			left 50%
-			padding-left 192px
+			right 0
+			// padding-left 192px
 			text-align right
 			// max-width 768px
 
 			@media screen and (max-width 1622px)
 				left 0
-				padding-left 1003px
+				// padding-left 1003px
 				// max-width 619px
 			@media screen and (max-width 1440px)
 				left 0
-				padding-left 715px
+				// padding-left 715px
 				// max-width 725px
-			@media screen and (max-width 1360px)
-				left 50%
-				padding-left 32px
-				// max-width 648px
+			// @media screen and (max-width 1360px)
+			// 	left 50%
+			// 	// padding-left 32px
+			// 	// max-width 648px
 			@media screen and (max-width 1280px)
 				left 0
-				padding-left 670px
+				// padding-left 670px
 				// max-width 610px
 		&.rt
 			top 0
-			// bottom 60%
 			vertical-align top
+			// bottom 60%
 		&.rm
-			top 30%
-			bottom 30%
+			// top 30%
+			// bottom 30%
 			vertical-align middle
 		&.rb
 			// top 70%
+			bottom 0
 			vertical-align bottom
 
 
@@ -87,7 +89,7 @@
 			top 0
 			left 0
 			right 50%
-			padding-right 656px
+			// padding-right 656px
 			text-align left
 			vertical-align bottom
 			height 475px
@@ -95,12 +97,13 @@
 			@media screen and (max-width 1700px)
 				display none
 
+		&.lt,
 		&.lm,
 		&.lb
 			left 0
 			right 50%
 			// padding-top 475px
-			padding-right 368px
+			// padding-right 368px
 			text-align left
 			// max-width 592px
 
@@ -113,13 +116,14 @@
 				display none
 
 		&.lm
-			bottom 30%
-			margin-top 475px
+			// bottom 30%
+			// margin-top 475px
 			vertical-align middle
 		&.lb
-			margin-top 475px
+			// margin-top 475px
 			// top 70%
 			vertical-align bottom
+			bottom 0
 
 
 

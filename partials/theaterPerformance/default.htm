@@ -40,16 +40,31 @@
 <div class="block">
     <style type="text/css">
 
-{% for query, data in post.bg_query %}
+{% for query, data in post.bg_data %}
     {% if query != '' %}
 
-        @media screen and (max-width: {{ query }}px) {
-            {% for key, item in data %}{% if item.styles %}
-            .bg-container .bg.{{ item.class }} { {{ item.styles }} }
-            {% endif %}{% endfor %}
+        @media screen and (max-width: {{ query[1:] }}px) {
+            {% for column in data %}{% for item in column %}
+
+            .bg-container {{ item.class }} {
+                {{ 'padding: ' ~ item.padding ~ ';' }}
+                {{ 'left: ' ~ item.left ~ ';' }}
+                {{ 'right: ' ~ item.right ~ ';' }}
+                {{ 'text-align: ' ~ item.text_align ~ ';' }}
+                {{ 'vertical-align: ' ~ item.vertical_align ~ ';' }}
+                {{ 'display: ' ~ item.display ~ ';' }}
+                {{ 'padding-left: ' ~ item.padding_left ~ 'px;' }}
+                {{ 'padding-right: ' ~ item.padding_right ~ 'px;' }}
+                {{ item.height_perc ? 'height: ' ~ item.height_perc ~ ';' }}
+                {{ item.top ? 'top: ' ~ item.top ~ ';' }}
+                {{ item.padding_right < 0 and item.width  ? 'width: ' ~ item.width ~ 'px;' }}
+                {{ item.padding_top  ? 'padding-top: ' ~ item.padding_top ~ 'px;' }}
+            }
+
+            {% endfor %}{% endfor %}
         }
 
-    {% elseif query == '' %}
+    {% elseif query == 'q1920' %}
 
         {% for key, item in data %}{% if item.styles %}
         .bg-container .bg.{{ item.class }} { {{ item.styles }} }
