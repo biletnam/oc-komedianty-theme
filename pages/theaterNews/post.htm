@@ -1,0 +1,25 @@
+title = "Новость"
+url = "/novosti/:slug"
+layout = "default"
+description = "Страница Новости"
+is_hidden = "0"
+
+[theaterNews]
+slug = "{{ :slug }}"
+categoryPage = "theaterNews/category"
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'newsArchive';
+}
+==
+<!-- Single Article -->
+<div id="{{ this.param.slug }}-news-page" class="page side-menu news">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterNews' %}
+			</div>
+		</div>
+	</div>
+</div>

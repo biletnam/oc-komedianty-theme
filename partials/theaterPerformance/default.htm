@@ -1,0 +1,71 @@
+    <div class="container">
+        <div class="wrap">
+
+            <div style="" class="content title">{{ post.title }}<div class="buy-button"><a href="#">Купить билет!</a></div></div>
+            {% if post.author %}<div class="content author">{{ post.author }}</div>{% endif %}
+            {% if post.description %}<div class="content description{% if post.author == null %} alone{% endif %}">{{ post.description }}</div>{% endif %}
+
+            {% partial __SELF__ ~ "::event" %}
+
+            <div class="content about">
+                {{ post.content|raw }}
+            </div>
+
+
+            {% partial __SELF__ ~ "::participations" %}
+
+            {% partial __SELF__ ~ "::press" %}
+
+            {% partial __SELF__ ~ "::video" %}
+
+            {% partial __SELF__ ~ "::gallery" %}
+
+            <div class="content meta">
+                <div class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | dateLocale('%e %h %Y года') }}</span></div>
+
+                <div class="duration">
+                    Длительность спектакля<br>
+                    {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
+                    {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
+                    {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
+                    {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
+                    {% endif %}
+                </div>
+            </div>
+
+    </div>
+</div>
+
+
+<div class="block">
+    <style type="text/css">
+
+{% for query, data in post.bg_data %}
+    {% if query != '' %}
+
+        @media screen and (max-width: {{ query[1:] }}px) {
+            {% for column in data %}{% for item in column %}
+
+            .bg-container {{ item.class }} {
+                {% for name, value in item.styles %}{{ name }}: {{value}};
+                {% endfor %}
+
+            }
+            {% endfor %}{% endfor %}
+
+        }
+
+    {% endif %}
+{% endfor %}
+    </style>
+
+    <div class="bg-container">
+        <!-- Backgrounds -->
+        {% for key, background in post.background %}
+
+        {% partial __SELF__ ~ "::background" key = key data = background %}
+        {% endfor %}<!-- End -->
+    </div>
+</div>
+
+

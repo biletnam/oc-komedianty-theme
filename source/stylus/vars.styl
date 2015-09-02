@@ -43,6 +43,8 @@ base-font-size = $rem
 // Fonts
 first()
 	font-family "Proba Pro", "Calibri", "Helvetica", "Arial", sans-serif
+	font-weight normal
+	font-style normal
 second()
 	font-family "Mignon", "Georgia", serif
 
@@ -76,9 +78,9 @@ trim_elipsis(num = 3, lh = 24px)
 	height num * lh
 	text-overflow ellipsis
 
-test()
-	outline 1px dashed rgba(gray, .2)
-	background-image repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(gray,.2) 1px, rgba(gray,.2) 10px)
+test($color = gray, $deg = 45deg)
+	outline 1px dashed rgba($color, .2)
+	background-image repeating-linear-gradient($deg, transparent, transparent 5px, rgba($color,.2) 1px, rgba($color,.2) 10px)
 
 
 div(val)
@@ -142,7 +144,7 @@ button(color = $button, hover = $brand, text = $text, hovertext = #fff)
 
 	reset-link()
 
-	fs rem(16px)
+	fs -rem(16px)
 
 	cursor pointer
 

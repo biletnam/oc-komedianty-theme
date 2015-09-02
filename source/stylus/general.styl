@@ -10,7 +10,7 @@ body
 	reset-box-model()
 
 	first()
-	fs rem(16px)
+	fs -rem(16px)
 
 	color $text
 	background-color $bg
@@ -36,7 +36,7 @@ h4, h5, h6
 	uppercase()
 	// margin-top 1em
 h1
-	fs rem(52px)
+	fs -rem(52px)
 
 hr
 	border none
@@ -56,8 +56,8 @@ hr
 	max-width 1312px+2*155px
 	min-width 960px
 	margin 0 auto
-	@media screen and (max-width $small)
-		max-width 1056px+2*110px
+	// @media screen and (max-width $small)
+	// 	max-width 1056px+2*110px
 
 	& > .wrap
 		margin 0 155px

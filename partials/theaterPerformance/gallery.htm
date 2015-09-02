@@ -1,0 +1,15 @@
+[photoswipe]
+
+
+[viewBag]
+==
+{% if post.featured | length != 0 %}<!-- Gallery -->
+
+<div class="content">
+
+<h4 class="gallery-title">Галерея</h4>
+
+{% component 'photoswipe' images=post.featured %}
+
+</div>
+{% endif %}<!-- /End -->

@@ -1,0 +1,23 @@
+title = "Пресса"
+url = "/pressa/:slug"
+layout = "default"
+description = "Статья прессы"
+is_hidden = "0"
+
+[theaterPress]
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'pressArchive';
+}
+==
+<!-- Single Press -->
+<div id="{{ this.param.slug }}-press-page" class="page side-menu press">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPress' %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -57,11 +57,11 @@ items:
                 replace: '0'
     -
         title: Новости
-        nesting: '1'
+        nesting: ''
         type: cms-page
         url: ''
-        code: news
-        reference: pages/news
+        code: newsArchive
+        reference: theaterNews/archive
         cmsPage: ''
         replace: ''
         items:
@@ -70,92 +70,73 @@ items:
                 nesting: ''
                 type: cms-page
                 url: ''
-                code: ''
-                reference: pages/news
+                code: newsArchive
+                reference: theaterNews/archive
                 cmsPage: ''
                 replace: ''
             -
                 title: 'Архив прессы'
-                nesting: ''
                 type: cms-page
-                url: ''
-                code: ''
-                reference: pages/press
-                cmsPage: ''
-                replace: ''
+                code: pressArchive
+                reference: theaterPress/archive
             -
                 title: Журнал
+                nesting: ''
                 type: url
                 url: 'http://journal.komedianty.com'
-                code: ''
-    -
-        title: Афиша
-        nesting: '1'
-        type: cms-page
-        url: ''
-        code: playbill
-        reference: pages/playbill
-        cmsPage: ''
-        replace: ''
-        items:
-            -
-                title: Афиша
-                nesting: ''
-                type: playbill-now
-                url: ''
-                code: ''
-                reference: '5'
-                cmsPage: pages/playbill
-                replace: '1'
-            -
-                title: 'Детские спектакли'
-                nesting: ''
-                type: url
-                url: '#child'
                 code: ''
                 reference: ''
                 cmsPage: ''
                 replace: ''
     -
-        title: 'Репертуар'
-        nesting: '1'
-        type: cms-page
+        title: Афиша
+        nesting: ''
+        type: playbill
+        url: ''
+        code: playbill
+        reference: ''
+        cmsPage: theater/playbill
+        replace: '0'
+    -
+        title: Репертуар
+        nesting: ''
+        type: repertoire
         url: ''
         code: repertoire
-        reference: pages/repertoire
-        cmsPage: ''
+        reference: spektakl
+        cmsPage: theater/repertoire
         replace: ''
         items:
             -
-                title: Спектакли
+                title: Спектали
                 nesting: ''
-                type: performance-category
+                type: repertoire
                 url: ''
-                code: normal
-                reference: '1'
-                cmsPage: pages/repertoire
+                code: ''
+                reference: spektakl
+                cmsPage: theater/repertoire
                 replace: ''
             -
                 title: 'Детские спектакли'
                 nesting: ''
-                type: performance-category
+                type: repertoire
                 url: ''
                 code: ''
-                reference: '3'
-                cmsPage: pages/repertoire
+                reference: detskiy-spektakl
+                cmsPage: theater/repertoire
                 replace: ''
             -
                 title: 'Архивные спектакли'
                 nesting: ''
-                type: performance-category
+                type: repertoire
                 url: ''
                 code: ''
-                reference: '4'
-                cmsPage: pages/repertoire
+                reference: arkhivnyy-spektakl
+                cmsPage: theater/repertoire
                 replace: ''
     -
         title: Труппа
-        nesting: '1'
+        nesting: ''
         type: cms-page
         url: ''
         code: troupe
@@ -175,38 +156,20 @@ items:
             -
                 title: Актёры
                 nesting: ''
-                type: person-category
+                type: troupe
                 url: ''
                 code: ''
-                reference: '1'
-                cmsPage: pages/troupe
+                reference: akter
+                cmsPage: theater/troupe
                 replace: ''
             -
                 title: 'Приглашенные артисты'
                 nesting: ''
-                type: person-category
+                type: troupe
                 url: ''
                 code: ''
-                reference: '2'
-                cmsPage: pages/troupe
-                replace: ''
-            -
-                title: Администрация
-                nesting: ''
-                type: person-category
-                url: ''
-                code: ''
-                reference: '4'
-                cmsPage: pages/troupe
-                replace: ''
-            -
-                title: Постановочники
-                nesting: ''
-                type: person-category
-                url: ''
-                code: ''
-                reference: '3'
-                cmsPage: pages/troupe
+                reference: priglashennyy-artist
+                cmsPage: theater/troupe
                 replace: ''
     -
         title: Контакты
@@ -214,6 +177,6 @@ items:
         type: cms-page
         url: ''
         code: contacts
-        reference: pages/contacts
+        reference: contacts
         cmsPage: ''
         replace: ''

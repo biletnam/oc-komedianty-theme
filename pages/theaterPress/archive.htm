@@ -1,0 +1,23 @@
+title = "Архив Прессы"
+url = "/arkhiv-pressy/:page?"
+layout = "default"
+description = "Архив Прессы"
+is_hidden = "0"
+
+[theaterPressArchive]
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'pressArchive';
+}
+==
+<!-- Press Archive -->
+<div id="{{ this.param.performance ? this.param.performance + '-' : '' }}press-archive-page" class="page side-menu press-archive">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPressArchive' %}
+			</div>
+		</div>
+	</div>
+</div>

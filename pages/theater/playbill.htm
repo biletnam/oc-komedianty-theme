@@ -1,0 +1,28 @@
+title = "Афиша"
+url = "/afisha/:date?now"
+layout = "default"
+description = "Афиша на крайние 2 месяца"
+is_hidden = "0"
+
+[theaterEvents theaterPlaybill]
+scopes = "Playbill"
+sort = "event_date asc"
+date = "{{ :date }}"
+performancePage = "theater/performance"
+newsPage = "theater/news"
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'playbill';
+}
+==
+<!-- Playbill -->
+<div id="{{ this.param.category }}-playbill-page" class="page side-menu playbill">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPlaybill' %}
+			</div>
+		</div>
+	</div>
+</div>

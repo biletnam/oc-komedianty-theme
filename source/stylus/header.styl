@@ -35,7 +35,7 @@
 
 	color $text
 
-	z-index 10
+	z-index 9
 
 	.logo
 		fill $brand
@@ -105,11 +105,11 @@
  *  DESCRIPTOR
  ********************************************************************************************************************************************/
 .descriptor
-	height rem(2*$mod - 18px)
+	height -rem(2*$mod - 18px)
 	@media screen and (max-width $normal)
-		height rem(2*$mod - 44px)
+		height -rem(2*$mod - 44px)
 	@media screen and (max-width $tablet)
-		height rem(2*$mod - 42px)
+		height -rem(2*$mod - 42px)
 	@media screen and (max-width $phone)
 		display none
 
@@ -117,19 +117,19 @@
 	.items
 		upcase()
 		distribute()
-		padding-top rem(17px)
+		padding-top -rem(17px)
 		@media screen and (max-width $normal)
-			padding-top rem(13px)
+			padding-top -rem(13px)
 			text-align right
 
 	.item
 		inline-block()
 		reset-box-model()
 
-		fs rem(14px)
+		fs -rem(14px)
 		@media screen and (max-width $normal)
-			fs rem(14px)
-			margin-left rem(16px)
+			fs -rem(14px)
+			margin-left -rem(16px)
 			&.company
 				display none
 
@@ -142,25 +142,25 @@
 		margin-right -.8em
 		float right
 		relative()
-		top rem(-6px)
+		top -rem(-6px)
 		@media screen and (max-width $normal)
-			top rem(-5px)
+			top -rem(-5px)
 
 	.social-top
 		fs 0
-		margin 0  0 0 rem(-5px)
-		// margin 0 rem(-5px)
+		margin 0  0 0 -rem(-5px)
+		// margin 0 -rem(-5px)
 		@media screen and (max-width $normal)
-			margin-left rem(11px)
+			margin-left -rem(11px)
 		.social-items
 			relative()
 			button(transparent)
-			width rem(20px)
-			padding rem(2px) rem(4px)
+			width -rem(20px)
+			padding -rem(2px) -rem(4px)
 			@media screen and (max-width $normal)
-				width rem(21px)
-				padding rem(5px)
-				fs rem(14px)
+				width -rem(21px)
+				padding -rem(5px)
+				fs -rem(14px)
 			text-align center
 		.vk:hover:before
 			background-color $vk
@@ -195,7 +195,7 @@
 
 		// 	text-align center
 		// 	color $text
-		// 	fs rem(14px)
+		// 	fs -rem(14px)
 
 		// 	&:hover
 		// 		background-color $brand_dark

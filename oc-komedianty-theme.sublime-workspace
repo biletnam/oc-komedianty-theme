@@ -1,0 +1,646 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color	styl"
+			],
+			[
+				"len",
+				"length	(gallery.htm)"
+			],
+			[
+				"photo",
+				"photoswipe	(Performance.php)"
+			],
+			[
+				"las",
+				"lastDateInDb"
+			],
+			[
+				"Re",
+				"Repertoire"
+			],
+			[
+				"Abnm",
+				"Abnmt\\Theater\\Models\\Article"
+			],
+			[
+				"path",
+				"pathinfo"
+			],
+			[
+				"file",
+				"fileData"
+			],
+			[
+				"fil",
+				"fileData"
+			],
+			[
+				"set",
+				"setUrl"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"where",
+				"whereHas"
+			],
+			[
+				"Eve",
+				"EventModel"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"event",
+				"event_date	(Performance.php)"
+			],
+			[
+				"eve",
+				"event_date"
+			],
+			[
+				"categ",
+				"categories"
+			],
+			[
+				"Mo",
+				"Models"
+			],
+			[
+				"The",
+				"Theater"
+			],
+			[
+				"Tax",
+				"TaxonomyModel"
+			],
+			[
+				"give",
+				"given_name	(Person.php)"
+			],
+			[
+				"famil",
+				"family_name	(Person.php)"
+			],
+			[
+				"post",
+				"posts"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"publish",
+				"published_at	(Performance.php)"
+			],
+			[
+				"order",
+				"orderBy	(Performance.php)"
+			],
+			[
+				"ex",
+				"extract	(Plugin.php)"
+			],
+			[
+				"is",
+				"isPublished	(Performance.php)"
+			],
+			[
+				"Abnmt",
+				"Abnmt\\Theater\\Models\\Taxonomy	(Performance.php)"
+			],
+			[
+				"wh",
+				"where	(Performance.php)"
+			],
+			[
+				"sort",
+				"sortOrder"
+			],
+			[
+				"anon",
+				"anounce"
+			],
+			[
+				"premi",
+				"premiere"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"cre",
+				"createRelation"
+			],
+			[
+				"rela",
+				"relations"
+			],
+			[
+				"nu",
+				"nullable"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"premiere",
+				"premiere_date	(performances.php)"
+			],
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "mark",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pret",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/Abnmt/Desktop/_home__playbill.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/coffee/main.coffee",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/home_calendar.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/_main.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/general.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/buy_popup.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/footer.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/header.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/main-navigation.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_archive.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_contacts.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_performance.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_person.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_playbill.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_repertoire.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_troupe.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/vars.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/gulpfile.coffee",
+		"/C/Users/Abnmt/Desktop/jade-stylus-coffeescript-seed-master/gulpfile.js",
+		"/C/Users/Abnmt/Desktop/jade-stylus-coffeescript-seed-master/src/styles.styl",
+		"/C/Users/Abnmt/Desktop/jade-stylus-coffeescript-seed-master/package.json",
+		"/D/Dropbox/GItHub/fr/package.json",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/package.json",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/node_modules/axis/axis/ui.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/node_modules/axis/axis/typography.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/node_modules/axis/axis/utilities.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterCalendar/dates.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/Person.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/models/Performance.php",
+		"/C/Users/Abnmt/Desktop/calendar/dates.htm",
+		"/C/Users/Abnmt/Desktop/calendar/performances.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterCalendar/event.htm",
+		"/C/Users/Abnmt/Desktop/calendar/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterCalendar/calendar.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterCalendar/default.htm",
+		"/C/Users/Abnmt/Desktop/oc-theater-plugin-dcac6f2ba9ee1dce8269dd8681929b1561d71ae7/components/Calendar.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPerson/gallery.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/layouts/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/photoswipe/components/gallery/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/Performance.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPerformance/gallery.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/photoswipe/components/Gallery.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/Events.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/photoswipe/Plugin.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/header.htm",
+		"/C/Users/Abnmt/Desktop/blog-plugin-master/models/Category.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/models/Person.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/journal.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/news-archive.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/news.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/performance.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/press-archive.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/troupe.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/repertoire.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/person.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/playbill.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/Theater.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPerformance/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/lang/ru/lang.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/lang/en/lang.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPerformance/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/seed_tables.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterRepertoire/performance.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterTroupe/person.htm",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/updates/seed_people_table.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/updates/seed_performances_table.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/data/people.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/data/performances.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/models/Taxonomy.php",
+		"/C/Users/Abnmt/AppData/Local/Temp/d20150731-3708-mh7hsf/config",
+		"/C/Users/Abnmt/Desktop/komedianty.com/sql/komedianty.sql",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/data/articles.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/articles.htm",
+		"/C/Users/Abnmt/Desktop/rn.cmd",
+		"/D/GIT/Komedianty/.gitattributes",
+		"/C/Users/Abnmt/Desktop/IMAGES/images.cmd",
+		"/C/Users/Abnmt/Desktop/performances.txt",
+		"/C/Users/Abnmt/AppData/Local/Temp/MRT102C.txt",
+		"/C/Users/Abnmt/AppData/Local/Temp/MRT3EA3.txt",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/data/events.php",
+		"/C/Users/Abnmt/Desktop/people.txt",
+		"/C/Users/Abnmt/AppData/Local/Temp/MRT4CA4.txt",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/test.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/Plugin.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPerformance/event.htm",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/Plugin.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/models/PerformanceCategory.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/models/News.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/models/Performance.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/News.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Playbill.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/models/Article.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/models/Event.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPlaybill/event.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPress/article-item.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/theaterPlaybill/default.htm",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/models/Playbill.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/.htaccess",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/index.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/theater/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/person/default.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/performance/default.htm",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Troupe.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Repertoire.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/models/PersonCategory.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Performance.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/theater/article.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/troupe/art-director.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/contacts.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/performance/event.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/components/performance/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/layouts/page.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/contacts.htm",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Person.php",
+		"/D/Dropbox/openserver/domains/komedianty.abnmt.com/plugins/abnmt/theater/components/Press.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/work/images.txt",
+		"/E/_WORK/komedianty.abnmt.com/plugins/abnmt/theater/components/Theater.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/.git/config",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/.git/HEAD",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/create_articles_table.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/plugins/abnmt/theater/updates/create_taxonomies_table.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/Vagrantfile",
+		"/C/Users/Abnmt/Desktop/wevevwv.php",
+		"/C/Users/Abnmt/Desktop/journal.php",
+		"/C/Users/Abnmt/Desktop/vswb.php",
+		"/C/Users/Abnmt/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Abnmt\\Desktop\\komedianty.com\\public\\themes\\komedianty\\source\\stylus",
+			"C:\\Users\\Abnmt\\Desktop\\komedianty.com\\public\\themes\\komedianty\\partials",
+			"<project>",
+			"C:\\Users\\Abnmt\\Desktop\\komedianty.com\\public",
+			"C:\\Users\\Abnmt\\Desktop\\komedianty.com\\public\\themes\\komedianty\\source\\stylus",
+			"D:\\Dropbox\\AutoCAD\\lsp"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\((\\d+)/\\$rem\\)",
+			"\\((\\d+)\\$rem\\)",
+			"performance",
+			"rem\\((.+?)\\)",
+			"rem\\((.+?\\))",
+			"performance",
+			"CW::info",
+			"[];\n",
+			"CW::info",
+			"byCategory",
+			"ByCategory",
+			"weekday",
+			"weekday_long",
+			"month",
+			"humanDate",
+			"\\+",
+			",",
+			"pathname",
+			"getthum",
+			"createEvent",
+			"findModel",
+			"\"administration\"",
+			"\"cooperate\"",
+			"\"actor\"",
+			"'archived'",
+			"'premiere'",
+			"'child'",
+			"'normal'",
+			"normal",
+			"binary",
+			"E:\\KOMEDIANTY\\Dropbox\\photo\\Крепостная [28.02.15]\\",
+			"E:\\KOMEDIANTY\\Dropbox\\photo\\Крепостная [28.02.15]",
+			"D:\\Dropbox\\site\\_image_work\\performance\\krepostnaya-lyubov\\gallery\\",
+			"E:\\KOMEDIANTY\\Dropbox\\photo\\Крепостная [28.02.15]\\",
+			"\\\\t",
+			"\\\\n",
+			"\\\\\"",
+			"\"content\"       => \"",
+			"\"content\"",
+			"src=\\\"http://journal.komedianty.com/files",
+			"\"out\\",
+			"copy \"",
+			"/",
+			"out/media/",
+			"  \"files/",
+			"http://journal.komedianty.com/",
+			"  +",
+			"/storage/app/",
+			"src=",
+			"img",
+			"category",
+			"'journal'",
+			"'cancellation '",
+			"'replacement '",
+			"'Фото'",
+			"'photo'",
+			"'video'",
+			"'anounce'",
+			"'premiere'",
+			"'news'",
+			"['news']",
+			"['press']",
+			"source_date",
+			"'press'",
+			"([^\\:|\\n|\"])//",
+			"([^\\:])//",
+			"[^\\:]//",
+			"\\\\\"",
+			"src",
+			"\\\\\"",
+			"<img.+?>",
+			"src=\\\\\".+?\\\\\"",
+			"    \"0\"",
+			"\"D:\\Dropbox\\site\\_image_work\\person\\",
+			"\"",
+			" \"1\"",
+			"  \"1\"",
+			"event_date",
+			"performance",
+			"theaterRepertoire",
+			"theaterTroupe",
+			"'Abnmt\\Theater\\Models\\",
+			"Abnmt\\Theater\\Models\\",
+			"request",
+			"src=\"",
+			"src=\".+?\"",
+			"\\\\\"",
+			"\"<p>",
+			"content",
+			"        \"author\"        => \"\",",
+			"        \"author\"        => \"admin\",",
+			"source_author",
+			"1,],",
+			" => ",
+			",\"published\" => 1,",
+			" => ",
+			"  +=>",
+			"        \"",
+			"modified",
+			"\"title\" => '",
+			"  =",
+			"\" =",
+			"=>",
+			"\"date\"",
+			"\"published_at\"",
+			"        ],",
+			"        [",
+			"\"title\" => '",
+			"\"content\"",
+			"\"releases\"",
+			"\"published_at\"",
+			"      ",
+			"\"category\"",
+			"\"slug\"",
+			"        ",
+			"\"excerpt\"",
+			"\"author\"",
+			"\"modified\"",
+			"\"date\"",
+			"\"title\"",
+			"'modified'",
+			"'date'",
+			"'title'",
+			"\",\"",
+			"],\"",
+			"['",
+			"','",
+			"[\"title\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"-rem(\\1px)",
+			"-rem(\\1)",
+			"|",
+			"\\t",
+			"\\n",
+			"\"",
+			"\\1/",
+			"\"",
+			" =>",
+			"\"date\"",
+			"\"\\1\"",
+			"\\\\\"",
+			"\\\"",
+			"\"",
+			"\\n\\1",
+			"\\\\n",
+			"\\\\t",
+			"['news']",
+			"\"",
+			"D:\\\\Dropbox\\\\AutoCAD"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "oc-komedianty-theme.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 252.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

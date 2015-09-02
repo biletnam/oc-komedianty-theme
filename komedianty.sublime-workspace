@@ -1,0 +1,340 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "komedianty.sublime-project",
+			"settings":
+			{
+				"buffer_size": 202,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_repertoire.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/page_performance.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/fonts.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/coffee/main.coffee",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/stylus/vars.styl",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/home.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/content/about-artistic-director.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/komedianty.sublime-project",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/node_modules/axis/package.json",
+		"/D/Dropbox/scotch-box/public/themes/komedianty/node_modules/axis/package.json",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/theme.yaml",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/layouts/default.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/pages/account.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/blog/posts.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/layouts/chair.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/layouts/default.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/layouts/home.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/snippets/news.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/snippets/login.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/title.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/partials/meta.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/scripts.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/header.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/footer.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/nav.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/partials/meta.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/troupe/art-director.htm",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/theme.yaml",
+		"/C/Users/Abnmt/Desktop/relax-theme-master/version.yaml",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/single/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/single/news.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/single/performance.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/single/person.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/config/app.php",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/gulpfile.coffee",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/troupe.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/repertoire.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/pressCategory.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/press.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/playbill.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/newsCategory.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/news.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/pages/pages/contacts.htm",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/source/partials/theaterPerformance/backgrounds.jade",
+		"/C/Users/Abnmt/Desktop/komedianty.com/work/plugins.txt",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/.gitignore",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/.gitattributes",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/package.json",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/version.yaml",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/assets/images/default.svg",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/assets/browserconfig.xml",
+		"/C/Users/Abnmt/Desktop/komedianty.com/public/themes/komedianty/assets/crossdomain.xml",
+		"/C/Users/Abnmt/Desktop/komedianty.com/Vagrantfile",
+		"/C/Users/Abnmt/Desktop/october-logo-transparent.svg",
+		"/C/Users/Abnmt/Desktop/LOGO_KOMEDIANTY_CURVES-02.svg",
+		"/D/Dropbox/scotch-box/public/config/database.php",
+		"/D/Dropbox/scotch-box/Vagrantfile",
+		"/C/Users/Abnmt/Desktop/komedianty.com/.gitignore",
+		"/C/Users/Abnmt/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Abnmt/Desktop/readme.md",
+		"/C/Users/Abnmt/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/BackUp/AppData/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Abnmt/Desktop/actors3.md",
+		"/D/Temp/2015.06.22-downloads/press.php",
+		"/D/Temp/2015.06.22-downloads/actors.php",
+		"/D/Temp/2015.06.22-downloads/_news.php",
+		"/D/Temp/test-seed/src/test.jade",
+		"/C/Users/Abnmt/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Dropbox/scotch-box/public/plugins/abnmt/theater/components/Playbill.php",
+		"/D/BackUp/AppData/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Abnmt/AppData/Roaming/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/D/Dropbox/AutoCAD/lsp_vendor/plinediet.lsp",
+		"/C/Users/Abnmt/Desktop/EKuLZ4/Vagrantfile",
+		"/C/Users/Abnmt/Desktop/EKuLZ4/puphpet/config.yaml",
+		"/C/Users/Abnmt/Desktop/EKuLZ4/puphpet/vagrant/Vagrantfile-digitalocean",
+		"/C/Users/Abnmt/Desktop/glpi/Vagrantfile",
+		"/C/Users/Abnmt/Desktop/glpi/ocsng/README",
+		"/C/Users/Abnmt/Downloads/fusioninventory-agent_windows-x64_2.3.16-portable/FusionInventory-Agent/etc/agent.cfg",
+		"/C/Users/Abnmt/Downloads/FusionInventory-Agent/etc/agent.cfg",
+		"/C/Users/Abnmt/Desktop/FusionInventory-Agent/etc/agent.cfg",
+		"/C/Users/Abnmt/Desktop/FusionInventory-Agent/perl/bin/fusioninventory-inventory",
+		"/C/Users/Abnmt/Desktop/FusionInventory-Agent/perl/agent/FusionInventory/Agent/Inventory.pm",
+		"/C/Users/Abnmt/Desktop/FusionInventory-Agent/perl/bin/fusioninventory-wakeonlan",
+		"/C/Program Files/FusionInventory-Agent/etc/agent.cfg.sample",
+		"/C/Users/Abnmt/Downloads/FusionInventory-Agent/inv.html",
+		"/C/Users/Abnmt/Desktop/OCSNG_UNIX_SERVER-2.1.2/README",
+		"/D/Dropbox/AutoCAD/lsp/aur_2014-vendor.lsp",
+		"/D/Dropbox/AutoCAD/lsp/aur_2014-menuload.lsp",
+		"/D/Dropbox/AutoCAD/lsp/aur_2014-modules.lsp",
+		"/D/Dropbox/AutoCAD/lsp/aur_2014-supportpaths.lsp",
+		"/D/Dropbox/AutoCAD/aur_2014-starter.lsp",
+		"/D/Dropbox/AutoCAD/aur_2014-load-and-start.lsp",
+		"/D/Dropbox/AutoCAD/lsp/LM_hatchpatternlist.LSP",
+		"/D/Dropbox/AutoCAD/lsp/abnmt_Util.lsp",
+		"/D/Dropbox/AutoCAD/fonts_other/acad.fmp",
+		"/C/Users/Abnmt/Desktop/MyLispPlugin.iss",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/plugins/abnmt/theater/updates/seed_news_table.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/plugins/abnmt/theater/updates/seed_press_table.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/config/cms.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/plugins/abnmt/theater/updates/seed_people_table.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/plugins/abnmt/theater/updates/seed_performances_table.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/config/database.php",
+		"/D/Dropbox/OpenServer/domains/komedianty.abnmt.com/config/database.php",
+		"/D/Dropbox/OpenServer/domains/komedianty.abnmt.com/config/cms.php",
+		"/D/Dropbox/OpenServer/domains/komedianty.abnmt.com/config/app.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/public/config/app.php",
+		"/C/Users/Abnmt/Desktop/scotch-box/Vagrantfile",
+		"/D/Dropbox/App/KiTTY/Sessions/vagrant"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Abnmt\\Desktop\\komedianty.com\\public\\themes\\komedianty\\source\\stylus",
+			"D:\\Dropbox\\AutoCAD\\lsp"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"block",
+			"// \n",
+			"\n\n// ",
+			"\n// ",
+			";",
+			":",
+			"}",
+			" {",
+			"font-weight",
+			"PluginName",
+			"W:\\\\TEMPLATES\\\\AutoCAD"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"D:\\\\Dropbox\\\\AutoCAD"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "komedianty.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "komedianty.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 338.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

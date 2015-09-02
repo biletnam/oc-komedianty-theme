@@ -4,7 +4,7 @@
 .page.playbill
 
 	h3
-		fs rem(40px)
+		fs -rem(40px)
 		@media screen and (max-width $normal)
 			margin-left $side_normal
 		@media screen and (max-width $tablet)
@@ -13,7 +13,7 @@
 	.event
 		// margin-bottom 2*$rem
 		line-height 1.2
-		fs rem(22px)
+		fs -rem(22px)
 		@media screen and (max-width $normal)
 			&:hover
 				.buy-button-block
@@ -52,9 +52,9 @@
 				content ' '
 			&.day
 				bold()
-				fs rem(24px)
+				fs -rem(24px)
 			&.weekday
-				fs rem(24px)
+				fs -rem(24px)
 				lowercase()
 		@media screen and (max-width $normal)
 			display table-cell
@@ -70,17 +70,17 @@
 			// test()
 			inline-block()
 			upcase()
-			fs rem(22px)
+			fs -rem(22px)
 			colors()
 		.rate
 			inline-block()
 			margin-left 1em
-			fs rem(22px)
+			fs -rem(22px)
 			second()
 			color $brand_dark
 		.author, .description
 			// display none
-			fs rem(22px)
+			fs -rem(22px)
 			color $gray
 			// nowrap()
 			// &:before
@@ -88,7 +88,7 @@
 			// 	display block
 		.meta
 			// display none
-			fs rem(18px)
+			fs -rem(18px)
 			color $gray
 			opacity 0
 			transition all .5s ease-out-quart

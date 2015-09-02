@@ -5,7 +5,7 @@
 
 	.row
 		distribute()
-		margin-bottom rem(3*23px)
+		margin-bottom -rem(3*23px)
 	.col
 		width div(30.5/64)
 		vertical-align top
@@ -14,13 +14,13 @@
 	.title
 		second()
 		upcase()
-		fs rem(32px)
+		fs -rem(32px)
 		line-height 1
 		margin-bottom $line
 
 	.grade
 		second()
-		fs rem(16px)
+		fs -rem(16px)
 		line-height (32/16)
 
 	.cols
@@ -29,19 +29,24 @@
 		// margin-top 3em
 
 	.content-block
-		fs rem(18px)
+		fs -rem(18px)
 		line-height (23/18)
 		-webkit-column-break-inside avoid
 		break-inside avoid
-		& + .content-block
-			margin-top 3em
+		// margin-top 3em
+		// & + .content-block
+		// 	margin-top 3em
+		padding-bottom 3em
 		a
 			// border-bottom 1px solid rgba($text,.5)
 			// &:hover
 			// 	border-bottom 1px solid rgba($brand,.5)
 			text-decoration underline
+		// h4
+		// 	margin-top 3em
 
 	.roles
+		// margin-top 0
 		.performance-title
 			&:before
 				content "«"
@@ -51,6 +56,7 @@
 			display inline
 			color $gray
 	.press
+		// margin-top 3em
 		.article-title
 			&:before
 				content "«"
@@ -71,7 +77,7 @@
 		margin-top 0
 		upcase()
 		first()
-		fs rem(23px)
+		fs -rem(23px)
 		line-height 1
 		font-weight 400
 		color $brand
@@ -79,7 +85,7 @@
 	dl
 		display block
 		reset-box-model()
-		fs rem(18px)
+		fs -rem(18px)
 		line-height (23/18)
 
 	dt

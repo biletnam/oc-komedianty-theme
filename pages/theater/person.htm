@@ -1,0 +1,25 @@
+title = "Персона"
+url = "/person/:slug"
+layout = "default"
+description = "Страница биографии"
+hidden = "0"
+
+[theaterPerson]
+==
+
+function onInit()
+{
+    $this['activeMenuItem'] = 'troupe';
+}
+==
+<!-- Single Person -->
+<div id="{{ this.param.slug }}-person-page" class="page side-menu person">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterPerson' %}
+			</div>
+		</div>
+	</div>
+</div>
+

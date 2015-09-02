@@ -1,0 +1,19 @@
+{% if post.events | length != 0 %}
+<div class="content earliest-block">
+    <div class="day num-{{post.events[0].event_date | date('j')}}">{{ post.events[0].event_date | date('j') }}</div>
+    <div class="month">{{ post.events[0].event_date | dateLocale('%h') }}</div>
+    <div class="weekday">{{ post.events[0].event_date | dateLocale('%A') }}</div>
+    <div class="header">Ближайшая дата спектакля</div>
+    <div class="buy-button"><a href="#">Купить билет!</a></div>
+</div>
+
+{% else %}
+
+<div class="content earliest-block contacts">
+    <div class="header">О ближайшей дате спектакля вы&nbsp;можете узнать по&nbsp;телефону:</div>
+    <div class="phone">764–81–14</div>
+    <div class="header">Каждый день <span class="nowrap">с 12:00 до 18:00</span></div>
+    <div class="buy-button"><a href="#">Купить билет!</a></div>
+</div>
+
+{% endif %}

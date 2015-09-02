@@ -1,0 +1,7 @@
+<ul class="post-list">
+    {% for post in posts %}
+        {% partial __SELF__ ~ "::article-item" post=post %}
+    {% else %}
+        {% partial __SELF__ ~ "::404" %}
+    {% endfor %}
+</ul>

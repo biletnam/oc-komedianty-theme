@@ -1,0 +1,50 @@
+{% set width  = data.width %}
+{% set height = data.height %}
+{% set class  = data.class %}
+
+{% set bg   = post.background[key] %}
+{% set mask = post.background_mask[key] %}
+{% set flat = post.background_flat[key] %}
+
+{% if bg and flat | length != 0 and mask | length != 0 %}<!-- bg {{ key+1 }} -->
+    <div class="bg bg-{{ key+1 }} {{ class }}">
+
+        <svg
+{#             version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" #}
+            preserveAspectRatio="xMinYMin meet"
+            viewBox="0 0 {{ width }} {{ height }}"
+            width="{{ width }}"
+            height="{{ height }}"
+        >
+            <defs>
+                <mask id="MaskG-{{ key+1 }}">
+                    <image
+                        xlink:href="{{ mask.thumb(width, height) }}"
+                        x="0" y="0"
+                        width="{{ width }}px"
+                        height="{{ height }}px"
+                    >
+                    </image>
+                </mask>
+            </defs>
+            <image
+                xlink:href="{{ flat.thumb(width, height) }}"
+                x="0" y="0"
+                width="{{ width }}px"
+                height="{{ height }}px"
+                mask="url(#MaskG-{{ key+1 }})">
+            </image>
+        </svg>
+
+    </div>
+{% elseif bg %}
+    <div class="bg bg-{{key+1}} {{ class }}">
+        <img
+            src="{{ bg.thumb(width, height) }}"
+            width="{{ width }}px"
+            height="{{ height }}px"
+        >
+    </div>
+{% endif %}

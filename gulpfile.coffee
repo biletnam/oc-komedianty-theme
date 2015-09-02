@@ -48,12 +48,6 @@ p =
 		s: src + '/images/**/*.{jpg,png,jpeg}'
 		w: src + '/images/**/*.{jpg,png,jpeg}'
 		d: out + '/images/'
-	tpls:
-		s: src + '/partials/**/*.{jpg,png,jpeg}'
-		w: src + '/partials/**/*.{jpg,png,jpeg}'
-		d: './partials/'
-	php:
-		w: '../../plugins/abnmt/theater/**/*.{php|htm|yaml}'
 
 # Error handler ???
 handleError = (err) ->

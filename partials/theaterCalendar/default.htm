@@ -1,0 +1,5 @@
+{% if group %}{% set events = group.normal %}{% else %}{% set events = posts %}{% endif %}
+{% partial __SELF__ ~ "::events" events=events %}
+{% partial __SELF__ ~ "::calendar" events=events %}
+
+

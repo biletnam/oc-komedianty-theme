@@ -1,0 +1,22 @@
+title = "Архив Новостей"
+url = "/arkhiv-novostey/:page?"
+layout = "default"
+description = "Страница Архива Новостей"
+is_hidden = "0"
+
+[theaterNewsArchive]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+categoryPage = "theaterNews/category"
+postPage = "theaterNews/post"
+==
+<!-- News Archive -->
+<div id="{{ this.param.category ? this.param.category + '-' : '' }}news-archive-page" class="page side-menu news-archive">
+	<div class="container">
+		<div class="wrap">
+			<div class="content">
+				{% component 'theaterNewsArchive' %}
+			</div>
+		</div>
+	</div>
+</div>
