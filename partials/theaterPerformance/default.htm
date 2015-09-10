@@ -7,6 +7,15 @@
 
             {% partial __SELF__ ~ "::event" %}
 
+            <div class="duration">
+                Продолжительность спектакля<br>
+                {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
+                {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
+                {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
+                {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
+                {% endif %}
+            </div>
+
             <div class="content about">
                 {{ post.content|raw }}
             </div>
@@ -22,26 +31,36 @@
 
             <div class="content meta">
                 <div class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | dateLocale('%e %h %Y года') }}</span></div>
-
-                <div class="duration">
-                    Длительность спектакля<br>
-                    {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
-                    {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
-                    {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
-                    {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
-                    {% endif %}
-                </div>
             </div>
 
     </div>
 </div>
 
 
-<div class="block">
+<div class="bg-block">
     <style type="text/css">
 
 {% for query, data in post.bg_data %}
     {% if query != '' %}
+
+        {% if query == 'q1920' %}
+
+        {% for column in data %}{% for item in column %}
+
+        .bg-container {{ item.class }} {
+            {% for name, value in item.styles %}{{ name }}: {{value}};
+            {% endfor %}
+
+        }
+        .bg-container {{ item.class }} .bg-wrap {
+            {% for name, value in item.margin %}{{ name }}: {{value}};
+            {% endfor %}
+
+        }
+
+        {% endfor %}{% endfor %}
+
+        {% else %}
 
         @media screen and (max-width: {{ query[1:] }}px) {
             {% for column in data %}{% for item in column %}
@@ -51,10 +70,17 @@
                 {% endfor %}
 
             }
+            .bg-container {{ item.class }} .bg-wrap {
+                {% for name, value in item.margin %}{{ name }}: {{value}};
+                {% endfor %}
+
+            }
+
             {% endfor %}{% endfor %}
 
         }
 
+        {% endif %}
     {% endif %}
 {% endfor %}
     </style>

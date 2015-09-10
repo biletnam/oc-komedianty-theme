@@ -1,3 +1,5 @@
+[viewBag]
+==
 {% set width  = data.width %}
 {% set height = data.height %}
 {% set class  = data.class %}
@@ -8,7 +10,7 @@
 
 {% if bg and flat | length != 0 and mask | length != 0 %}<!-- bg {{ key+1 }} -->
     <div class="bg bg-{{ key+1 }} {{ class }}">
-
+        <div class="bg-wrap" style="">
         <svg
 {#             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,14 +39,17 @@
                 mask="url(#MaskG-{{ key+1 }})">
             </image>
         </svg>
+        </div>
 
     </div>
 {% elseif bg %}
     <div class="bg bg-{{key+1}} {{ class }}">
+    	<div class="bg-wrap" style="">
         <img
-            src="{{ bg.thumb(width, height) }}"
-            width="{{ width }}px"
-            height="{{ height }}px"
+            src="{{ bg.thumb(width, height, { extension: 'png' } ) }}"
+            width="auto"
+            height="auto"
         >
+        </div>
     </div>
 {% endif %}
