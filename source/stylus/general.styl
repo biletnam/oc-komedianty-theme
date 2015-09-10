@@ -5,6 +5,7 @@
 html
 	font-size $rem
 	line-height 1.5
+	min-width 1200px
 
 body
 	reset-box-model()
@@ -15,11 +16,11 @@ body
 	color $text
 	background-color $bg
 
-	background url('../images/bg.jpg')
-	@media screen and (max-width $phone)
-		background #000000
-	background-size 100% auto
-	background-position top center
+	// background url('../images/bg.jpg')
+	// @media screen and (max-width $phone)
+	// 	background #000000
+	// background-size 100% auto
+	// background-position top center
 
 a
 	reset-link()
@@ -56,8 +57,8 @@ hr
 	max-width 1312px+2*155px
 	min-width 960px
 	margin 0 auto
-	@media screen and (max-width $small)
-		max-width 1056px+2*110px
+	// @media screen and (max-width $small)
+	// 	max-width 1056px+2*110px
 
 	& > .wrap
 		margin 0 155px
@@ -70,7 +71,7 @@ hr
 	min-width 960px
 
 .page.side-menu
-	margin-top $top_page_margin
+	margin-top $top_page_margin * .5
 	@media screen and (max-width $small)
 		margin-top $top_page_margin_small
 	.container

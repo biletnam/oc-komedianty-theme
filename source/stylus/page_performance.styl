@@ -51,6 +51,19 @@
 
 		z-index 2
 
+	.duration
+		absolute()
+		top 0
+		left 560px + 280px + 32px
+		border-top 1px solid $brand
+		margin-top 1em
+		white-space nowrap
+		fs -rem(14px)
+		padding-top 3px
+
+		@media screen and (max-width $normal)
+			left auto
+			right 0
 
 	.description
 		color $brand_bright
@@ -75,7 +88,7 @@
 			fs -rem(17px)
 			line-height (22/17)
 
-	.premiere-date, .duration
+	.premiere-date
 		absolute()
 		display block
 		margin 0
@@ -119,6 +132,10 @@
 			color $text
 			margin-bottom 1.5em
 
+		.phone
+			fs -rem(40px)
+			second()
+			nowrap()
 
 		.day
 			fs -rem(154px)
@@ -233,14 +250,14 @@
 	.gallery
 		relative()
 
-		margin-top 2em
+		// margin-top 2em
 
 		$c = 560
 		$m = 25
 		$cnt = 3
 
 		width (($c + $m)/$c)*100%
-		margin-bottom -($m/($c + $m))*100%
+		// margin-top -($m/($c + $m))*100%
 
 		fs 0
 
@@ -249,7 +266,7 @@
 			relative()
 
 			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
-			margin 0 ($m/($c + $m))*100% ($m/($c + $m))*100% 0
+			margin  ($m/($c + $m))*100% ($m/($c + $m))*100% 0 0
 
 			padding 0
 

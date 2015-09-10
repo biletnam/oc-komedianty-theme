@@ -7,6 +7,15 @@
 
             {% partial __SELF__ ~ "::event" %}
 
+            <div class="duration">
+                Продолжительность спектакля<br>
+                {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
+                {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
+                {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
+                {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
+                {% endif %}
+            </div>
+
             <div class="content about">
                 {{ post.content|raw }}
             </div>
@@ -22,46 +31,67 @@
 
             <div class="content meta">
                 <div class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | dateLocale('%e %h %Y года') }}</span></div>
-
-                <div class="duration">
-                    Длительность спектакля<br>
-                    {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
-                    {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
-                    {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
-                    {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
-                    {% endif %}
-                </div>
             </div>
 
     </div>
 </div>
 
 
-<style type="text/css">
-    {% for layout in post.bg_layouts %}
-    {% set min = layout.query.min %}
-    {% set max = layout.query.max %}
+<div class="bg-block">
+    <style type="text/css">
 
-    @media screen {% if min != 'no' %}{{ " and (min-width: #{min}px)" }}{% endif %}{% if max != 'no' %}{{ " and (max-width: #{max}px)" }}{% endif %} {
-        .bg-container.q{{min}}-{{max}} {display: block !important;}
-    }
-    {% endfor %}
+{% for query, data in post.bg_data %}
+    {% if query != '' %}
 
-</style>
+        {% if query == 'q1920' %}
 
+        {% for column in data %}{% for item in column %}
 
-<div class="block">
-    {% for layout in post.bg_layouts %}
-    {% set min = layout.query.min %}
-    {% set max = layout.query.max %}
+        .bg-container {{ item.class }} {
+            {% for name, value in item.styles %}{{ name }}: {{value}};
+            {% endfor %}
 
-    <div class="bg-container q{{min}}-{{max}}">
-        {% for bg in layout.positions %}
-        {% partial __SELF__ ~ "::background" data = bg %}
-        {% endfor %}
+        }
+        .bg-container {{ item.class }} .bg-wrap {
+            {% for name, value in item.margin %}{{ name }}: {{value}};
+            {% endfor %}
+
+        }
+
+        {% endfor %}{% endfor %}
+
+        {% else %}
+
+        @media screen and (max-width: {{ query[1:] }}px) {
+            {% for column in data %}{% for item in column %}
+
+            .bg-container {{ item.class }} {
+                {% for name, value in item.styles %}{{ name }}: {{value}};
+                {% endfor %}
+
+            }
+            .bg-container {{ item.class }} .bg-wrap {
+                {% for name, value in item.margin %}{{ name }}: {{value}};
+                {% endfor %}
+
+            }
+
+            {% endfor %}{% endfor %}
+
+        }
+
+        {% endif %}
+    {% endif %}
+{% endfor %}
+    </style>
+
+    <div class="bg-container">
+        <!-- Backgrounds -->
+        {% for key, background in post.background %}
+
+        {% partial __SELF__ ~ "::background" key = key data = background %}
+        {% endfor %}<!-- End -->
     </div>
-    {% endfor %}
-
 </div>
 
 
