@@ -1,0 +1,50 @@
+// ************************************************************************************************
+// PAGE ABOUT
+// ************************************************************************************************
+
+.page.about
+	.title
+		fs -rem(37px)
+	.role
+		first()
+		fs -rem(28px)
+		color $brand
+
+
+	.bg
+		z-index -10
+
+		absolute()
+		left 0
+		right 0
+		top 0
+		bottom 0
+
+		left 50%
+		padding-left 45px
+		padding-right 60px
+		margin-top -80px
+
+
+	.bio
+		width 768px
+
+
+.page.about.hystory
+	.content
+		fs -rem(18px)
+		clearfix()
+		.title
+			text-transform none
+		.col
+			float left
+			width 47.5%
+
+		.col + .col
+			margin-left 5%
+
+		.pictures
+			width 36%
+			margin-top 30px
+			img + img
+				margin-top 36px
