@@ -76,9 +76,13 @@ items:
                 replace: ''
             -
                 title: 'Архив прессы'
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: pressArchive
                 reference: theaterPress/archive
+                cmsPage: ''
+                replace: ''
             -
                 title: Журнал
                 nesting: ''
@@ -136,23 +140,19 @@ items:
                 replace: ''
     -
         title: Труппа
-        nesting: ''
-        type: cms-page
-        url: ''
+        nesting: '0'
+        type: static-page
         code: troupe
-        reference: troupe/art-director
-        cmsPage: ''
-        replace: ''
+        reference: truppa-hudruk
+        replace: '0'
         items:
             -
                 title: 'Художественный руководитель'
-                nesting: ''
-                type: cms-page
-                url: ''
+                nesting: '0'
+                type: static-page
                 code: ''
-                reference: troupe/art-director
-                cmsPage: ''
-                replace: ''
+                reference: truppa-hudruk
+                replace: '0'
             -
                 title: Актёры
                 nesting: ''

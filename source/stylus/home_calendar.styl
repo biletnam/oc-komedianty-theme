@@ -2,35 +2,64 @@
  *  HOME PAGE - CALENDAR
  ********************************************************************************************************************************************/
 #home #playbill
-    relative()
-    margin-top -2*$mod
+    ratio-box(1920/1080)
+    margin-top -rem(-131px)
+    @media screen and (max-width $normal)
+        margin-top -rem(-105px)
+    @media screen and (max-width $tablet)
+        margin-top -rem(-105px)
 
     .event
+        absolute()
+        top 0
+        left 0
+        right 0
+        bottom 0
+
         display none // for JS
         &.active
             display block
 
+        background-size cover
+        background-position top center
+
+    .container, .wrap
+        height 100%
+
     .ratio
-        relative()
-        ratio-box(80/52)
+        absolute()
+        top 0
+        left 0
+        right 0
+        bottom 0
+        height 100%
+        // ratio-box(80/52)
+        // height 100%
 
     .section-header
         absolute()
-        width div(13/82)
+        width -rem(13*$rem)
 
+        fs -rem(28px)
+        // second()
+        text-transform none
+
+        a
+            colors($brand_dark, $brand, darken($brand_dark, 15%))
         // z-index 3000
 
-        bottom div(4/52)
+        bottom div(8/52) + div(134/1080)
         margin 0
 
         line-height .675em
         text-indent .12em
+        nowrap()
 
     .title-block
         absolute()
 
-        width div(65/80)
-        bottom div(4/52)
+        width div(65/82)
+        bottom div(8/52) + div(134/1080)
         right 0
 
         text-align right
@@ -77,13 +106,20 @@
 
 
     .date-block
+        fs 16px
+
+        @media (max-width 1440px)
+            fs -rem(14px)
+        @media (max-width 1360px)
+            fs -rem(12px)
         absolute()
         z-index 200
 
-        width div(13/82)
-        height div(20/52)
+        width 13em
+        height 20em
 
-        top div(16/52)
+        top div(12/52)
+        // bottom div(19/52) + div(134/1080)
 
         background-color $brand_dark
 
@@ -100,9 +136,9 @@
             display block
         .day
             relative()
-            top -(4/124)*1em
-            fs -rem(150px)
-            line-height 1.24em
+            top -(1/124)*1em
+            fs -em(140/16)
+            line-height 1.2em
             // font-weight bold
 
             &.double
@@ -112,62 +148,70 @@
 
         .month
             absolute()
-            fs -rem(24px)
+            fs -em(24/16)
             // margin-top .5em
             line-height .7em
             width 100%
-            top div(12/22)
+            top div(11/22)
 
             &.Jan
-                fs 2.5rem
+                fs -em(40/16)
             &.Feb
-                fs 1.8rem
+                fs -em(29/16)
             &.Mar
-                fs 2.2rem
+                fs -em(35/16)
             &.April
-                fs 1.8rem
+                fs -em(29/16)
             &.May
-                fs 2.2rem
+                fs -em(35/16)
                 // letter-spacing .11em
                 // text-indent .12em
+            &.June
+                fs -em(29/16)
+            &.July
+                fs -em(29/16)
+            &.Sep
+                fs -em(25/16)
+            &.Oct
+                fs -em(27/16)
 
         .weekday
-            fs 1.6rem
+            fs -em(26/16)
             margin-top .8em
             line-height .5em
 
             absolute()
             width 100%
-            bottom div(6/22)
+            bottom div(7/22)
             // top (13/22)*100%
 
             &.Mon
-                fs -rem(16px)
+                fs -em(16/16)
                 letter-spacing .02em
             &.Tue
-                fs -rem(26px)
+                fs -em(26/16)
                 letter-spacing .01em
             &.Wed
-                fs -rem(32px)
+                fs -em(32/16)
                 letter-spacing .15em
                 text-indent .1em
             &.Thu
-                fs -rem(28px)
+                fs -em(28/16)
                 // letter-spacing .05em
             &.Fri
-                fs -rem(25px)
+                fs -em(25/16)
                 letter-spacing .01em
             &.Sat
-                fs -rem(26px)
+                fs -em(26/16)
             &.Sun
-                fs -rem(17px)
+                fs -em(17/16)
         // .time
         //  letter-spacing 0
         //  fs -rem(13px)
         .button-buy
             // margin-top $line
             line-height 1.3em
-            fs -rem(16px)
+            fs -em(16/16)
             letter-spacing 0.02em
 
             absolute()
@@ -181,11 +225,31 @@
 
 
     .calendar
-        // relative()
-        height -rem(32px)
-        margin-bottom 2*$mod
+        absolute()
+        right 0
+        left 0
+        bottom div(134/1080)
 
-        background-color $brand_dark
+        overflow hidden
+
+        &:before, &:after
+            content ""
+            display block
+            absolute()
+            width 50%
+            background-color $brand
+            top -rem(32px)
+            height -rem(32px)
+            left 0
+            right 0
+            // z-index 0
+        &:before
+            right 50%
+            background linear-gradient(to left, $brand_dark 0, $brand_dark 811px, $brand_dark * .3 100%)
+        &:after
+            background linear-gradient(to right, $brand_dark 0, $brand_dark 811px, $brand_dark * .3 100%)
+            left 50%
+
 
         second()
 
@@ -193,7 +257,7 @@
             absolute()
             display block
 
-            top 145%
+            top -rem(82px)
 
             padding 0
             font-size 0
@@ -208,26 +272,62 @@
 
             z-index 5000
 
+
             &.slick-prev
                 right 100%
                 triangle left -rem(11px) #7A1D00
                 margin-right -rem(16px)
+                &:hover
+                    triangle left -rem(11px) $brand
+                &:active
+                    triangle left -rem(11px) $brand_dark
+
             &.slick-next
                 left 100%
                 triangle right -rem(11px) #7A1D00
                 margin-left -rem(16px)
+                &:hover
+                    triangle right -rem(11px) $brand
+                &:active
+                    triangle right -rem(11px) $brand_dark
 
+        .slide
+            transition all .5s ease
+            relative()
+            left 0
 
         .slider
+            relative()
+
+            // padding-left -rem(8px)
+
             distribute()
 
+            overflow hidden
+            white-space nowrap
+
+            height -rem(114px)
+            // margin-top -rem(32px)
+
             .slider-item
+                z-index 10
                 relative()
                 inline-block()
 
+                top -rem(32px)
+
                 height -rem(32px)
-                width div(2/92)
-                padding 0 div(1/92)
+
+                width div(2/100)
+                margin 0 div(1.5/100)
+
+                @media (max-width 1680px )
+                    width div(2/80)
+                    margin 0 div(1.5/80)
+                // @media (max-width 1440px )
+                //     width div(2/60)
+                //     margin 0 div(1.5/60)
+
 
                 vertical-align top
 
@@ -238,6 +338,10 @@
                 border none
                 text-decoration none
                 text-align center
+
+                &.active, &:hover
+                    transition all .05s ease
+                    box-shadow 0px 0px 24px 12px rgba(0,0,0,0.6)
 
 
 
@@ -273,10 +377,10 @@
                         font-weight 600
 
                     .day
-                        padding 16px 8px
-                        margin -16px -8px 0
+                        padding 16px 8px 16px 6px
+                        margin -16px -8px 0 -6px
                         fs -rem(30px)
-                        box-shadow 0px 0px 24px 5px rgba(0,0,0,0.6)
+                        // box-shadow 0px 0px 24px 5px rgba(0,0,0,0.6)
                     .weekday
                         margin-top 4px
                         fs -rem(21px)

@@ -3,6 +3,13 @@
  ********************************************************************************************************************************************/
 #site-navigation
 	relative()
+
+	padding-left $side
+	@media screen and (max-width $normal)
+		padding-left $side_normal
+	@media screen and (max-width $tablet)
+		padding-left $side_tablet
+
 	// @media screen and (max-width $normal)
 	@media screen and (max-width $phone)
 		display none

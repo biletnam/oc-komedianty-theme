@@ -87,24 +87,53 @@ $(".mainMenu .mainMenu-item > a").click (e) ->
 
 
 
-AlignBackgrounds = ->
-    backgrounds = $('.bg-container .bg')
-    console.log backgrounds
+# AlignBackgrounds = ->
+#     backgrounds = $('.bg-container .bg')
+#     console.log backgrounds
 
-    images = []
+#     images = []
 
-    for image in backgrounds
-        do (image) ->
-            svg = $('svg', image)
-            width = svg.attr('width')
-            height = svg.attr('height')
+#     for image in backgrounds
+#         do (image) ->
+#             svg = $('svg', image)
+#             width = svg.attr('width')
+#             height = svg.attr('height')
 
-            images.push [width, height]
+#             images.push [width, height]
 
-    console.log images
-
-
+#     console.log images
 
 
-$(document).ready ->
-    AlignBackgrounds()
+
+
+# $(document).ready ->
+#     AlignBackgrounds()
+
+
+
+$(".nav.slick-next").click (e) ->
+    console.log 'Click Next'
+    el = $(".calendar .slide")
+    console.log left = el.position().left
+    items = $(".calendar .slide .slider-item")
+    console.log count = items.size()
+    console.log width = el.prop('scrollWidth')
+    console.log step = 5*(width/count)
+    # console.log step = pos.left - ($(".calendar .slide .slider-item.active").outerWidth(true) * 5)
+    console.log step = left - step
+    el.css('left', step)
+    console.log slider = $(".calendar .slider").outerWidth(true)
+    console.log check = width - slider + step
+    if check < 0
+        step = slider - width
+        el.css('left', step)
+
+$(".nav.slick-prev").click (e) ->
+    console.log 'Click Prev'
+    el = $(".calendar .slide")
+    console.log left = el.position().left
+    console.log step = left + $(".calendar .slide .slider-item.active").outerWidth(true) * 5
+    if step > 0
+        el.css('left', 0)
+    else
+        el.css('left', step)

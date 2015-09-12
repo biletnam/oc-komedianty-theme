@@ -12,13 +12,14 @@
 	margin-bottom -6px // TODO: Rewrite!
 
 
+
 /********************************************************************************************************************************************
  *  MAIN LOGO
  ********************************************************************************************************************************************/
 
 .main-logo
 	relative()
-	// absolute top left
+	absolute top left
 
 	width $side
 	height 2*$mod
@@ -28,7 +29,7 @@
 	@media screen and (max-width $tablet)
 		width $side_tablet
 
-	float left
+	// float left
 
 	first()
 	font-weight 300
@@ -106,10 +107,14 @@
  ********************************************************************************************************************************************/
 .descriptor
 	height -rem(2*$mod - 18px)
+
+	padding-left $side
 	@media screen and (max-width $normal)
+		padding-left $side_normal
 		height -rem(2*$mod - 44px)
 	@media screen and (max-width $tablet)
 		height -rem(2*$mod - 42px)
+		padding-left $side_tablet
 	@media screen and (max-width $phone)
 		display none
 
