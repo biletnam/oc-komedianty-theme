@@ -54,6 +54,12 @@ $('.buy-button').click (e) ->
 
     BuyPopUpShow()
 
+$('.button-buy').click (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+
+    BuyPopUpShow()
+
 
 # ShowSideMenu = (e) ->
 #     e.show

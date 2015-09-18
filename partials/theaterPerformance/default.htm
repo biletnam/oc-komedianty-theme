@@ -48,12 +48,12 @@
         {% for column in data %}{% for item in column %}
 
         .bg-container {{ item.class }} {
-            {% for name, value in item.styles %}{{ name }}: {{value}};
+            {% for name, value in item.container_styles %}{{ name }}: {{value}};
             {% endfor %}
 
         }
-        .bg-container {{ item.class }} .bg-wrap {
-            {% for name, value in item.margin %}{{ name }}: {{value}};
+        .bg-container {{ item.class }} .bg-item {
+            {% for name, value in item.item_styles %}{{ name }}: {{value}};
             {% endfor %}
 
         }
@@ -66,12 +66,12 @@
             {% for column in data %}{% for item in column %}
 
             .bg-container {{ item.class }} {
-                {% for name, value in item.styles %}{{ name }}: {{value}};
+                {% for name, value in item.container_styles %}{{ name }}: {{value}};
                 {% endfor %}
 
             }
-            .bg-container {{ item.class }} .bg-wrap {
-                {% for name, value in item.margin %}{{ name }}: {{value}};
+            .bg-container {{ item.class }} .bg-item {
+                {% for name, value in item.item_styles %}{{ name }}: {{value}};
                 {% endfor %}
 
             }

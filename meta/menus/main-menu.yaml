@@ -129,29 +129,24 @@ items:
                 reference: detskiy-spektakl
                 cmsPage: theater/repertoire
                 replace: ''
-            -
-                title: 'Архивные спектакли'
-                nesting: ''
-                type: repertoire
-                url: ''
-                code: ''
-                reference: arkhivnyy-spektakl
-                cmsPage: theater/repertoire
-                replace: ''
     -
         title: Труппа
         nesting: '0'
         type: static-page
+        url: ''
         code: troupe
         reference: truppa-hudruk
+        cmsPage: ''
         replace: '0'
         items:
             -
                 title: 'Художественный руководитель'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: truppa-hudruk
+                cmsPage: ''
                 replace: '0'
             -
                 title: Актёры

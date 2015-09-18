@@ -2,7 +2,7 @@
  *  HOME PAGE - CALENDAR
  ********************************************************************************************************************************************/
 #home #playbill
-    ratio-box(1920/1080)
+    ratio-box(1920/960)
     margin-top -rem(-131px)
     @media screen and (max-width $normal)
         margin-top -rem(-105px)
@@ -45,10 +45,12 @@
         text-transform none
 
         a
-            colors($brand_dark, $brand, darken($brand_dark, 15%))
+            // colors($brand_dark, $brand, darken($brand_dark, 15%))
+            colors()
         // z-index 3000
 
-        bottom div(8/52) + div(134/1080)
+        // bottom div(8/52) + div(134/960)
+        bottom div(8/52)
         margin 0
 
         line-height .675em
@@ -59,7 +61,8 @@
         absolute()
 
         width div(65/82)
-        bottom div(8/52) + div(134/1080)
+        // bottom div(8/52) + div(134/960)
+        bottom div(8/52)
         right 0
 
         text-align right
@@ -136,10 +139,10 @@
             display block
         .day
             relative()
-            top -(1/124)*1em
-            fs -em(140/16)
-            line-height 1.2em
-            // font-weight bold
+            top (32/128)*1em
+            fs -em(128/16)
+            line-height 1
+            font-weight bold
 
             &.double
                 position relative
@@ -148,63 +151,64 @@
 
         .month
             absolute()
-            fs -em(24/16)
+            fs -em(30/16)
             // margin-top .5em
-            line-height .7em
+            line-height 1
             width 100%
-            top div(11/22)
+            top div(10.7/20)
 
-            &.Jan
-                fs -em(40/16)
-            &.Feb
-                fs -em(29/16)
-            &.Mar
-                fs -em(35/16)
-            &.April
-                fs -em(29/16)
-            &.May
-                fs -em(35/16)
-                // letter-spacing .11em
-                // text-indent .12em
-            &.June
-                fs -em(29/16)
-            &.July
-                fs -em(29/16)
-            &.Sep
-                fs -em(25/16)
-            &.Oct
-                fs -em(27/16)
+            // &.Jan
+            //     fs -em(40/16)
+            // &.Feb
+            //     fs -em(29/16)
+            // &.Mar
+            //     fs -em(35/16)
+            // &.April
+            //     fs -em(29/16)
+            // &.May
+            //     fs -em(35/16)
+            //     // letter-spacing .11em
+            //     // text-indent .12em
+            // &.June
+            //     fs -em(29/16)
+            // &.July
+            //     fs -em(29/16)
+            // &.Sep
+            //     fs -em(25/16)
+            // &.Oct
+            //     fs -em(27/16)
 
         .weekday
-            fs -em(26/16)
-            margin-top .8em
-            line-height .5em
+            fs -em(18/16)
+            // margin-top .8em
+            line-height 1
 
             absolute()
             width 100%
-            bottom div(7/22)
+            bottom div(5.5/20)
             // top (13/22)*100%
 
-            &.Mon
-                fs -em(16/16)
-                letter-spacing .02em
-            &.Tue
-                fs -em(26/16)
-                letter-spacing .01em
-            &.Wed
-                fs -em(32/16)
-                letter-spacing .15em
-                text-indent .1em
-            &.Thu
-                fs -em(28/16)
-                // letter-spacing .05em
-            &.Fri
-                fs -em(25/16)
-                letter-spacing .01em
-            &.Sat
-                fs -em(26/16)
-            &.Sun
-                fs -em(17/16)
+            // &.Mon
+            //     fs -em(16/16)
+            //     letter-spacing .02em
+            // &.Tue
+            //     fs -em(26/16)
+            //     letter-spacing .01em
+            // &.Wed
+            //     fs -em(32/16)
+            //     letter-spacing .15em
+            //     text-indent .1em
+            // &.Thu
+            //     fs -em(28/16)
+            //     // letter-spacing .05em
+            // &.Fri
+            //     fs -em(25/16)
+            //     letter-spacing .01em
+            // &.Sat
+            //     fs -em(26/16)
+            // &.Sun
+            //     fs -em(17/16)
+
         // .time
         //  letter-spacing 0
         //  fs -rem(13px)
@@ -212,14 +216,14 @@
             // margin-top $line
             line-height 1.3em
             fs -em(16/16)
-            letter-spacing 0.02em
+            // letter-spacing 0.02em
 
             absolute()
             width 100%
             bottom div(3/22)
 
             a
-                color inherit
+                colors(inherit)
                 text-decoration none
                 border-bottom 1px solid
 
@@ -228,7 +232,8 @@
         absolute()
         right 0
         left 0
-        bottom div(134/1080)
+        // bottom div(134/960)
+        bottom 0
 
         overflow hidden
 
