@@ -135,11 +135,13 @@
 		.sponsor
 			inline-block()
 			height 2*$mod
+			line-height 2*$mod
 			// width 75%
 			// vertical-align middle
 			text-align center
 			a
 				inline-block()
+				relative()
 				vertical-align middle
 				height 100%
 				&:before
@@ -147,14 +149,32 @@
 					inline-block()
 					vertical-align middle
 					height 100%
+			a:hover .bw
+				opacity 0
+				transition .5s opacity ease
+			a:hover .color
+				opacity 1
+				transition .2s opacity ease
 
 			img
 				inline-block()
+				// absolute()
+				// top 0
+				// left 0
 				vertical-align middle
-				max-width 100px
-				max-height 100%
+				// max-width 100px
+				// max-height 100%
 				height auto
 				width auto
+			.bw, .color
+				absolute()
+				top 0
+				left 0
+				bottom 0
+				right 0
+			.color
+				opacity 0
+
 
 	.culture
 		text-align center
