@@ -1,0 +1,26 @@
+title = "Тест"
+url = "/testbilet"
+layout = "default"
+is_hidden = "0"
+==
+
+{% put scripts %}
+    <script type="text/javascript" src="http://komedianty.apit.bileter.ru/d98a3e8ab87ecd3721a78a273bd9146a.js"></script>
+{% endput %}
+
+{% put styles %}
+    <link href="http://apit.bileter.ru/css/apit.css" rel="stylesheet" />
+    {# <link href="http://apit.bileter.ru/css/komedianty.com.css" rel="stylesheet" /> #}
+{% endput %}
+
+
+<div id="bileter_playbill" class="page">
+    <div class="container">
+        <div class="wrap">
+
+            <div class="bileter_afisha"></div>
+
+        </div>
+    </div>
+</div>
+
