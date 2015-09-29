@@ -1,4 +1,9 @@
-    <div class="container">
+[theaterBackgrounds]
+layout = "{{ :slug }}"
+
+[viewBag]
+==
+<div class="container">
         <div class="wrap">
 
             <div style="" class="content title">{{ post.title }}<div class="buy-button"><a href="#">Купить билет!</a></div></div>
@@ -36,62 +41,4 @@
     </div>
 </div>
 
-
-<div class="bg-block">
-    <style type="text/css">
-
-{% for query, data in post.bg_data %}
-    {% if query != '' %}
-
-        {% if query == 'q1920' %}
-
-        {% for column in data %}{% for item in column %}
-
-        .bg-container {{ item.class }} {
-            {% for name, value in item.container_styles %}{{ name }}: {{value}};
-            {% endfor %}
-
-        }
-        .bg-container {{ item.class }} .bg-item {
-            {% for name, value in item.item_styles %}{{ name }}: {{value}};
-            {% endfor %}
-
-        }
-
-        {% endfor %}{% endfor %}
-
-        {% else %}
-
-        @media screen and (max-width: {{ query[1:] }}px) {
-            {% for column in data %}{% for item in column %}
-
-            .bg-container {{ item.class }} {
-                {% for name, value in item.container_styles %}{{ name }}: {{value}};
-                {% endfor %}
-
-            }
-            .bg-container {{ item.class }} .bg-item {
-                {% for name, value in item.item_styles %}{{ name }}: {{value}};
-                {% endfor %}
-
-            }
-
-            {% endfor %}{% endfor %}
-
-        }
-
-        {% endif %}
-    {% endif %}
-{% endfor %}
-    </style>
-
-    <div class="bg-container">
-        <!-- Backgrounds -->
-        {% for key, background in post.background %}
-
-        {% partial __SELF__ ~ "::background" key = key data = background %}
-        {% endfor %}<!-- End -->
-    </div>
-</div>
-
-
+{% component 'theaterBackgrounds' %}
