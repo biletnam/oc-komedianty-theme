@@ -11,7 +11,7 @@ $mod = 4*$rem
 
 // Sizes
 $top_page_margin = 2*$mod
-$top_page_margin_small = 1*$mod
+$top_page_margin_small = 1.5*$mod
 $side = 18*$rem
 $side_normal = 15*$rem
 $side_tablet = 12*$rem
@@ -158,7 +158,7 @@ button(color = $button, hover = $brand, text = $text, hovertext = #fff)
 	cursor pointer
 
 	color text
-	transition all .5s ease-out-quart
+	transition all .5s ease-out
 	border none
 
 	&:before
@@ -173,7 +173,7 @@ button(color = $button, hover = $brand, text = $text, hovertext = #fff)
 		background color
 		z-index -1
 
-		transition background .5s ease-out-quart
+		transition background .5s ease-out
 
 	&:hover
 		color hovertext

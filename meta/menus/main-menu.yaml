@@ -94,41 +94,45 @@ items:
                 replace: ''
     -
         title: Афиша
-        nesting: ''
         type: playbill
-        url: ''
         code: playbill
-        reference: ''
         cmsPage: theater/playbill
         replace: '0'
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
     -
         title: Репертуар
-        nesting: ''
         type: repertoire
-        url: ''
         code: repertoire
-        reference: spektakl
+        reference: spektakli
         cmsPage: theater/repertoire
-        replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
         items:
             -
                 title: Спектали
-                nesting: ''
                 type: repertoire
-                url: ''
                 code: ''
-                reference: spektakl
+                reference: spektakli
                 cmsPage: theater/repertoire
-                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
             -
                 title: 'Детские спектакли'
-                nesting: ''
                 type: repertoire
-                url: ''
                 code: ''
-                reference: detskiy-spektakl
+                reference: detskie-spektakli
                 cmsPage: theater/repertoire
-                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
     -
         title: Труппа
         nesting: '0'
@@ -150,22 +154,24 @@ items:
                 replace: '0'
             -
                 title: Актёры
-                nesting: ''
                 type: troupe
-                url: ''
                 code: ''
-                reference: akter
+                reference: aktery
                 cmsPage: theater/troupe
-                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
             -
                 title: 'Приглашенные артисты'
-                nesting: ''
                 type: troupe
-                url: ''
                 code: ''
-                reference: priglashennyy-artist
+                reference: priglashennye-artisty
                 cmsPage: theater/troupe
-                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
     -
         title: Контакты
         nesting: ''
