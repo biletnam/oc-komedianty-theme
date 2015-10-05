@@ -1,4 +1,6 @@
-                                <article class="news">
+{% set back_color = ['7b001d', '820027', '780313', '5f1001', '660010'] %}
+
+                                <article class="news" style="background-color:#{{random(back_color)}};">
                                     <div class="featured">
                                         <a href="{{ post.url }}" class="featured-link">
                                             <img src="{{ post.cover.thumb(416, 256, { mode: 'crop', extension: 'jpg' }) }}" />

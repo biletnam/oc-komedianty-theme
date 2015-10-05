@@ -41,26 +41,26 @@ jQuery(document).ready ($) ->
 	# 				$('.content .section').removeClass "active"
 	# 				dest.addClass "active"
 
+
+
 	BuyPopUpShow = ->
 		$('.buy-popup').show()
 
 	BuyPopUpHide = ->
 		$('.buy-popup').hide()
 
-	$(document).ready ->
-		BuyPopUpHide()
 
-	$('.buy-button').click (e) ->
-		e.preventDefault()
-		e.stopPropagation()
+	# $('.buy-button').click (e) ->
+	# 	e.preventDefault()
+	# 	e.stopPropagation()
 
-		BuyPopUpShow()
+	# 	# BuyPopUpShow()
 
-	$('.button-buy').click (e) ->
-		e.preventDefault()
-		e.stopPropagation()
+	# $('.button-buy').click (e) ->
+	# 	e.preventDefault()
+	# 	e.stopPropagation()
 
-		BuyPopUpShow()
+	# 	BuyPopUpShow()
 
 
 	# ShowSideMenu = (e) ->
@@ -145,3 +145,26 @@ jQuery(document).ready ($) ->
 			el.css('left', 0)
 		else
 			el.css('left', step)
+
+
+	# test = (e) ->
+	# 	bileter_api_key = 'd98a3e8ab87ecd3721a78a273bd9146a'
+	# 	bileter_api_url = 'http://komedianty.apit.bileter.ru/'
+
+	# 	$.ajax(
+	# 		async: !0
+	# 		type: 'POST'
+	# 		url: bileter_api_url + bileter_api_key + '/afisha/'
+	# 		dataType: 'html'
+	# 		data:
+	# 			api_key: bileter_api_key
+	# 		success: (t) ->
+	# 			console.log t
+	# 			return
+	# 	)
+	# 	return
+
+
+	$(document).ready ->
+		BuyPopUpHide()
+		# test()

@@ -6,7 +6,7 @@ layout = "{{ :slug }}"
 <div class="container">
         <div class="wrap">
 
-            <div style="" class="content title">{{ post.title }}<div class="buy-button"><a href="#">Купить билет!</a></div></div>
+            <div style="" class="content title">{{ post.title }}<div class="buy-button">{% if post.events[0].bileter_id %}<div class="bileter_mini_afisha_buy" id="pl{{post.events[0].bileter_id}}" >Купить билет!</div>{% endif %}</div></div>
             {% if post.author %}<div class="content author">{{ post.author }}</div>{% endif %}
             {% if post.description %}<div class="content description{% if post.author == null %} alone{% endif %}">{{ post.description }}</div>{% endif %}
 

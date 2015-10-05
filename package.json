@@ -4,8 +4,7 @@
   "main": "gulpfile.coffee",
   "dependencies": {
     "axis": "latest",
-    "coffee-script": "^1.9.3",
-    "del": "latest",
+    "coffee-script": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-coffee": "latest",
@@ -15,6 +14,6 @@
     "gulp-stylus": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
-    "jeet": "latest"
+    "rimraf": "latest"
   }
 }

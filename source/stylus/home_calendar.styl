@@ -222,10 +222,14 @@
             width 100%
             bottom div(3/22)
 
-            a
+            .bileter_mini_afisha_buy
                 colors(inherit)
                 text-decoration none
                 border-bottom 1px solid
+                width auto
+                inline-block()
+                cursor pointer
+                // position absolute
 
 
     .calendar
@@ -375,7 +379,7 @@
 
                 &.active, &:hover
                     // background $brand
-                    z-index 99999
+                    z-index 10
 
                     .day, .weekday
                         transition all .05s ease

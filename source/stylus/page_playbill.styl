@@ -25,11 +25,12 @@
 	.buy-button-block
 		inline-block()
 		width $side_normal - 4*$rem
-		opacity 0
-		.buy-button
+		opacity 1
+		.bileter_mini_afisha_buy
 			button()
-		@media screen and (min-width $normal + 1)
-			display none
+			width auto
+		// @media screen and (min-width $normal + 1)
+		// 	display none
 		@media screen and (max-width $normal)
 			display table-cell
 			relative()

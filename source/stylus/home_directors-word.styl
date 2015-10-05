@@ -4,10 +4,11 @@
 #home #directors-word
 	relative()
 
-	background #0e0204
-	background url('../images/directors_word.jpg') no-repeat #0e0204
+	// background #0e0204
+	background url('../images/levshin_main_1920.jpg') no-repeat
 	background-position top right
-	background-size auto 100%
+	// background-size auto 100%
+	background-size contain
 
 	// margin-bottom -32px
 
@@ -15,7 +16,7 @@
 		fs -rem(33px)
 
 	h2, h3
-		second_font()
+		second()
 		text-transform uppercase
 		font-weight normal
 	h3
@@ -25,9 +26,9 @@
 		padding 48px 0
 
 	.content
-		second_font()
-		width div(36/82)
-		margin-left (2.5/82)*100%
+		second()
+		width div(40/82)
+		// margin-left (2.5/82)*100%
 
 		// margin-bottom div(2/82)
 
@@ -38,24 +39,24 @@
 			content "«"
 
 			absolute()
-			right div(81/82)
+			right div(83/82)
 			top 1.94em
 
 			fs -rem(100px)
 			line-height .5em
 			color $gray_color
-			second_font()
+			second()
 			opacity .5
 
 		&:after
 			content "»"
 
 			relative()
-			left (83.5/82)*100%
+			left (83/82)*100%
 			bottom 1.855em
 
 			fs -rem(100px)
 			line-height .5em
 			color $gray_color
-			second_font()
+			second()
 			opacity .5
