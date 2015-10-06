@@ -1,8 +1,5 @@
 <!-- {{ event.slug }} -->
-<div class="event">
-    {% if event.bileter_id %}
-        <div class="buy-button-block"><div class="bileter_mini_afisha_buy" id="pl{{event.bileter_id}}" >Купить билет!</div></div>
-    {% endif %}
+<div class="event{{ date(event.event_date) < date() ? " inactive"}}">
     <div class="date-block"><span class="date day">{{ event.event_date | date('j') }}</span><span class="date weekday">{{ event.event_date | dateLocale('%a') }}</span></div>
     <div class="title-block">
         <div class="title"><a href="{{ event.relation.url }}">{{ event.relation.title }}</a></div>
@@ -16,5 +13,7 @@
             <span class="start-time">начало в {{ event.event_date | date('H:i') }}</span>
         </div>
     </div>
+    {% if event.relation.meta.premiere == true %}<div class="premiere-label">Премьера!</div>{% endif %}
+    {% if date(event.event_date) >= date() and event.bileter_id %}<div class="buy-button-block"><div class="bileter_mini_afisha_buy" id="pl{{event.bileter_id}}" >Купить билет!</div></div>{% endif %}
 </div>
 

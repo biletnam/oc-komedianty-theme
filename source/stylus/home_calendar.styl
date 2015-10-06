@@ -16,9 +16,11 @@
         right 0
         bottom 0
 
-        display none // for JS
+        // display none // for JS
+        hidden()
         &.active
-            display block
+            // display block
+            visible()
 
         background-size cover
         background-position top center
@@ -376,6 +378,9 @@
                     margin-top -rem(12px)
                     fs -rem(16px)
 
+                &.empty
+                    color $gray
+                    pointer-events none
 
                 &.active, &:hover
                     // background $brand

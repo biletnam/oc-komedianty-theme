@@ -12,8 +12,9 @@ axis       = require 'axis'
 # jeet       = require 'jeet'
 
 # CSS
-prefix     = require 'gulp-autoprefixer'
-csso       = require 'gulp-csso'
+postcss      = require 'gulp-postcss'
+autoprefixer = require 'autoprefixer'
+csso         = require 'gulp-csso'
 
 # Images
 # imagemin   = require 'imagemin'
@@ -86,13 +87,16 @@ gulp.task 'styles', ->
 			set: ['include css']
 			use: [axis()]
 		.on 'error', handleError
+		.pipe postcss [
+			autoprefixer browsers: [ 'last 2 versions' ]
+		]
 		.pipe sourcemaps.write()
 
-	styles = styles
-		.pipe prefix
-			browsers: ['> 5%', 'last 2 version']
-			cascade: true
-		.pipe csso() if production
+	# styles = styles
+	# 	.pipe prefix
+	# 		browsers: ['> 5%', 'last 2 version']
+	# 		cascade: true
+	# 	.pipe csso() if production
 
 	styles = styles.pipe gulp.dest p.styles.d
 	styles = styles.pipe livereload() unless production

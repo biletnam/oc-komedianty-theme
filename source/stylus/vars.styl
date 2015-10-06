@@ -73,6 +73,17 @@ inline-block()
 // relative()
 // 	position relative
 
+hidden()
+	opacity 0
+	visibility hidden
+	transition visibility 0s, opacity 0.5s ease-out
+	// display none
+
+visible($type = block)
+	opacity 1
+	visibility visible
+	transition visibility 0s, opacity 0.5s ease-out
+	// display $type
 
 nowrap()
 	white-space nowrap

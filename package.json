@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "main": "gulpfile.coffee",
   "dependencies": {
-    "axis": "latest",
-    "coffee-script": "latest",
-    "gulp": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-coffee": "latest",
-    "gulp-csso": "latest",
-    "gulp-livereload": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-stylus": "latest",
-    "gulp-uglify": "latest",
-    "gulp-util": "latest",
-    "rimraf": "latest"
+    "autoprefixer": "^6.0.3",
+    "axis": "*",
+    "coffee-script": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-coffee": "*",
+    "gulp-csso": "*",
+    "gulp-livereload": "*",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "rimraf": "*"
   }
 }

@@ -37,19 +37,19 @@
 		fs -rem(40px)
 		line-height (48/40)
 
-		.buy-button
-			a
-				button()
-			display none
-			@media screen and (max-width $normal)
-				display block
-				width 10em
-				margin 0
-				padding 1em .5em
-				absolute top 0 left 100%
-				fs -rem(14px)
 
 		z-index 2
+	.buy-button
+		display none
+		.bileter_mini_afisha_buy
+			margin 0
+		@media screen and (max-width $normal)
+			display block
+			width 10em
+			margin 0
+			padding 1em .5em
+			absolute top 0 left 560px
+			fs -rem(14px)
 
 	.duration
 		absolute()
@@ -183,6 +183,7 @@
 		// text-align left
 
 
+
 	h1, h2, h3, h4, h5, h6
 		color $brand
 
@@ -249,23 +250,30 @@
 	.gallery
 		relative()
 
+		// height div(1/3)
+		// overflow hidden
+
 		// margin-top 2em
 
 		$c = 560
 		$m = 25
 		$cnt = 3
+		$gap = ($m/($c + $m))*100%
 
 		width (($c + $m)/$c)*100%
+		// padding-left $gap
+		// margin-left 0 - $gap
 		// margin-top -($m/($c + $m))*100%
 
 		fs 0
 
 		.gallery-item
 			inline-block()
+			display none
 			relative()
 
 			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
-			margin  ($m/($c + $m))*100% ($m/($c + $m))*100% 0 0
+			margin  $gap $gap 0 0
 
 			padding 0
 
@@ -293,3 +301,42 @@
 			img
 				relative()
 				opacity 0
+
+			&.item-1,
+			&.item-2,
+			&.item-3,
+			&.item-4,
+			&.item-5,
+			&.item-6,
+			&.item-7,
+			&.item-8,
+			&.item-9
+				display inline-block
+			@media screen and (max-width 1600px)
+				&.item-7,
+				&.item-8,
+				&.item-9
+					display none
+			@media screen and (max-width 1500px)
+				&.item-4,
+				&.item-5,
+				&.item-6
+					display none
+			@media screen and (max-width 1440px)
+				&.item-4,
+				&.item-5,
+				&.item-6,
+				&.item-7,
+				&.item-8,
+				&.item-9
+					display inline-block
+			@media screen and (max-width 1280px)
+				&.item-7,
+				&.item-8,
+				&.item-9
+					display none
+			@media screen and (max-width 1200px)
+				&.item-4,
+				&.item-5,
+				&.item-6
+					display none
