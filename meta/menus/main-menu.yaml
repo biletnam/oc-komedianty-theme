@@ -76,9 +76,13 @@ items:
                 replace: ''
             -
                 title: 'Архив прессы'
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: pressArchive
                 reference: theaterPress/archive
+                cmsPage: ''
+                replace: ''
             -
                 title: Журнал
                 nesting: ''
@@ -97,15 +101,23 @@ items:
         reference: ''
         cmsPage: theater/playbill
         replace: '0'
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
     -
         title: Репертуар
         nesting: ''
         type: repertoire
         url: ''
         code: repertoire
-        reference: spektakl
+        reference: spektakli
         cmsPage: theater/repertoire
         replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
         items:
             -
                 title: Спектали
@@ -113,64 +125,71 @@ items:
                 type: repertoire
                 url: ''
                 code: ''
-                reference: spektakl
+                reference: spektakli
                 cmsPage: theater/repertoire
                 replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
             -
                 title: 'Детские спектакли'
                 nesting: ''
                 type: repertoire
                 url: ''
                 code: ''
-                reference: detskiy-spektakl
+                reference: detskie-spektakli
                 cmsPage: theater/repertoire
                 replace: ''
-            -
-                title: 'Архивные спектакли'
-                nesting: ''
-                type: repertoire
-                url: ''
-                code: ''
-                reference: arkhivnyy-spektakl
-                cmsPage: theater/repertoire
-                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
     -
         title: Труппа
-        nesting: ''
-        type: cms-page
+        nesting: '0'
+        type: static-page
         url: ''
         code: troupe
-        reference: troupe/art-director
+        reference: truppa-hudruk
         cmsPage: ''
-        replace: ''
+        replace: '0'
         items:
             -
                 title: 'Художественный руководитель'
-                nesting: ''
-                type: cms-page
+                nesting: '0'
+                type: static-page
                 url: ''
                 code: ''
-                reference: troupe/art-director
+                reference: truppa-hudruk
                 cmsPage: ''
-                replace: ''
+                replace: '0'
             -
                 title: Актёры
                 nesting: ''
                 type: troupe
                 url: ''
                 code: ''
-                reference: akter
+                reference: aktery
                 cmsPage: theater/troupe
                 replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
             -
                 title: 'Приглашенные артисты'
                 nesting: ''
                 type: troupe
                 url: ''
                 code: ''
-                reference: priglashennyy-artist
+                reference: priglashennye-artisty
                 cmsPage: theater/troupe
                 replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
     -
         title: Контакты
         nesting: ''

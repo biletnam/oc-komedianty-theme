@@ -11,7 +11,7 @@ $mod = 4*$rem
 
 // Sizes
 $top_page_margin = 2*$mod
-$top_page_margin_small = 1*$mod
+$top_page_margin_small = 1.5*$mod
 $side = 18*$rem
 $side_normal = 15*$rem
 $side_tablet = 12*$rem
@@ -66,8 +66,27 @@ $phone  = 480px
 // UTILITES
 // ************************************************************************************************
 
+inline-block()
+	display inline-block
+// absolute()
+// 	position absolute
+// relative()
+// 	position relative
+
+hidden()
+	opacity 0
+	visibility hidden
+	transition visibility 0s, opacity 0.5s ease-out
+	// display none
+
+visible($type = block)
+	opacity 1
+	visibility visible
+	transition visibility 0s, opacity 0.5s ease-out
+	// display $type
+
 nowrap()
-	white-space no-wrap
+	white-space nowrap
 
 trim_elipsis(num = 3, lh = 24px)
 	display block // Fallback for non-webkit
@@ -106,7 +125,9 @@ distribute()
 		inline-block()
 		size 100% 0
 	& > *
+		text-align-last left
 		text-align left
+
 
 
 // distribute()
@@ -129,7 +150,8 @@ colors(current = $text, hover = $brand, active = $brand_dark)
 	&:active
 		color active
 
-
+-em($val)
+	return $val * 1em
 
 
 // ************************************************************************************************
@@ -149,7 +171,7 @@ button(color = $button, hover = $brand, text = $text, hovertext = #fff)
 	cursor pointer
 
 	color text
-	transition all .5s ease-out-quart
+	transition all .5s ease-out
 	border none
 
 	&:before
@@ -164,7 +186,7 @@ button(color = $button, hover = $brand, text = $text, hovertext = #fff)
 		background color
 		z-index -1
 
-		transition background .5s ease-out-quart
+		transition background .5s ease-out
 
 	&:hover
 		color hovertext

@@ -9,11 +9,12 @@ stylus     = require 'gulp-stylus'
 # Stylus FW
 #koutoSwiss = require 'kouto-swiss'
 axis       = require 'axis'
-jeet       = require 'jeet'
+# jeet       = require 'jeet'
 
 # CSS
-prefix     = require 'gulp-autoprefixer'
-csso       = require 'gulp-csso'
+postcss      = require 'gulp-postcss'
+autoprefixer = require 'autoprefixer'
+csso         = require 'gulp-csso'
 
 # Images
 # imagemin   = require 'imagemin'
@@ -25,7 +26,7 @@ csso       = require 'gulp-csso'
 livereload = require 'gulp-livereload'
 # changed    = require 'gulp-changed'
 
-del        = require 'del'
+del        = require 'rimraf'
 
 
 # ENV
@@ -85,14 +86,17 @@ gulp.task 'styles', ->
 		.pipe stylus
 			set: ['include css']
 			use: [axis()]
-		.pipe sourcemaps.write()
 		.on 'error', handleError
+		.pipe postcss [
+			autoprefixer browsers: [ 'last 2 versions' ]
+		]
+		.pipe sourcemaps.write()
 
-	styles = styles
-		# .pipe prefix
-		# 	browsers: ['> 5%', 'last 2 version']
-		# 	cascade: true
-		.pipe csso() if production
+	# styles = styles
+	# 	.pipe prefix
+	# 		browsers: ['> 5%', 'last 2 version']
+	# 		cascade: true
+	# 	.pipe csso() if production
 
 	styles = styles.pipe gulp.dest p.styles.d
 	styles = styles.pipe livereload() unless production

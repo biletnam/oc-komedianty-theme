@@ -3,6 +3,13 @@
  ********************************************************************************************************************************************/
 #site-navigation
 	relative()
+
+	padding-left $side
+	@media screen and (max-width $normal)
+		padding-left $side_normal
+	@media screen and (max-width $tablet)
+		padding-left $side_tablet
+
 	// @media screen and (max-width $normal)
 	@media screen and (max-width $phone)
 		display none
@@ -49,12 +56,12 @@
 		absolute()
 		left 0
 		width 15*$rem
-		margin-top $top_page_margin * .5
+		margin-top $top_page_margin * .8
 		font-weight normal
 		fs -rem(16px)
 		line-height 1.4
 
-		transition opacity 1s ease-out-quart 1s
+		transition opacity 1s ease-out 1s
 
 		.sideMenu-item
 			margin-bottom .8em
