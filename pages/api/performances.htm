@@ -1,0 +1,90 @@
+title = "Test"
+url = "/api/performances"
+is_hidden = "0"
+==
+
+function onStart()
+{
+    $posts = Abnmt\Theater\Models\Performance::isPublished()
+            ->with('participation.person')
+            ->with(
+                ['press' => function ($q) {
+                    $q
+                        ->orderBy('published_at', 'desc')
+                    ;
+                }]
+            )
+            ->orderBy('sort_order', 'desc')
+            ->get()
+    ;
+
+    $posts->each(function ($post) {
+        $post['roles'] = collect($post->participation)->groupBy('type')->toArray();
+
+        $_roles = [];
+
+        foreach($post['roles'] as $type => $roles) {
+            $_roles[$type] = collect($roles)->groupBy('title')->toArray();
+        }
+
+        $post['roles'] = $_roles;
+
+    });
+
+    \Clockwork\Support\Laravel\Facade::info($posts);
+
+    $this['posts'] = $posts;
+}
+
+==
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Спектакли — Театр «Комедианты»</title>
+    </head>
+    <body>
+        {% for post in posts %}
+        <article>
+            <h1>{{post.title}}</h1>
+            <p class="author">{{ post.author }}</p>
+            <p class="description">{{ post.description }}</p>
+            <p class="duration">
+                Продолжительность спектакля<br>
+                {% if post.duration %}<span class="nowrap">{{ post.duration | duration }}</span>{% endif %}
+                {% if post.entracte == 0 %}<span class="nowrap"> без антракта</span>
+                {% elseif post.entracte == 1 %}<span class="nowrap"> с одним антрактом</span>
+                {% elseif post.entracte == 2 %}<span class="nowrap"> с двумя антрактами</span>
+                {% endif %}
+            </p>
+            <p class="premiere-date">Премьера состоялась</br><span class="nowrap">{{ post.premiere_date | dateLocale('%e %h %Y года') }}</span></p>
+            <div class="content about">
+                {{ post.content|raw }}
+            </div>
+
+            {% if post.participation | length != 0 %}<!-- Participation -->
+            <div class="content">
+
+            <h4>Создатели</h4>
+
+            {% partial "common/role" type='creators' roles=post.roles_ng %}
+
+            <h4>Роли и исполнители</h4>
+
+            {% partial "common/role" type='roles' roles=post.roles_ng %}
+
+            {% if post.roles | length > 0 %}{% for group, roles in post.roles %}
+            <h5>{{ group }}</h5>
+
+            {% partial "common/role" type='roles' roles=roles %}
+
+            {% endfor %}<!-- /End -->
+            {% endif %}
+
+            </div>
+            <!-- /End -->{% endif %}
+        </article>
+        {% endfor %}
+    </body>
+</html>

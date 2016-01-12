@@ -1,0 +1,10 @@
+<table>
+    <!-- {{ event.slug }} -->
+    <tr class="event{{ date(event.event_date) < date() ? " inactive"}}">
+        <td class="date day">{{ event.event_date | date('j') }}</td>
+        <td class="date weekday">{{ event.event_date | dateLocale('%a') }}</td> <td class="title">{{ event.relation.title }}</td>
+        {% if event.relation.meta.premiere == true %}<td class="premiere-label">Премьера!</td>{% endif %}
+        {% if event.relation.author != null %}<td class="author">{{ event.relation.author }}</td>{% endif %}
+    </tr>
+</table>
+

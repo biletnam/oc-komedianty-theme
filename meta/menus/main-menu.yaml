@@ -55,6 +55,17 @@ items:
                 reference: documents
                 cmsPage: ''
                 replace: '0'
+            -
+                title: 'Оценка качества услуг'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: o-teatre-anketa-ocenki-kachestva-uslug
+                replace: '0'
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
     -
         title: Новости
         nesting: ''

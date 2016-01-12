@@ -1,13 +1,14 @@
 title = "Test"
 url = "/test"
-is_hidden = "0"
-layout = "default"
-
+layout = "page"
+is_hidden = 1
 ==
+<?php
 function onInit()
 {
     $this['activeMenuItem'] = 'repertoire';
 }
+?>
 ==
 <article class="page side-menu performance test">
     <div class="test"></div>
@@ -18,3 +19,23 @@ function onInit()
         </div>
     </div>
 </article>
+{#<div id="spot-im-frame-inpage" data-post-id="1"></div>#}
+{#<script type="text/javascript">!function(t,e,n){function a(t){var a=e.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===e.location.protocol?"https":"http")+":"+n,(t||e.body||e.head).appendChild(a)}function o(){var t=e.getElementsByTagName("script"),n=t[t.length-1];return n.parentNode} var p=o();t.spotId="sp_dYIP0Ja4",t.parentElement=p,a(p)}(window.SPOTIM={},document,"//www.spot.im/launcher/bundle.js");</script>#}
+
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function() {
+    this.page.url = "http://komedianty.com{{this.page.url}}"; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "{{this.page.id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document,
+        s = d.createElement('script');
+
+    s.src = '//abnmt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

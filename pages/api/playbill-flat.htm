@@ -1,0 +1,30 @@
+title = "Афиша"
+url = "/api/playbill/:date?now"
+
+description = "Афиша на крайние 2 месяца"
+is_hidden = "0"
+
+[theaterEvents apiPlaybill]
+scopes = "Playbill"
+sort = "event_date asc"
+date = "{{ :date }}"
+performancePage = "theater/performance"
+newsPage = "theater/news"
+
+==
+function onInit()
+{
+    $this['activeMenuItem'] = 'playbill';
+}
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playbill — Komedianty theater</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<!-- Playbill -->
+{% component 'apiPlaybill' %}
+</body>
+</html>
