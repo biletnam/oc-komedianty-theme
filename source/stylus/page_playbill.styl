@@ -4,7 +4,7 @@
 .page.playbill
 
 	h3
-		fs -rem(36px)
+		fs rem(36px)
 		@media screen and (max-width $normal)
 			margin-left $side_normal
 		@media screen and (max-width $tablet)
@@ -13,7 +13,7 @@
 	.event
 		relative()
 		line-height 1.2
-		fs -rem(22px)
+		fs rem(22px)
 		&:after
 			content ""
 			inline-block()
@@ -65,7 +65,7 @@
 		inline-block()
 		// width $side_normal - 4*$rem
 		width auto
-		// fs -rem(16px)
+		// fs rem(16px)
 		margin-left 2em
 		// opacity 1
 		vertical-align 22px + 22px + 5px
@@ -104,9 +104,9 @@
 				content ' '
 			&.day
 				bold()
-				fs -rem(24px)
+				fs rem(24px)
 			&.weekday
-				fs -rem(24px)
+				fs rem(24px)
 				lowercase()
 	// 	@media screen and (max-width $normal)
 	// 		display table-cell
@@ -124,17 +124,17 @@
 			// test()
 			inline-block()
 			upcase()
-			fs -rem(22px)
+			fs rem(22px)
 			colors()
 		.rate
 			inline-block()
 			margin-left 1em
-			fs -rem(22px)
+			fs rem(22px)
 			second()
 			color $brand_dark
 		.author, .description
 			// display none
-			fs -rem(22px)
+			fs rem(22px)
 			color $gray
 			// nowrap()
 			// &:before
@@ -142,7 +142,7 @@
 			// 	display block
 		.meta
 			// display none
-			fs -rem(18px)
+			fs rem(18px)
 			color $gray
 			opacity 0
 			transition all .5s ease-out

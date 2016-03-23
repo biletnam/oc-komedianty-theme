@@ -27,7 +27,7 @@ livereload = require 'gulp-livereload'
 # changed    = require 'gulp-changed'
 
 del        = require 'rimraf'
-
+watch      = require('gulp-chokidar')(gulp);
 
 # ENV
 production = process.env.NODE_ENV is 'production'
@@ -52,7 +52,7 @@ p =
 
 # Error handler ???
 handleError = (err) ->
-	gutil.log err
+	gutil.log(gutil.colors.red('ERROR!\n'), gutil.colors.bgRed(err.message));
 	gutil.beep()
 	this.emit 'end'
 
@@ -122,8 +122,8 @@ gulp.task 'images', ->
 gulp.task 'watch', ->
 	livereload.listen()
 
-	gulp.watch p.scripts.w,   ['scripts']
-	gulp.watch p.styles.w,    ['styles']
+	watch p.scripts.w,   ['scripts']
+	watch p.styles.w,    ['styles']
 
 	.emit 'update'
 

@@ -11,7 +11,7 @@ body
 	reset-box-model()
 
 	first()
-	fs -rem(16px)
+	fs rem(16px)
 
 	color $text
 	background-color $bg
@@ -38,7 +38,7 @@ h4, h5, h6
 	uppercase()
 	// margin-top 1em
 h1
-	fs -rem(52px)
+	fs rem(52px)
 
 hr
 	border none
@@ -47,6 +47,9 @@ hr
 // ************************************************************************************************
 // LAYOUT
 // ************************************************************************************************
+
+.site-main
+	min-height 320px
 
 #page, .page, .container, .wrap
 	relative()

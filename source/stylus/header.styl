@@ -106,14 +106,14 @@
  *  DESCRIPTOR
  ********************************************************************************************************************************************/
 .descriptor
-	height -rem(2*$mod - 18px)
+	height rem(2*$mod - 18px)
 
 	padding-left $side
 	@media screen and (max-width $normal)
 		padding-left $side_normal
-		height -rem(2*$mod - 44px)
+		height rem(2*$mod - 44px)
 	@media screen and (max-width $tablet)
-		height -rem(2*$mod - 42px)
+		height rem(2*$mod - 42px)
 		padding-left $side_tablet
 	@media screen and (max-width $phone)
 		display none
@@ -122,19 +122,19 @@
 	.items
 		upcase()
 		distribute()
-		padding-top -rem(17px)
+		padding-top rem(17px)
 		@media screen and (max-width $normal)
-			padding-top -rem(13px)
+			padding-top rem(13px)
 			text-align right
 
 	.item
 		inline-block()
 		reset-box-model()
 
-		fs -rem(14px)
+		fs rem(14px)
 		@media screen and (max-width $normal)
-			fs -rem(14px)
-			margin-left -rem(16px)
+			fs rem(14px)
+			margin-left rem(16px)
 			&.company
 				display none
 
@@ -147,25 +147,25 @@
 		margin-right -.8em
 		float right
 		relative()
-		top -rem(-6px)
+		top rem(-6px)
 		@media screen and (max-width $normal)
-			top -rem(-5px)
+			top rem(-5px)
 
 	.social-top
 		fs 0
-		margin 0  0 0 -rem(-5px)
-		// margin 0 -rem(-5px)
+		margin 0  0 0 rem(-5px)
+		// margin 0 rem(-5px)
 		@media screen and (max-width $normal)
-			margin-left -rem(11px)
+			margin-left rem(11px)
 		.social-items
 			relative()
 			button(transparent)
-			width -rem(20px)
-			padding -rem(2px) -rem(4px)
+			width rem(20px)
+			padding rem(2px) rem(4px)
 			@media screen and (max-width $normal)
-				width -rem(21px)
-				padding -rem(5px)
-				fs -rem(14px)
+				width rem(21px)
+				padding rem(5px)
+				fs rem(14px)
 			text-align center
 		.vk:hover:before
 			background-color $vk
@@ -178,9 +178,18 @@
 		.google-plus:hover:before
 			background-color $google-plus
 			outline-color $google-plus
+		.youtube
+			.fa
+				text-indent 0.1em
 		.youtube:hover:before
 			background-color $youtube
 			outline-color $youtube
+		.instagram
+			.fa
+				text-indent 0.2em
+		.instagram:hover:before
+			background-color $instagram
+			outline-color $instagram
 		.vimeo:hover:before
 			background-color $vimeo
 			outline-color $vimeo
@@ -200,7 +209,7 @@
 
 		// 	text-align center
 		// 	color $text
-		// 	fs -rem(14px)
+		// 	fs rem(14px)
 
 		// 	&:hover
 		// 		background-color $brand_dark

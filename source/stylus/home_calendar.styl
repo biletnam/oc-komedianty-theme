@@ -3,11 +3,11 @@
  ********************************************************************************************************************************************/
 #home #playbill
     ratio-box(1920/960)
-    margin-top -rem(-131px)
+    margin-top rem(-131px)
     @media screen and (max-width $normal)
-        margin-top -rem(-105px)
+        margin-top rem(-105px)
     @media screen and (max-width $tablet)
-        margin-top -rem(-105px)
+        margin-top rem(-105px)
 
     .event
         absolute()
@@ -40,9 +40,9 @@
 
     .section-header
         absolute()
-        width -rem(13*$rem)
+        width rem(13*$rem)
 
-        fs -rem(28px)
+        fs rem(28px)
         // second()
         text-transform none
 
@@ -82,9 +82,9 @@
             // margin-right -.08em
 
             second()
-            fs -rem(60px)
+            fs rem(60px)
             @media screen and (max-width $normal)
-                fs -rem(48px) !important
+                fs rem(48px) !important
             line-height 1.42em
             upcase()
             // letter-spacing 0.1em
@@ -100,7 +100,7 @@
         .author
             margin 0
             second()
-            fs -rem(24px)
+            fs rem(24px)
             line-height 1em
             // text-transform uppercase
             // letter-spacing 0.1em
@@ -113,7 +113,7 @@
         .description
             upcase()
             letter-spacing 0.1em
-            fs -rem(19px)
+            fs rem(19px)
 
 
 
@@ -121,9 +121,9 @@
         fs 16px
 
         @media (max-width 1440px)
-            fs -rem(14px)
+            fs rem(14px)
         @media (max-width 1360px)
-            fs -rem(12px)
+            fs rem(12px)
         absolute()
         z-index 200
 
@@ -156,7 +156,7 @@
             &.double
                 position relative
                 top (20/124)*1em
-                fs -rem(124px)
+                fs rem(124px)
 
         .month
             absolute()
@@ -220,7 +220,7 @@
 
         // .time
         //  letter-spacing 0
-        //  fs -rem(13px)
+        //  fs rem(13px)
         .button-buy
             // margin-top $line
             line-height 1.3em
@@ -256,8 +256,8 @@
             absolute()
             width 50%
             background-color $brand
-            top -rem(32px)
-            height -rem(32px)
+            top rem(32px)
+            height rem(32px)
             left 0
             right 0
             // z-index 0
@@ -275,7 +275,7 @@
             absolute()
             display block
 
-            top -rem(82px)
+            top rem(82px)
 
             padding 0
             font-size 0
@@ -293,21 +293,21 @@
 
             &.slick-prev
                 right 100%
-                triangle left -rem(11px) #7A1D00
-                margin-right -rem(16px)
+                triangle left rem(11px) #7A1D00
+                margin-right rem(16px)
                 &:hover
-                    triangle left -rem(11px) $brand
+                    triangle left rem(11px) $brand
                 &:active
-                    triangle left -rem(11px) $brand_dark
+                    triangle left rem(11px) $brand_dark
 
             &.slick-next
                 left 100%
-                triangle right -rem(11px) #7A1D00
-                margin-left -rem(16px)
+                triangle right rem(11px) #7A1D00
+                margin-left rem(16px)
                 &:hover
-                    triangle right -rem(11px) $brand
+                    triangle right rem(11px) $brand
                 &:active
-                    triangle right -rem(11px) $brand_dark
+                    triangle right rem(11px) $brand_dark
 
         .slide
             transition all .5s ease
@@ -317,24 +317,24 @@
         .slider
             relative()
 
-            // padding-left -rem(8px)
+            // padding-left rem(8px)
 
             distribute()
 
             overflow hidden
             white-space nowrap
 
-            height -rem(114px)
-            // margin-top -rem(32px)
+            height rem(114px)
+            // margin-top rem(32px)
 
             .slider-item
                 z-index 10
                 relative()
                 inline-block()
 
-                top -rem(32px)
+                top rem(32px)
 
-                height -rem(32px)
+                height rem(32px)
 
                 width div(2/100)
                 margin 0 div(1.5/100)
@@ -349,7 +349,7 @@
 
                 vertical-align top
 
-                line-height -rem(32px)
+                line-height rem(32px)
 
                 color $text
 
@@ -372,7 +372,7 @@
                     width 100%
                     text-align center
 
-                    fs -rem(20px)
+                    fs rem(20px)
                     transition all .2s ease .05s
 
                 .day
@@ -381,9 +381,9 @@
                 .weekday
                     upcase()
                     display block
-                    height -rem(46px)
-                    margin-top -rem(12px)
-                    fs -rem(16px)
+                    height rem(46px)
+                    margin-top rem(12px)
+                    fs rem(16px)
 
                 &.empty
                     color $gray
@@ -400,11 +400,11 @@
                     .day
                         padding 16px 8px 16px 6px
                         margin -16px -8px 0 -6px
-                        fs -rem(30px)
+                        fs rem(30px)
                         // box-shadow 0px 0px 24px 5px rgba(0,0,0,0.6)
                     .weekday
                         margin-top 4px
-                        fs -rem(21px)
+                        fs rem(21px)
 
                 &.active
                     .weekday
