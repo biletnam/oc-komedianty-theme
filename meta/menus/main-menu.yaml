@@ -59,13 +59,26 @@ items:
                 title: 'Оценка качества услуг'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: o-teatre-anketa-ocenki-kachestva-uslug
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isExternal: '0'
                     isHidden: '0'
                     cssClass: ''
+            -
+                title: 'Правила применения электронных билетов'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: o-teatre-pravila-primeneniya-elektronnyh-biletov
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Новости
         nesting: ''

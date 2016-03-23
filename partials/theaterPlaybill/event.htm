@@ -6,7 +6,7 @@
         {% if event.relation.rate != null %}<div class="rate">{{ event.relation.rate }}</div>{% endif %}
 
         {% if event.relation.author != null %}<div class="author">{{ event.relation.author }}</div>
-        {% elseif event.relation.description %}<div class="description">{{ event.relation.description }}</div>{% endif %}
+        {% elseif event.description %}<div class="description">{{ event.description }}</div>{% endif %}
 
         <div class="meta">
             {% if event.relation.duration != null %}<span class="duration">длительность {{ event.relation.duration | duration }},</span>{% endif %}
