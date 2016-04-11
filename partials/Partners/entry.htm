@@ -1,1 +1,11 @@
-<div class="sponsor"><a href="{{partner.link}}" style="width:{{ partner.meta.width }}px;height:{{ partner.meta.height }}px"><img src="{{ partner.logo_color.path}}" class="color"><img src="{{ partner.logo_bw.path}}" class="bw"></a></div>
+<div class="sponsor">
+    <a
+    	href="{{ partner.link }}"
+    	title="{{ partner.meta.description ?: partner.title }}"
+    	target="_blank"
+    	style="width:{{ partner.meta.width }}px;height:{{ partner.meta.height }}px"
+	>
+    	<img src="{{ partner.logo_color.path}}" class="color">
+    	<img src="{{ partner.logo_bw.path}}" class="bw">
+    </a>
+</div>
