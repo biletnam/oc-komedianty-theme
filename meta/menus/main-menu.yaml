@@ -72,8 +72,10 @@ items:
                 title: 'Правила применения электронных билетов'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: o-teatre-pravila-primeneniya-elektronnyh-biletov
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -169,6 +171,16 @@ items:
                     isExternal: '0'
                     isHidden: '0'
                     cssClass: ''
+            -
+                title: 'Архивные спектакли'
+                type: repertoire
+                code: ''
+                reference: arhivnye-spektakli
+                cmsPage: theater/repertoire
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Труппа
         nesting: '0'
