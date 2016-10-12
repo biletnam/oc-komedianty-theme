@@ -1,3 +1,5 @@
+[viewBag]
+==
 <!-- Events -->
 						{% for event in events %}{% set meta = event.relation.meta %}<!-- {{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }} -->
 						<div style="background-image: url('{{ event.relation.playbill.path }}');" id="{{ event.event_date | date('Y-m-d') ~ '-' ~ event.relation.slug }}" class="event {{ event.active }} {{ event.relation.slug }}">
@@ -7,11 +9,13 @@
 										{# <h3 class="section-header"><a href="{{ 'theater/playbill' | page({date: now}) }}">Афиша на {{ event.event_date | dateLocale('%B') }}</a></h3> #}
 										<h3 class="section-header"><a href="{{ 'theater/playbill' | page({date: now}) }}">{{ event.event_date | dateLocale('%B') | title }}</a></h3>
 										<div class="title-block" >
-											{% if not event.relation.author %}
+											{# {% if not event.relation.author %}
 											<div class="author">{{ event.relation.description  }}</div>
 											{% else %}
 											<div class="author">{{ meta.calendar_authors ? meta.calendar_authors : event.relation.author  }}</div>
-											{% endif %}
+											{% endif %} #}
+                                            {% if event.relation.author != null %}<div class="author">{{ event.relation.author }}</div>
+                                            {% elseif event.description %}<div class="author">{{ event.description }}</div>{% endif %}
 											<div
 												class="title"
 												style="{{ meta.calendar_title_font_size ? 'font-size:' ~ meta.calendar_title_font_size ~ ';' }}"

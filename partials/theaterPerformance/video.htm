@@ -6,7 +6,64 @@
 <h4 class="video-title">Видео-релиз спектакля <span class="performance-title">«{{ post.title }}»</span></h4>
 {# <div class="video-description">Режиссёр Аноним Безымянный</div> #}
 <div class="video">
-    <img src="{{ post.video.path }}" alt="">
+    {% if post.meta and post.meta.video %}
+        {% put styles %}
+        <link rel="stylesheet" href="https://cdn.plyr.io/1.6.13/plyr.css">
+        <style>
+            .video-poster {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /*background-color: #ffc0cb;*/
+                cursor: pointer;
+                transition: opacity .3s ease;
+            }
+            .video-poster:hover {
+                opacity: 0.8;
+            }
+            .plyr {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        {% endput %}
+        {% put scripts %}
+        <script src="https://cdn.plyr.io/1.6.13/plyr.js"></script>
+        <script>
+            (function(d, p){
+                var a = new XMLHttpRequest(),
+                    b = d.body;
+                a.open('GET', p, true);
+                a.send();
+                a.onload = function() {
+                    var c = d.createElement('div');
+                    c.setAttribute('hidden', '');
+                    c.innerHTML = a.responseText;
+                    b.insertBefore(c, b.childNodes[0]);
+                };
+            })(document, 'https://cdn.plyr.io/1.6.13/plyr.svg');
+        </script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('.video-poster').click(function(e){
+                    // console.log('click!');
+                    $(this).hide();
+                    plyr.setup({controls:['play', 'volume'], autoplay: true});
+                    // player.play();
+                });
+            });
+        </script>
+        {% endput %}
+        <div class="plyr">
+            <div data-video-id="{{ post.meta.video }}" data-type="youtube"></div>
+        </div>
+    {% endif %}
+    <img src="{{ post.video.path }}" alt="" class="video-poster">
 </div>
 
 

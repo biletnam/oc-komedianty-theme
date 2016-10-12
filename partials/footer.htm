@@ -2,6 +2,8 @@
 category = "partnery"
 [theaterPartners Sponsors]
 category = "sponsory"
+[staticMenu siteMap]
+code = "main-menu"
 ==
 <!-- Footer -->
 <footer id="footer">
@@ -14,7 +16,8 @@ category = "sponsory"
 				<a href="#" class="social-items ssk ssk-vimeo"></a>
 			</div>
 			<nav class="sitemap">
-				<ul class="nav-menu">
+				{% component 'siteMap' %}
+<!-- 				<ul class="nav-menu">
 					<li class="page_item about">
 						<a href="about.html">О театре</a>
 						<ul class="subnav">
@@ -65,7 +68,7 @@ category = "sponsory"
 							<p>Касса: (812) 764−81−14</p>
 						</div>
 					</li>
-				</ul>
+				</ul> -->
 			</nav>
 			<div class="colophon">
 				<div class="colophon-item copyrights">

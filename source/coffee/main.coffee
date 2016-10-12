@@ -67,7 +67,7 @@ jQuery(document).ready ($) ->
 	#     e.show
 
 
-	$(".mainMenu .mainMenu-item > a").click (e) ->
+	$(".mainMenu .mainMenu-item.has-child > a").click (e) ->
 		mainMenuLink = $(this)
 		mainMenuItem = mainMenuLink.parent()
 		mainMenuItems = mainMenuItem.parent().children()
