@@ -1,0 +1,62 @@
+/********************************************************************************************************************************************
+ *  DIRECTORS WORD
+ ********************************************************************************************************************************************/
+#home #directors-word
+	relative()
+
+	// background #0e0204
+	background url('../images/levshin_main_1920.jpg') no-repeat
+	background-position top right
+	// background-size auto 100%
+	background-size contain
+
+	// margin-bottom -32px
+
+	h2
+		fs rem(33px)
+
+	h2, h3
+		second()
+		text-transform uppercase
+		font-weight normal
+	h3
+		text-transform none
+
+	.wrap
+		padding 48px 0
+
+	.content
+		second()
+		width div(40/82)
+		// margin-left (2.5/82)*100%
+
+		// margin-bottom div(2/82)
+
+		fs rem(20px)
+
+
+		&:before
+			content "«"
+
+			absolute()
+			right div(83/82)
+			top 1.94em
+
+			fs rem(100px)
+			line-height .5em
+			color $gray_color
+			second()
+			opacity .5
+
+		&:after
+			content "»"
+
+			relative()
+			left (83/82)*100%
+			bottom 1.855em
+
+			fs rem(100px)
+			line-height .5em
+			color $gray_color
+			second()
+			opacity .5

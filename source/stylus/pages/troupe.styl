@@ -1,0 +1,133 @@
+// *****************************************************************************************************************************************
+// TROUPE PAGE
+// *****************************************************************************************************************************************/
+.page.troupe
+
+
+	.content
+		relative()
+		margin-top 2em
+
+		$c = 1024
+		$m = 4*16
+		$cnt = 4
+
+		width (($c + $m)/$c)*100%
+		margin-bottom -($m/($c + $m))*100%
+
+		font-size 0
+
+		.person
+			display inline-block
+			relative()
+
+			width ((($c + $m) - ($cnt*$m))/$cnt/($c + $m))*100%
+			margin 0 ($m/($c + $m))*100% 0 0
+
+			padding 0
+
+			// overflow hidden
+
+			// font-size 0
+			transition all .1s ease-out
+
+			ratio-box(1)
+
+			&:hover
+				// transform scale(1.05)
+				opacity .75
+
+			.portrait
+				absolute top left
+				size 100%
+				a
+					// absolute()
+					top 0
+					width 100%
+					height 100%
+					display block
+			.caption
+				padding .5em 0 .7em
+				fs rem(16px)
+				text-align center
+				height $mod + 2*$rem
+
+				.grade
+					color $gray
+					fs rem(14px)
+
+
+// 	.person
+// 		width ((57/5)/67)*100%
+// 		padding 0 (1/67)*100%
+
+// 		float left
+
+// 		fs (14/$rem)
+
+// 		margin-bottom (8/67)*100%
+
+// 		relative()
+
+// 		p
+// 			margin 0
+// 			padding 0
+
+// 		.portrait
+// 			padding-bottom 100%
+// 			overflow hidden
+// 			background-color $brand_color_dark *.2
+// 			relative()
+
+// 			color black
+
+// 			img
+// 				width 100%
+// 				height auto
+// 				absolute()
+
+// 				border none
+// 				border-image none
+
+// 		.caption
+// 			absolute()
+// 			width 100%
+// 			text-align left
+// 			margin-top 1em
+// 			fs (18/$rem)
+
+// 			a
+// 				text-decoration none
+
+// 		.grade
+// 			color $gray_color
+
+// 		&.director
+
+// 			center(30%)
+// 			clear right
+
+// 			.portret
+// 				height auto
+
+
+// #about-artistic-director
+// 	img
+// 		float left
+// 		width (30/65) *100%
+// 		// width 496px
+// 		height auto
+// 		margin-right (3/65)*100%
+// 		margin-bottom (8/65)*100%
+
+// 	h2
+// 		fs (37/$rem)
+// 		text-transform uppercase
+// 		relative()
+// 		top -.45em
+
+// 	.role
+// 		color $brand_color
+// 		fs (26/$rem)
+// 	.bio
+// 		fs (20/$rem)

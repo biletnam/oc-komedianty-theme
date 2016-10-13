@@ -1,0 +1,66 @@
+// ************************************************************************************************
+// BUY POPUP
+// ************************************************************************************************
+
+.buy-popup
+	display none
+	fixed top left
+	width 100%
+	min-height 100%
+	background-color rgba(#000,0.8)
+	overflow hidden
+
+
+	z-index 9999
+
+	.buy-popup-content
+		relative()
+		margin 13em auto 0 auto
+		size rem(500px) rem(250px)
+		text-align center
+	.header
+		second()
+		fs rem(36px)
+		line-height (50/36)
+		margin-bottom 2em
+
+	.sponsor
+		margin-top 1em
+		transition all .5s ease-out
+		&:hover
+			transform scale(1.1)
+		a
+			text-align center
+			display block
+
+		img
+			width inherit
+			margin 0 auto
+
+	.close
+		display block
+		absolute top right
+		size rem(44px)
+
+		transform scale(1.5)
+
+		background-image url('../images/default.svg')
+		background-position 0 -44px
+
+		pointer-events pointer
+
+		&:hover
+			transform scale(2)
+			cursor pointer
+
+
+
+
+
+
+#bileter_playbill
+	.bileter_with_date,
+	.control_m,
+	.bileter_with_date_month,
+	.bileter_with_date_blok
+		reset-box-model()

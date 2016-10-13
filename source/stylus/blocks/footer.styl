@@ -1,0 +1,202 @@
+/********************************************************************************************************************************************
+ *  FOOTER
+ ********************************************************************************************************************************************/
+
+#footer
+	color $gray
+	margin-top 0
+	fs rem(14px)
+
+	ul, li
+		reset-list()
+
+	p
+		margin 0
+		padding 0
+		list-style none
+
+	a
+		colors()
+
+	.container
+		relative()
+		&:before
+			display block
+			content ""
+			width 100%
+			padding-bottom (56/82)*100%
+			@media screen and (max-width $medium)
+				padding-bottom (60/82)*100%
+	.wrap
+		absolute()
+		top 0
+		left 0
+		right 0
+		bottom 0
+		// width 100%
+		// height 100%
+		padding 0 155px
+		@media screen and (max-width $small)
+			padding 0 110px
+
+	.social-bottom
+		absolute()
+		left 0
+		right 0
+		// width 100%
+		bottom 100%
+		text-align center
+		.social-items
+			margin-left .25em
+			margin-right .25em
+		.ssk-
+			&youtube
+				background-color $youtube
+				&:hover
+					background-color darken($youtube, 20%)
+			&vimeo
+				background-color $vimeo
+				&:hover
+					background-color darken($vimeo, 20%)
+
+
+	.sitemap, .colophon ,colophon.small, .sponsors, .partners, .culture
+		border-top 1px solid $gray
+
+	.sitemap
+		padding $mod 0
+
+		.nav-menu
+			fs 0
+			text-align justify
+			&:after
+				content ""
+				inline-block()
+				width 100%
+		.page_item
+			inline-block()
+			vertical-align top
+			text-align center
+			// height 3*$mod
+			fs rem(14px)
+		// .subnav
+		.subpage_item, .data p
+			margin-top 1.2em
+			@media screen and (max-width $medium)
+				margin-top .8em
+			a
+				link $gray
+				&:hover
+					color $brand
+					border none
+
+
+	.colophon
+		display block
+		height 7*$rem
+		padding-top $rem
+		@media screen and (max-width $medium)
+			display none
+	.colophon.small
+		display none
+		height 10*$rem
+		padding-top 2*$rem
+		@media screen and (max-width $medium)
+			display block
+
+	.colophon, .colophon.small
+		color $text
+		fs 0
+		text-align justify
+		&:after
+			content ""
+			inline-block()
+			width 100%
+		.colophon-item
+			inline-block()
+
+			text-align center
+			fs rem(14px)
+
+			p
+				margin-top 1.2em
+				@media screen and (max-width $medium)
+					margin-top .8em
+
+	.sponsors, .partners
+		relative()
+		// height (8/60)*100%
+		fs 0
+		text-align justify
+		&:after
+			content ""
+			inline-block()
+			width 100%
+		.sponsor
+			inline-block()
+			height 2*$mod
+			line-height 2*$mod
+			// width 75%
+			// vertical-align middle
+			text-align center
+			a
+				inline-block()
+				relative()
+				vertical-align middle
+				height 100%
+				&:before
+					content ""
+					inline-block()
+					vertical-align middle
+					height 100%
+			a:hover .bw
+				opacity 0
+				transition .5s opacity ease
+			a:hover .color
+				opacity 1
+				transition .2s opacity ease
+
+			img
+				inline-block()
+				// absolute()
+				// top 0
+				// left 0
+				vertical-align middle
+				// max-width 100px
+				// max-height 100%
+				height auto
+				width auto
+			.bw, .color
+				absolute()
+				top 0
+				left 0
+				bottom 0
+				right 0
+			.color
+				opacity 0
+
+
+	.culture
+		text-align center
+		line-height 2rem
+		border-top 1px solid
+		// margin-top 2rem
+		padding 2rem 0
+		h4
+			color $text
+			normal()
+			fs rem(16px)
+			second_font()
+			margin 0
+			margin-bottom $rem
+
+		a.logo
+			// width 75px
+			display block
+			text-align center
+
+			img
+				display block
+				margin 0 auto
+				width 4.5*$rem
+				height auto

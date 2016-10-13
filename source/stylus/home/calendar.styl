@@ -1,0 +1,413 @@
+/********************************************************************************************************************************************
+ *  HOME PAGE - CALENDAR
+ ********************************************************************************************************************************************/
+#home #playbill
+    ratio-box(1920/960)
+    margin-top rem(-131px)
+    @media screen and (max-width $normal)
+        margin-top rem(-105px)
+    @media screen and (max-width $tablet)
+        margin-top rem(-105px)
+
+    .event
+        absolute()
+        top 0
+        left 0
+        right 0
+        bottom 0
+
+        // display none // for JS
+        hidden()
+        &.active
+            // display block
+            visible()
+
+        background-size cover
+        background-position top center
+
+    .container, .wrap
+        height 100%
+
+    .ratio
+        absolute()
+        top 0
+        left 0
+        right 0
+        bottom 0
+        height 100%
+        // ratio-box(80/52)
+        // height 100%
+
+    .section-header
+        absolute()
+        width rem(13*$rem)
+
+        fs rem(28px)
+        // second()
+        text-transform none
+
+        a
+            // colors($brand_dark, $brand, darken($brand_dark, 15%))
+            colors()
+        // z-index 3000
+
+        // bottom div(8/52) + div(134/960)
+        bottom div(8/52)
+        @media screen and (max-width $normal)
+            bottom div(10/52)
+        margin 0
+
+        line-height .675em
+        text-indent .12em
+        nowrap()
+
+    .title-block
+        absolute()
+
+        width div(65/82)
+        // bottom div(8/52) + div(134/960)
+        bottom div(8/52)
+        @media screen and (max-width $normal)
+            bottom div(10/52)
+
+        right 0
+
+        text-align right
+
+        .title
+            relative()
+            top .35em
+
+            margin 0
+            // margin-right -.08em
+
+            second()
+            fs rem(60px)
+            @media screen and (max-width $normal)
+                fs rem(48px) !important
+            line-height 1.42em
+            upcase()
+            // letter-spacing 0.1em
+            text-align right
+            // font-weight bold
+
+            a
+                text-decoration none
+
+            .oa-comma
+                margin-right -.38em
+
+        .author
+            margin 0
+            second()
+            fs rem(24px)
+            line-height 1em
+            // text-transform uppercase
+            // letter-spacing 0.1em
+            text-align right
+
+            position absolute
+            right 0
+            top .05em
+
+        .description
+            upcase()
+            letter-spacing 0.1em
+            fs rem(19px)
+
+
+
+    .date-block
+        fs 16px
+
+        @media (max-width 1440px)
+            fs rem(14px)
+        @media (max-width 1360px)
+            fs rem(12px)
+        absolute()
+        z-index 200
+
+        width 13em
+        height 20em
+
+        top div(12/52)
+        // bottom div(19/52) + div(134/1080)
+
+        background-color $brand_dark
+
+        second()
+        normal()
+        upcase()
+        text-align center
+        // letter-spacing 0.1em
+        color $text
+
+        .date
+            margin 0
+            padding 0
+            display block
+        .day
+            relative()
+            top (32/128)*1em
+            fs -em(128/16)
+            line-height 1
+            font-weight bold
+
+            &.double
+                position relative
+                top (20/124)*1em
+                fs rem(124px)
+
+        .month
+            absolute()
+            fs -em(30/16)
+            // margin-top .5em
+            line-height 1
+            width 100%
+            top div(10.7/20)
+
+            // &.Jan
+            //     fs -em(40/16)
+            // &.Feb
+            //     fs -em(29/16)
+            // &.Mar
+            //     fs -em(35/16)
+            // &.April
+            //     fs -em(29/16)
+            // &.May
+            //     fs -em(35/16)
+            //     // letter-spacing .11em
+            //     // text-indent .12em
+            // &.June
+            //     fs -em(29/16)
+            // &.July
+            //     fs -em(29/16)
+            // &.Sep
+            //     fs -em(25/16)
+            // &.Oct
+            //     fs -em(27/16)
+
+        .weekday
+            fs -em(18/16)
+            // margin-top .8em
+            line-height 1
+
+            absolute()
+            width 100%
+            bottom div(5.5/20)
+            // top (13/22)*100%
+
+            // &.Mon
+            //     fs -em(16/16)
+            //     letter-spacing .02em
+            // &.Tue
+            //     fs -em(26/16)
+            //     letter-spacing .01em
+            // &.Wed
+            //     fs -em(32/16)
+            //     letter-spacing .15em
+            //     text-indent .1em
+            // &.Thu
+            //     fs -em(28/16)
+            //     // letter-spacing .05em
+            // &.Fri
+            //     fs -em(25/16)
+            //     letter-spacing .01em
+            // &.Sat
+            //     fs -em(26/16)
+            // &.Sun
+            //     fs -em(17/16)
+
+        // .time
+        //  letter-spacing 0
+        //  fs rem(13px)
+        .button-buy
+            // margin-top $line
+            line-height 1.3em
+            fs -em(16/16)
+            // letter-spacing 0.02em
+
+            absolute()
+            width 100%
+            bottom div(3/22)
+
+            .bileter_mini_afisha_buy
+                colors(inherit)
+                text-decoration none
+                border-bottom 1px solid
+                width auto
+                inline-block()
+                cursor pointer
+                // position absolute
+
+
+    .calendar
+        absolute()
+        right 0
+        left 0
+        // bottom div(134/960)
+        bottom 0
+
+        overflow hidden
+
+        &:before, &:after
+            content ""
+            display block
+            absolute()
+            width 50%
+            background-color $brand
+            top rem(32px)
+            height rem(32px)
+            left 0
+            right 0
+            // z-index 0
+        &:before
+            right 50%
+            background linear-gradient(to left, $brand_dark 0, $brand_dark 811px, $brand_dark * .3 100%)
+        &:after
+            background linear-gradient(to right, $brand_dark 0, $brand_dark 811px, $brand_dark * .3 100%)
+            left 50%
+
+
+        second()
+
+        .nav
+            absolute()
+            display block
+
+            top rem(82px)
+
+            padding 0
+            font-size 0
+            line-height 0
+
+            cursor pointer
+            color transparent
+            border none
+            outline none
+
+            background transparent
+
+            z-index 5000
+
+
+            &.slick-prev
+                right 100%
+                triangle left rem(11px) #7A1D00
+                margin-right rem(16px)
+                &:hover
+                    triangle left rem(11px) $brand
+                &:active
+                    triangle left rem(11px) $brand_dark
+
+            &.slick-next
+                left 100%
+                triangle right rem(11px) #7A1D00
+                margin-left rem(16px)
+                &:hover
+                    triangle right rem(11px) $brand
+                &:active
+                    triangle right rem(11px) $brand_dark
+
+        .slide
+            transition all .5s ease
+            relative()
+            left 0
+
+        .slider
+            relative()
+
+            // padding-left rem(8px)
+
+            distribute()
+
+            overflow hidden
+            white-space nowrap
+
+            height rem(114px)
+            // margin-top rem(32px)
+
+            .slider-item
+                z-index 10
+                relative()
+                inline-block()
+
+                top rem(32px)
+
+                height rem(32px)
+
+                width div(2/100)
+                margin 0 div(1.5/100)
+
+                @media (max-width 1680px )
+                    width div(2/80)
+                    margin 0 div(1.5/80)
+                // @media (max-width 1440px )
+                //     width div(2/60)
+                //     margin 0 div(1.5/60)
+
+
+                vertical-align top
+
+                line-height rem(32px)
+
+                color $text
+
+                border none
+                text-decoration none
+                text-align center
+
+                &.active, &:hover
+                    transition all .05s ease
+                    box-shadow 0px 0px 24px 12px rgba(0,0,0,0.6)
+
+
+
+                &:hover
+                    border none
+                    text-decoration none
+
+                .day, .weekday
+                    position relative
+                    width 100%
+                    text-align center
+
+                    fs rem(20px)
+                    transition all .2s ease .05s
+
+                .day
+                    background $brand_dark
+
+                .weekday
+                    upcase()
+                    display block
+                    height rem(46px)
+                    margin-top rem(12px)
+                    fs rem(16px)
+
+                &.empty
+                    color $gray
+                    pointer-events none
+
+                &.active, &:hover
+                    // background $brand
+                    z-index 10
+
+                    .day, .weekday
+                        transition all .05s ease
+                        font-weight 600
+
+                    .day
+                        padding 16px 8px 16px 6px
+                        margin -16px -8px 0 -6px
+                        fs rem(30px)
+                        // box-shadow 0px 0px 24px 5px rgba(0,0,0,0.6)
+                    .weekday
+                        margin-top 4px
+                        fs rem(21px)
+
+                &.active
+                    .weekday
+                        margin-top 8px;
+                &.before
+                    color $gray+20%

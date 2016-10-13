@@ -3,7 +3,8 @@
 
 # TEAM
 
-    Abnmt -- designer -- abnmt.com
+    Ekaterina May -- designer -- design-may.com
+    Abnmt -- developer -- abnmt.com
 
 # THANKS
 

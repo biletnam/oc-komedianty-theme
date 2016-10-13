@@ -1,5 +1,5 @@
 {
-    "name": "october/komedianty-theme",
+    "name": "oc-komedianty-theme",
     "type": "october-theme",
     "description": "Komedianty theater OctoberCMS theme",
     "keywords": ["october", "cms", "theater", "theme"],
@@ -17,6 +17,6 @@
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.6"
     }
 }

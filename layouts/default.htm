@@ -41,15 +41,12 @@ code = "main-menu"
 	</main>
 
     {% partial "footer" %}
-	{% partial "buyTicket/default" %}
 
 </div><!-- #page -->
 
 
 <!-- Scripts -->
-{# <script src="{{ ['assets/js/jquery.min.js', 'assets/js/main.js' ]|theme }}"></script> #}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-{# <script>window.jQuery || document.write('<script src="http://kolos-design.com/themes/kolos/assets/js/vendor/jquery-1.11.2.min.js"><\\/script>')</script> #}
 <script src="{{ ['assets/js/main.js' ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
