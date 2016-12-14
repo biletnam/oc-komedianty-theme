@@ -2,7 +2,7 @@ title = "Контактная информация"
 url = "/kontakty"
 layout = "default"
 description = "Страница с контактной информацией"
-hidden = "0"
+is_hidden = 0
 ==
 {% put scripts %}
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -69,28 +69,29 @@ hidden = "0"
 						<p>Телефон кассы театра: +7 812 764-81-14</br>
 						Групповые заявки принимаются<br>по телефону: +7 812 572-10-04</p>
 
-						<p>e-mail: komedianty.spb@gmail.com</br>
+						<p>e-mail: <a href="mailto:komedianty.spb@gmail.com">komedianty.spb@gmail.com</a></br>
 						{# Администрация: adelveis1344@yandex.ru</br> #}
 						Телефон: +7 812 572-10-04</br>
 						Факс: +7 812 764-70-16</p>
 					</div>
 					<div class="phones administration">
 						<div class="item">
-							<p>Заместитель директора:</br>
-							Михайловцева Ольга Анатольевна</br>
-							<span class="phone">+7 812 572-47-90</span></p>
-						</div>
-						<div class="item">
 							<p>Главный администратор:</br>
 							Половинкина Людмила Алексеевна</br>
+							<span class="email">
+							    <a href="mailto:adelveis1344@yandex.ru">adelveis1344@yandex.ru</a>
+						    </span></br>
 							<span class="phone">+7 812 572-10-04</span></p>
+						</div>
+						<div class="item">
+							<p>Заведующий труппой:</br>
+							Чернова Милена Альбертовна</br>
+							<span class="phone">+7 812 572-10-03</span></p>
 						</div>
 						<div class="item">
 							<p>Заведующий литературной частью:</br>
 							Шарова Борислава Борисовна</br>
-							<p>Редактор литературной части:</br>
-							Шевчук Алина Евгеньевна<br>{# </p>
-							<p> #}<span class="phone">+7 812 575-57-83</span></p>
+							<span class="phone">+7 812 575-57-83</span></p>
 						</div>
 					</div>
 					<div class="phones administration">
@@ -127,4 +128,3 @@ hidden = "0"
 
 
 </div><!-- .page -->
-

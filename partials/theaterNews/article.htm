@@ -1,5 +1,6 @@
 
-    {# <h1>{{  post.title }}</h1> #}
     <article>
+        <h1>{{  post.title }}</h1>
+        {% if post.cover %}<img src="{{ post.cover.thumb(640, null) }}" >{% endif %}
         {{ post.content |raw }}
     </article>
