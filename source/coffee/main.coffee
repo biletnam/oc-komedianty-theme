@@ -17,13 +17,6 @@ jQuery(document).ready ($) ->
             $(this).removeClass "active"
             $("#playbill .event").removeClass "active"
 
-    # Buy Popup
-    BuyPopUpShow = ->
-        $('.buy-popup').show()
-
-    BuyPopUpHide = ->
-        $('.buy-popup').hide()
-
     # Main menu
     $(".mainMenu .mainMenu-item.has-child > a").click (e) ->
         mainMenuLink = $(this)
@@ -66,7 +59,3 @@ jQuery(document).ready ($) ->
             el.css('left', 0)
         else
             el.css('left', step)
-
-    # Ready
-    $(document).ready ->
-        BuyPopUpHide()
