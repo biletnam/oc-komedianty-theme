@@ -46,7 +46,7 @@ p =
     scripts:
         s: src + '/coffee/**/*.coffee'
         w: src + '/coffee/**/*.coffee'
-        d: out + '/javascript/'
+        d: out + '/js/'
     images:
         s: src + '/images/**/*.{jpg,png,jpeg}'
         w: src + '/images/**/*.{jpg,png,jpeg}'

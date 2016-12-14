@@ -1,1 +1,0 @@
-var customPath = "/themes/komedianty/assets";
