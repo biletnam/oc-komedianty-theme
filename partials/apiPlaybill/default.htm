@@ -1,22 +1,29 @@
+[viewBag]
+==
 {% if group %}
 
+<table>
 {% for post in group.normal %}
     {% partial __SELF__ ~ "::event" event=post %}
 {% endfor%}
 
 {% if group.child %}
+</table>
+
 <h3 id="child">Детские спектакли</h3>
+<table>
 {% for post in group.child %}
     {% partial __SELF__ ~ "::event" event=post %}
 {% endfor%}
+</table>
 {% endif %}
 
 {% else %}
 
+</table>
 {% for post in posts %}
     {% partial __SELF__ ~ "::event" event=post %}
 {% endfor%}
+</table>
 
 {% endif %}
-
-

@@ -1,0 +1,28 @@
+description = "Вывод афиши в Wiki-разметки для вКонтакте"
+
+[viewBag]
+==
+{% if group %}
+&#61;&#61;{{ group.normal.0.event_date | dateLocale('%B') | capitalize }}&#61;&#61;
+
+{% for post in group.normal %}
+{% partial __SELF__ ~ "::event" event=post %}
+
+{% endfor%}
+
+{% if group.child %}
+&#61;&#61;&#61;Детские спектакли&#61;&#61;&#61;
+{% for post in group.child %}
+{% partial __SELF__ ~ "::event" event=post %}
+
+{% endfor%}
+
+{% endif %}
+{% else %}
+&#61;&#61;{{ posts.0.event_date | dateLocale('%B')}}&#61;&#61;
+
+{% for post in posts %}
+{% partial __SELF__ ~ "::event" event=post %}
+
+{% endfor%}
+{% endif %}

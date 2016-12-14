@@ -1,0 +1,27 @@
+title = "Афиша для Vk"
+url = "/api/vk/playbill/:date?now"
+is_hidden = 0
+
+[theaterEvents apiVkPlaybill]
+scopes = "Playbill"
+sort = "event_date asc"
+date = "{{ :date }}"
+performancePage = "theater/performance"
+newsPage = "theaterNews/post"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playbill — Komedianty theater</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<pre>
+{% component 'apiVkPlaybill' %}
+
+----
+Санкт-Петербург, Лиговский пр. 44.
+Касса театра: 764–81–14, с 12:00 до 19:00.
+</pre>
+</body>
+</html>

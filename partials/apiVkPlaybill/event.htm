@@ -1,0 +1,3 @@
+[viewBag]
+==
+'''{{ event.event_date | dateLocale('%e %h (%a) в %R') }} — [{{ event.relation.url|e }}|{{ event.relation.title }}]'''{% if event.relation.meta.premiere == true %} ''Премьера!''{% endif %}{% if event.relation.author != null %} {{ event.relation.author }}{% endif %}.{% if event.relation.description != null %} {{ event.relation.description }}{% endif %}.

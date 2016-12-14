@@ -1,10 +1,12 @@
-<table>
-    <!-- {{ event.slug }} -->
+[viewBag]
+==
+<!-- {{ event.relation.slug }} -->
     <tr class="event{{ date(event.event_date) < date() ? " inactive"}}">
-        <td class="date day">{{ event.event_date | date('j') }}</td>
-        <td class="date weekday">{{ event.event_date | dateLocale('%a') }}</td> <td class="title">{{ event.relation.title }}</td>
-        {% if event.relation.meta.premiere == true %}<td class="premiere-label">Премьера!</td>{% endif %}
-        {% if event.relation.author != null %}<td class="author">{{ event.relation.author }}</td>{% endif %}
+        <td class="date day"><strong>{{ event.event_date | date('j') }}</strong></td>
+        <td class="date weekday"><strong>{{ event.event_date | dateLocale('%a') }}</strong></td>
+        <td class="title">
+            <strong><a href="{{ event.relation.url }}">{{ event.relation.title }}</a></strong>
+            {% if event.relation.meta.premiere == true %}<em class="premiere-label" style="font-style:italic;">Премьера!</em>{% endif %}
+        </td>
+        {% if event.relation.author != null %}<td class="author">{{ event.relation.author }}</td>{% else %} <td>—</td> {% endif %}
     </tr>
-</table>
-
